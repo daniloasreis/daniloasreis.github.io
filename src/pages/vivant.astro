@@ -34,9 +34,41 @@ import mockup3 from '@assets/vivant/mockup-3.png';
 import ArrowRight from '~icons/lucide/arrow-right';
 import MapPin from '~icons/ph/map-pin-fill';
 import Target from '~icons/streamline/target';
+
+const permalink = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <Layout title="Vivant Restaurante">
+  <!-- Open Graph Meta Tags -->
+  <meta
+    slot="opengraph"
+    property="og:title"
+    content="Vivant Restaurante - Simplificando a reserva de mesas e horários"
+  />
+  <meta
+    slot="opengraph"
+    property="og:description"
+    content="Vivant Restaurante é um aplicativo inovador que redefine a experiência de reserva e pedidos em restaurantes. Design intuitivo e centrado no usuário, criado por Danilo Reis."
+  />
+  <meta slot="opengraph" property="og:image" content="/vivant_og.png" />
+  <meta slot="opengraph" property="og:url" content={permalink} />
+  <meta slot="opengraph" property="og:type" content="website" />
+  <meta slot="opengraph" property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Meta Tags -->
+  <meta slot="twitter" name="twitter:card" content="summary_large_image" />
+  <meta
+    slot="twitter"
+    name="twitter:title"
+    content="Vivant Restaurante - Experiência Gastronômica Repensada"
+  />
+  <meta
+    slot="twitter"
+    name="twitter:description"
+    content="Aplicativo que redefine reservas e pedidos em restaurantes, projetado por Danilo Reis."
+  />
+  <meta slot="twitter" name="twitter:image" content="/vivant_og.png" />
+
   <header class="header">
     <div class="container">
       <div class="text">
