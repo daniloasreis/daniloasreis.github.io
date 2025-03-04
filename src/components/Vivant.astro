@@ -12,6 +12,15 @@ import headerMockup from '../assets/header_mockup.png';
 import marilia from '../assets/marilia.jpg';
 import henrique from '../assets/henrique.jpg';
 
+import wireframe1 from '../assets/wireframe-1.jpeg';
+import wireframe2 from '../assets/wireframe-2.jpeg';
+import wireframe3 from '../assets/wireframe-3.png';
+import wireframe4 from '../assets/wireframe-4.png';
+
+import mockup1 from '../assets/mockup-1.png';
+import mockup2 from '../assets/mockup-2.png';
+import mockup3 from '../assets/mockup-3.png';
+
 import ArrowRight from '~icons/lucide/arrow-right';
 import Target from '~icons/streamline/target';
 ---
@@ -38,14 +47,18 @@ import Target from '~icons/streamline/target';
   }
 
   section {
-    h2:first-child {
-      font-size: 4.5rem;
+    h2 {
+      font-size: 4rem;
       text-transform: uppercase;
       font-weight: 500;
-      margin-bottom: -1.05em;
+      margin-bottom: -1.1em;
       color: colors.$accent-light;
       margin-inline: -0.1ch;
+      &.fluid {
+        font-size: clamp(2rem, 8vw, 4rem);
+      }
     }
+
     h3 {
       text-transform: uppercase;
       font-weight: 700;
@@ -459,6 +472,87 @@ import Target from '~icons/streamline/target';
     ol {
       padding-left: 2ch;
     }
+    .emoji {
+      font-size: 2rem;
+    }
+  }
+  .desenvolvimento {
+    background: colors.$accent;
+    h2 {
+      color: rgba(colors.$main, 0.2);
+    }
+    .wireframes {
+      list-style-type: none;
+      padding-left: 0;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      display: grid;
+      gap: tokens.$space-4;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .estudos {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      display: grid;
+      row-gap: tokens.$space-4;
+      column-gap: tokens.$space-12;
+      .estudo {
+        padding: tokens.$space-5;
+        border-radius: tokens.$space-5;
+        border: 4px solid colors.$main;
+        position: relative;
+        margin-block: tokens.$space-6;
+        padding-top: tokens.$space-7;
+        ul {
+          padding-left: 2ch;
+        }
+        .titulo {
+          font-weight: 500;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 4px solid colors.$main;
+          color: colors.$main;
+          padding-inline: tokens.$space-3;
+          padding-top: tokens.$space-2;
+          padding-bottom: tokens.$space-1;
+          border-radius: tokens.$space-5;
+          background: colors.$accent;
+          padding-left: 3rem;
+          transform: translate(-10%, -50%);
+          text-transform: uppercase;
+        }
+        .numero {
+          width: auto;
+          height: 100%;
+          aspect-ratio: 1;
+          background: colors.$main;
+          color: colors.$accent;
+          border-radius: 50%;
+          display: flex;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          padding-top: 4px;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+    .mockups {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$space-6;
+      align-items: center;
+      margin-block: tokens.$space-4;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
 </style>
 
@@ -760,10 +854,10 @@ import Target from '~icons/streamline/target';
             </tr>
             <tr>
               <th scope="row">Sentimentos</th>
-              <td>😊</td>
-              <td>🤔</td>
-              <td>🤩</td>
-              <td>😌</td>
+              <td><span class="emoji">😊</span></td>
+              <td><span class="emoji">🤔</span></td>
+              <td><span class="emoji">🤩</span></td>
+              <td><span class="emoji">😌</span></td>
             </tr>
             <tr>
               <th scope="row">Oportunidade</th>
@@ -802,47 +896,83 @@ import Target from '~icons/streamline/target';
     </div>
   </section>
 
-  <section>
+  <section class="desenvolvimento">
     <div class="container">
-      <h2>Desenvolvimento</h2>
+      <h2 class="fluid">Desenvolvimento</h2>
       <h3>Wireframes</h3>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul class="wireframes">
+        <li class="item">
+          <Image
+            src={wireframe1}
+            alt="Wireframe do projeto Vivant Restaurante"
+          />
+        </li>
+        <li class="item">
+          <Image
+            src={wireframe2}
+            alt="Wireframe do projeto Vivant Restaurante"
+          />
+        </li>
+        <li class="item">
+          <Image
+            src={wireframe3}
+            alt="Wireframe do projeto Vivant Restaurante"
+          />
+        </li>
+        <li class="item">
+          <Image
+            src={wireframe4}
+            alt="Wireframe do projeto Vivant Restaurante"
+          />
+        </li>
       </ul>
 
       <h3>Resultados dos estudos de usabilidade</h3>
-      <h4>1º Estudo</h4>
-      <ul>
-        <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
-        <li>Incluir a opção de editar a reserva.</li>
-        <li>
-          Adicionar um campo para atendimento personalizado em situações
-          especiais, como aniversários e comemorações.
-        </li>
-      </ul>
 
-      <h4>2º Estudo</h4>
-      <ul>
-        <li>
-          Melhorias no design dos botões da tela inicial (cores, proporção).
-        </li>
-        <li>Aprimorar os textos dos botões de ação para evitar confusão.</li>
-        <li>
-          Adicionar uma tela de confirmação após a avaliação do app, garantindo
-          que o feedback foi registrado com sucesso.
-        </li>
-      </ul>
+      <div class="estudos">
+        <div class="estudo">
+          <h4 class="titulo"><span class="numero">1º</span> Estudo</h4>
+          <ul>
+            <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
+            <li>Incluir a opção de editar a reserva.</li>
+            <li>
+              Adicionar um campo para atendimento personalizado em situações
+              especiais, como aniversários e comemorações.
+            </li>
+          </ul>
+        </div>
+        <div class="estudo">
+          <h4 class="titulo"><span class="numero">2º</span> Estudo</h4>
+          <ul>
+            <li>
+              Melhorias no design dos botões da tela inicial (cores, proporção).
+            </li>
+            <li>
+              Aprimorar os textos dos botões de ação para evitar confusão.
+            </li>
+            <li>
+              Adicionar uma tela de confirmação após a avaliação do app,
+              garantindo que o feedback foi registrado com sucesso.
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <h3>Mockup</h3>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ul class="mockups">
+        <li class="item"><Image src={mockup1} alt="" /></li>
+        <li style="width: 48%" class="item">
+          <Image
+            src={mockup2}
+            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+          />
+        </li>
+        <li style="width: 80%" class="item">
+          <Image
+            src={mockup3}
+            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+          />
+        </li>
       </ul>
 
       <h3>Elementos visuais</h3>
