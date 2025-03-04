@@ -15,6 +15,7 @@ import MeetLogo from '@assets/vivant/meet_logo.svg';
 import MiroLogo from '@assets/vivant/miro_logo.svg';
 import NotionLogo from '@assets/vivant/notion_logo.svg';
 import VivantLogo from '@assets/vivant/vivant_logo.svg';
+import UserFlow from '@assets/vivant/user_flow.jpeg';
 
 import conclusaoMockup from '@assets/vivant/conclusao_mockup.png';
 import headerMockup from '@assets/vivant/header_mockup.png';
@@ -375,220 +376,219 @@ import Target from '~icons/streamline/target';
     <section class="fluxo">
       <div class="container">
         <h3>Fluxo do usuário</h3>
-        <embed
-          src="/user_flow.pdf"
-          width="1024"
-          height="480"
-          type="application/pdf"
+        <Image src={UserFlow} alt="Fluxograma de uso da aplicação." />
+      </div>
+    </section>
+
+    <section class="desenvolvimento">
+      <div class="container">
+        <h2 class="fluid">Desenvolvimento</h2>
+        <h3>Wireframes</h3>
+        <ul class="wireframes">
+          <li class="item">
+            <Image
+              src={wireframe1}
+              alt="Wireframe do projeto Vivant Restaurante"
+            />
+          </li>
+          <li class="item">
+            <Image
+              src={wireframe2}
+              alt="Wireframe do projeto Vivant Restaurante"
+            />
+          </li>
+          <li class="item">
+            <Image
+              src={wireframe3}
+              alt="Wireframe do projeto Vivant Restaurante"
+            />
+          </li>
+          <li class="item">
+            <Image
+              src={wireframe4}
+              alt="Wireframe do projeto Vivant Restaurante"
+            />
+          </li>
+        </ul>
+
+        <h3>Resultados dos estudos de usabilidade</h3>
+
+        <div class="estudos">
+          <div class="estudo">
+            <h4 class="titulo"><span class="numero">1º</span> Estudo</h4>
+            <ul>
+              <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
+              <li>Incluir a opção de editar a reserva.</li>
+              <li>
+                Adicionar um campo para atendimento personalizado em situações
+                especiais, como aniversários e comemorações.
+              </li>
+            </ul>
+          </div>
+          <div class="estudo">
+            <h4 class="titulo"><span class="numero">2º</span> Estudo</h4>
+            <ul>
+              <li>
+                Melhorias no design dos botões da tela inicial (cores,
+                proporção).
+              </li>
+              <li>
+                Aprimorar os textos dos botões de ação para evitar confusão.
+              </li>
+              <li>
+                Adicionar uma tela de confirmação após a avaliação do app,
+                garantindo que o feedback foi registrado com sucesso.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Mockup</h3>
+        <ul class="mockups">
+          <li class="item"><Image src={mockup1} alt="" /></li>
+          <li style="width: 48%" class="item">
+            <Image
+              src={mockup2}
+              alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+            />
+          </li>
+          <li style="width: 80%" class="item">
+            <Image
+              src={mockup3}
+              alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+            />
+          </li>
+        </ul>
+
+        <h3>Elementos visuais</h3>
+
+        <div class="elementos-visuais">
+          <div class="logo">
+            <h4>Logomarca</h4>
+            <Image
+              src={VivantLogo}
+              alt="Mesa com duas cadeiras ao centro, no topo está escrito Vivant, abaixo, Restaurante."
+            />
+          </div>
+          <div class="icones">
+            <h4>Ícones</h4>
+            <Image
+              src={Icones}
+              alt="Conjunto de icones utilizados no projeto"
+            />
+          </div>
+          <div class="cores">
+            <h4>Cores</h4>
+            <ul>
+              <li>
+                <span style="background: #FFF8E6" class="cor"></span>#FFF8E6
+              </li>
+              <li>
+                <span style="background: #8D0B41" class="cor"></span>#8D0B41
+              </li>
+              <li>
+                <span style="background: #FBBC05" class="cor"></span>#FBBC05
+              </li>
+              <li>
+                <span style="background: #302E2E" class="cor"></span>#302E2E
+              </li>
+              <li>
+                <span style="background: #4F4D48" class="cor"></span>#4F4D48
+              </li>
+            </ul>
+          </div>
+          <div class="tipografia">
+            <h4>Tipografia</h4>
+            <ul>
+              <li>
+                <span>Anek Odia / MEDIUM / 27px</span><span
+                  style="font-size: 27px">Exemplo</span
+                >
+              </li>
+              <li>
+                <span>Anek Odia / MEDIUM / 20px</span><span
+                  style="font-size: 20px">Exemplo</span
+                >
+              </li>
+              <li>
+                <span>Anek Odia / MEDIUM / 13px</span><span
+                  style="font-size: 13px">Exemplo</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="botoes">
+            <h4>Botões</h4>
+            <ul>
+              <li><button>Rótulo</button></li>
+              <li><button class="light">Rótulo</button></li>
+              <li><button class="round">1</button></li>
+              <li><button class="round light">1</button></li>
+              <li><button class="select"><MapPin /> Rótulo</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusao">
+      <div class="container">
+        <div class="aprendizado">
+          <h2>Conclusão</h2>
+          <h3>Aprendizado</h3>
+          <p>
+            Este projeto reforçou a <strong
+              >importância de entender a fundo as dores e necessidades dos
+              usuários</strong
+            > antes de propor soluções. Aprendi que
+            <strong>simplicidade e clareza</strong> são essenciais para uma experiência
+            fluida, especialmente em processos sensíveis como reservas. Além disso,
+            participar de <strong>todas as etapas do desenvolvimento</strong> ampliou
+            minha visão sobre a integração entre pesquisa, design e usabilidade,
+            destacando a importância da <strong
+              >iteração contínua com base no feedback dos usuários.</strong
+            >
+          </p>
+        </div>
+
+        <div class="etapas">
+          <h3>Próximas etapas</h3>
+          <ol>
+            <li>
+              Coletar dados de uso do aplicativo após o lançamento para entender
+              melhor como os usuários interagem com as demais funcionalidades.
+            </li>
+            <li>
+              Analisar os feedbacks recebidos nas avaliações para identificar
+              oportunidades de aprimoramento e focar nas áreas que precisam de
+              melhorias.
+            </li>
+          </ol>
+        </div>
+        <Image
+          src={conclusaoMockup}
+          alt="Uma mão segura um aparelho celular com o mockup de alta fidelidade do Vivant Restaurante aberto."
         />
       </div>
     </section>
-  </section>
 
-  <section class="desenvolvimento">
-    <div class="container">
-      <h2 class="fluid">Desenvolvimento</h2>
-      <h3>Wireframes</h3>
-      <ul class="wireframes">
-        <li class="item">
-          <Image
-            src={wireframe1}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe2}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe3}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe4}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-      </ul>
-
-      <h3>Resultados dos estudos de usabilidade</h3>
-
-      <div class="estudos">
-        <div class="estudo">
-          <h4 class="titulo"><span class="numero">1º</span> Estudo</h4>
-          <ul>
-            <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
-            <li>Incluir a opção de editar a reserva.</li>
-            <li>
-              Adicionar um campo para atendimento personalizado em situações
-              especiais, como aniversários e comemorações.
-            </li>
-          </ul>
-        </div>
-        <div class="estudo">
-          <h4 class="titulo"><span class="numero">2º</span> Estudo</h4>
-          <ul>
-            <li>
-              Melhorias no design dos botões da tela inicial (cores, proporção).
-            </li>
-            <li>
-              Aprimorar os textos dos botões de ação para evitar confusão.
-            </li>
-            <li>
-              Adicionar uma tela de confirmação após a avaliação do app,
-              garantindo que o feedback foi registrado com sucesso.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Mockup</h3>
-      <ul class="mockups">
-        <li class="item"><Image src={mockup1} alt="" /></li>
-        <li style="width: 48%" class="item">
-          <Image
-            src={mockup2}
-            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
-          />
-        </li>
-        <li style="width: 80%" class="item">
-          <Image
-            src={mockup3}
-            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
-          />
-        </li>
-      </ul>
-
-      <h3>Elementos visuais</h3>
-
-      <div class="elementos-visuais">
-        <div class="logo">
-          <h4>Logomarca</h4>
-          <Image
-            src={VivantLogo}
-            alt="Mesa com duas cadeiras ao centro, no topo está escrito Vivant, abaixo, Restaurante."
-          />
-        </div>
-        <div class="icones">
-          <h4>Ícones</h4>
-          <Image src={Icones} alt="Conjunto de icones utilizados no projeto" />
-        </div>
-        <div class="cores">
-          <h4>Cores</h4>
-          <ul>
-            <li>
-              <span style="background: #FFF8E6" class="cor"></span>#FFF8E6
-            </li>
-            <li>
-              <span style="background: #8D0B41" class="cor"></span>#8D0B41
-            </li>
-            <li>
-              <span style="background: #FBBC05" class="cor"></span>#FBBC05
-            </li>
-            <li>
-              <span style="background: #302E2E" class="cor"></span>#302E2E
-            </li>
-            <li>
-              <span style="background: #4F4D48" class="cor"></span>#4F4D48
-            </li>
-          </ul>
-        </div>
-        <div class="tipografia">
-          <h4>Tipografia</h4>
-          <ul>
-            <li>
-              <span>Anek Odia / MEDIUM / 27px</span><span
-                style="font-size: 27px">Exemplo</span
-              >
-            </li>
-            <li>
-              <span>Anek Odia / MEDIUM / 20px</span><span
-                style="font-size: 20px">Exemplo</span
-              >
-            </li>
-            <li>
-              <span>Anek Odia / MEDIUM / 13px</span><span
-                style="font-size: 13px">Exemplo</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="botoes">
-          <h4>Botões</h4>
-          <ul>
-            <li><button>Rótulo</button></li>
-            <li><button class="light">Rótulo</button></li>
-            <li><button class="round">1</button></li>
-            <li><button class="round light">1</button></li>
-            <li><button class="select"><MapPin /> Rótulo</button></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="conclusao">
-    <div class="container">
-      <div class="aprendizado">
-        <h2>Conclusão</h2>
-        <h3>Aprendizado</h3>
-        <p>
-          Este projeto reforçou a <strong
-            >importância de entender a fundo as dores e necessidades dos
-            usuários</strong
-          > antes de propor soluções. Aprendi que
-          <strong>simplicidade e clareza</strong> são essenciais para uma experiência
-          fluida, especialmente em processos sensíveis como reservas. Além disso,
-          participar de <strong>todas as etapas do desenvolvimento</strong> ampliou
-          minha visão sobre a integração entre pesquisa, design e usabilidade, destacando
-          a importância da <strong
-            >iteração contínua com base no feedback dos usuários.</strong
-          >
-        </p>
-      </div>
-
-      <div class="etapas">
-        <h3>Próximas etapas</h3>
-        <ol>
+    <footer class="obrigado">
+      <div class="container">
+        <h2>Muito obrigado!</h2>
+        <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
+        <ul class="social-media">
           <li>
-            Coletar dados de uso do aplicativo após o lançamento para entender
-            melhor como os usuários interagem com as demais funcionalidades.
+            <a href="https://linkedin.com/in/daniloasreis"
+              ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
+            >
           </li>
           <li>
-            Analisar os feedbacks recebidos nas avaliações para identificar
-            oportunidades de aprimoramento e focar nas áreas que precisam de
-            melhorias.
+            <a href="https://www.behance.net/daniloasreis"
+              ><Image alt="Behance" src={Behance} /> daniloasreis</a
+            >
           </li>
-        </ol>
+        </ul>
       </div>
-      <Image
-        src={conclusaoMockup}
-        alt="Uma mão segura um aparelho celular com o mockup de alta fidelidade do Vivant Restaurante aberto."
-      />
-    </div>
+    </footer>
   </section>
-
-  <footer class="obrigado">
-    <div class="container">
-      <h2>Muito obrigado!</h2>
-      <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
-      <ul class="social-media">
-        <li>
-          <a href="https://linkedin.com/in/daniloasreis"
-            ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
-          >
-        </li>
-        <li>
-          <a href="https://www.behance.net/daniloasreis"
-            ><Image alt="Behance" src={Behance} /> daniloasreis</a
-          >
-        </li>
-      </ul>
-    </div>
-  </footer>
 </Layout>

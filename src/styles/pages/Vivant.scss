@@ -228,9 +228,9 @@ a {
 .fluxo {
   --background-color: #{colors.$main};
   color: colors.$neutral-light;
-  embed {
+  img {
     width: 100%;
-    height: 80vh;
+    height: auto;
   }
 }
 
