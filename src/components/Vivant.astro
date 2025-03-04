@@ -9,6 +9,8 @@ import MiroLogo from '../assets/miro_logo.svg';
 import MeetLogo from '../assets/meet_logo.svg';
 import NotionLogo from '../assets/notion_logo.svg';
 import headerMockup from '../assets/header_mockup.png';
+import marilia from '../assets/marilia.jpg';
+import henrique from '../assets/henrique.jpg';
 
 import ArrowRight from '~icons/lucide/arrow-right';
 ---
@@ -287,6 +289,88 @@ import ArrowRight from '~icons/lucide/arrow-right';
       }
     }
   }
+
+  .persona {
+    margin-block: tokens.$space-8;
+    line-height: 1.6;
+    display: grid;
+    grid:
+      'perfil frase frase' min-content
+      'perfil interesses frustracoes' min-content
+      'perfil descricao descricao' 1fr /1fr 1fr 1fr;
+    gap: tokens.$space-5;
+    h4,
+    h5 {
+      font-size: 18pt;
+      color: colors.$accent;
+    }
+    ul {
+      padding: tokens.$space-4;
+      padding-bottom: 0;
+    }
+    hr {
+      border-bottom: 1px solid colors.$neutral-light;
+      width: calc(100% + tokens.$space-5);
+    }
+    .perfil {
+      grid-area: perfil;
+      display: flex;
+      flex-direction: column;
+      gap: tokens.$space-2;
+      padding-right: tokens.$space-5;
+      border-right: 1px solid colors.$neutral-light;
+      h4 {
+        text-align: center;
+        margin-top: tokens.$space-4;
+      }
+      img {
+        border-radius: 50%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+      }
+    }
+    .frase {
+      grid-area: frase;
+      border: 1px solid colors.$neutral-light;
+      font-size: 18pt;
+      border-radius: tokens.$space-5;
+      padding: tokens.$space-4;
+      padding-block: tokens.$space-2;
+      padding-top: calc(tokens.$space-4 + 0.1ex);
+      color: colors.$accent;
+      text-align: center;
+      &::before {
+        content: '“';
+      }
+      &::after {
+        content: '”';
+      }
+    }
+    .interesses {
+      grid-area: interesses;
+    }
+    .frustracoes {
+      grid-area: frustracoes;
+    }
+    .detalhes {
+      list-style-type: none;
+      padding: 0;
+      padding-block: tokens.$space-2;
+      li {
+        display: flex;
+        gap: 1ex;
+      }
+      span {
+        color: colors.$accent;
+      }
+    }
+    .descricao {
+      grid-area: descricao;
+      border: 1px solid colors.$accent;
+      border-radius: tokens.$space-5;
+      padding: tokens.$space-5;
+    }
+  }
 </style>
 
 <main>
@@ -422,90 +506,113 @@ import ArrowRight from '~icons/lucide/arrow-right';
 
       <h3>Personas</h3>
 
-      <h4>Marília</h4>
-      <p>
-        Marília é uma mulher cisgênero, heterossexual, conhecida por sua
-        personalidade divertida, espontanea e alegre. Após um divórcio recente,
-        está em busca de redescobrir os prazeres da vida de solteira. Ela gosta
-        de sair com as amigas para jantar, conhecer pessoas novas e se divertir.
-      </p>
-      <img alt="marilia" src="http://example.com/image.jpg" />
-      <aside>Não quero mais perder tempo, tenho sede de viver</aside>
-      <dl>
-        <dt>Idade</dt>
-        <dd>46 anos</dd>
+      <div class="persona">
+        <div class="perfil">
+          <Image
+            alt="Mulher de cabelo ondulado na altura do ombro, usando camisa laranja e sorrindo."
+            src={marilia}
+          />
+          <h4>Marília</h4>
+          <hr />
+          <ul class="detalhes">
+            <li>
+              <span>Idade:</span>
+              46 anos
+            </li>
+            <li>
+              <span>Cidade:</span>
+              Belo Horizonte, MG
+            </li>
+            <li>
+              <span>Estado Civil:</span>
+              Divorciada
+            </li>
+            <li>
+              <span>Família:</span>
+              02 filhos
+            </li>
+            <li>
+              <span>Escolaridade:</span>
+              Superior Completo
+            </li>
+            <li>
+              <span>Profissão:</span>
+              Massagista
+            </li>
+          </ul>
+        </div>
+        <p class="descricao">
+          Marília é uma mulher cisgênero, heterossexual, conhecida por sua
+          personalidade divertida, espontanea e alegre. Após um divórcio
+          recente, está em busca de redescobrir os prazeres da vida de solteira.
+          Ela gosta de sair com as amigas para jantar, conhecer pessoas novas e
+          se divertir.
+        </p>
+        <aside class="frase">
+          Não quero mais perder tempo, tenho sede de viver
+        </aside>
 
-        <dt>Cidade</dt>
-        <dd><address>Belo Horizonte, MG</address></dd>
+        <div class="interesses">
+          <h5>Interesses e Desejos</h5>
+          <ul>
+            <li>Se reunir com as amigas.</li>
+            <li>Conhecer novos restaurantes.</li>
+            <li>Experimentar novas culinárias.</li>
+          </ul>
+        </div>
 
-        <dt>Estado Civil</dt>
-        <dd>Divorciada</dd>
+        <div class="frustracoes">
+          <h5>Frustrações</h5>
+          <ul>
+            <li>Falta de tempo.</li>
+            <li>Problemas com reserva.</li>
+            <li>Chegar no restaurante e ter de aguardar liberação da mesa.</li>
+          </ul>
+        </div>
+      </div>
+      <hr />
 
-        <dt>Família</dt>
-        <dd>02 filhos</dd>
-
-        <dt>Escolaridade</dt>
-        <dd>Superior Completo</dd>
-
-        <dt>Profissão</dt>
-        <dd>Massagista</dd>
-      </dl>
-      <h5>Interesses e Desejos</h5>
-      <ul>
-        <li>Se reunir com as amigas.</li>
-        <li>Conhecer novos restaurantes.</li>
-        <li>Experimentar novas culinárias.</li>
-      </ul>
-
-      <h5>Frustrações</h5>
-      <ul>
-        <li>Falta de tempo.</li>
-        <li>Problemas com reserva.</li>
-        <li>Chegar no restaurante e ter de aguardar liberação da mesa.</li>
-      </ul>
-
-      <h4>Henrique</h4>
-      <p>
-        Henrique é um homem cisgênero e gay que vive sozinho no interior. Sua
-        personalidade é marcada pela praticidade, agilidade e decisão. Nos
-        momentos de lazer adora sair com os amigos, desfrutar de boas refeições,
-        ouvir música, e explorar cachoeiras. Valoriza a comodidade e busca uma
-        vida confortável, longe de complicações
-      </p>
-      <img alt="henrique" src="http://example.com/image.jpg" />
-      <aside>Gosto do prático e ágil, detesto burocracia</aside>
-      <dl>
-        <dt>Idade</dt>
-        <dd>30 anos</dd>
-
-        <dt>Cidade</dt>
-        <dd><address>Sete Lagoas, MG</address></dd>
-
-        <dt>Estado Civil</dt>
-        <dd>Solteiro</dd>
-
-        <dt>Família</dt>
-        <dd>Sem filhos</dd>
-
-        <dt>Escolaridade</dt>
-        <dd>Superior Completo</dd>
-
-        <dt>Profissão</dt>
-        <dd>Analista de Suporte</dd>
-      </dl>
-      <h5>Interesses e Desejos</h5>
-      <ul>
-        <li>Gosta de bom atendimento.</li>
-        <li>Tecnologia e soluções que otimizam o tempo.</li>
-        <li>Preferência por ambientes modernos.</li>
-      </ul>
-
-      <h5>Frustrações</h5>
-      <ul>
-        <li>Reserva não garantida.</li>
-        <li>Atendimento demorado.</li>
-        <li>Lugares sem diversidade.</li>
-      </ul>
+      <div class="persona">
+        <div class="perfil">
+          <Image
+            alt="Homem jovem, de cabelo loiro e curto, usando uma camisa amarela."
+            src={henrique}
+          />
+          <h4>Henrique</h4>
+          <ul class="detalhes">
+            <li><span>Idade:</span> 30 anos</li>
+            <li><span>Cidade:</span> <address>Sete Lagoas, MG</address></li>
+            <li><span>Estado Civil:</span> Solteiro</li>
+            <li><span>Família:</span> Sem filhos</li>
+            <li><span>Escolaridade:</span> Superior Completo</li>
+            <li><span>Profissão:</span> Analista de Suporte</li>
+          </ul>
+        </div>
+        <p class="descricao">
+          Henrique é um homem cisgênero e gay que vive sozinho no interior. Sua
+          personalidade é marcada pela praticidade, agilidade e decisão. Nos
+          momentos de lazer adora sair com os amigos, desfrutar de boas
+          refeições, ouvir música, e explorar cachoeiras. Valoriza a comodidade
+          e busca uma vida confortável, longe de complicações
+        </p>
+        <aside class="frase">Gosto do prático e ágil, detesto burocracia</aside>
+        <div class="interesses">
+          <h5>Interesses e Desejos</h5>
+          <ul>
+            <li>Gosta de bom atendimento.</li>
+            <li>Tecnologia e soluções que otimizam o tempo.</li>
+            <li>Preferência por ambientes modernos.</li>
+          </ul>
+        </div>
+        <div class="frustracoes">
+          <h5>Frustrações</h5>
+          <ul>
+            <li>Reserva não garantida.</li>
+            <li>Atendimento demorado.</li>
+            <li>Lugares sem diversidade.</li>
+          </ul>
+        </div>
+      </div>
 
       <h3>Jornada do Usuário</h3>
 
