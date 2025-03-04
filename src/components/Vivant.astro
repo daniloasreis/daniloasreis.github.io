@@ -33,560 +33,537 @@ import Target from '~icons/streamline/target';
 import MapPin from '~icons/ph/map-pin-fill';
 ---
 
-<main>
-  <header class="header">
-    <div class="container">
-      <div class="text">
-        <hgroup>
-          <h1 id="app-vivant-restaurante">
-            <small class="app">App</small>
-            <span class="vivant">Vivant</span>
-            <span class="restaurante">Restaurante</span>
-          </h1>
-          <h2>Simplificando a reserva de mesas e horários</h2>
-        </hgroup>
+<header class="header">
+  <div class="container">
+    <div class="text">
+      <hgroup>
+        <h1 id="app-vivant-restaurante">
+          <small class="app">App</small>
+          <span class="vivant">Vivant</span>
+          <span class="restaurante">Restaurante</span>
+        </h1>
+        <h2>Simplificando a reserva de mesas e horários</h2>
+      </hgroup>
 
-        <ul class="tags">
-          <li>UX/UI Design</li>
-          <li>UX Research</li>
-        </ul>
-
-        <p class="author">Danilo Reis</p>
-      </div>
-      <div class="image">
-        <Image
-          src={headerMockup}
-          alt="Uma mão segurando um smartphone com a tela inicial do app vivant restaurante aberta."
-        />
-      </div>
-    </div>
-  </header>
-
-  <section class="projeto">
-    <div class="container">
-      <h2 id="projeto">Projeto</h2>
-      <div class="grade">
-        <div class="item">
-          <h3>Produto</h3>
-          <p>
-            O aplicativo foi desenvolvido para proporcionar uma experiência
-            prática na reserva de horários e mesas, permitindo escolhas rápidas
-            e sem complicações.
-          </p>
-        </div>
-        <div class="item">
-          <h3>Ferramentas</h3>
-          <ul class="ferramentas">
-            <li>
-              <Image style={{ width: '2rem' }} src={FigmaLogo} alt="Figma" />
-            </li>
-            <li><Image src={MiroLogo} alt="Miro" /></li>
-            <li><Image src={MeetLogo} alt="Google Meet" /></li>
-            <li><Image src={NotionLogo} alt="Notion" /></li>
-          </ul>
-        </div>
-        <div class="item">
-          <h3>Duração do Projeto</h3>
-          <p><time>Novembro a Dezembro de 2024</time></p>
-        </div>
-        <div class="item">
-          <h3>Meu papel</h3>
-          <p>Designer de UX liderando o app desde a concepção até a entrega.</p>
-        </div>
-      </div>
-
-      <h3>Responsabilidades</h3>
-      <p>
-        Pesquisa e análise, prototipagem e design, ux writing, ux research e
-        gestão de projeto.
-      </p>
-
-      <h3>Desafios</h3>
-      <div class="desafios grade">
-        <div class="item">
-          <p class="desafio">
-            Dificuldade em encontrar mesas disponíveis, muitas vezes exigindo
-            reservas via WhatsApp, o que pode ser demorado e pouco prático.
-          </p>
-        </div>
-        <div class="item">
-          <p class="desafio">
-            Experiência de reserva pouco intuitiva, comprometida por uma
-            navegação confusa e interações pouco fluídas.
-          </p>
-        </div>
-      </div>
-
-      <h3>Meta</h3>
-      <p>
-        Identificar os desafios enfrentados pelos usuários durante o processo de
-        reserva e aprimorar a experiência, tornando-a mais confortável,
-        intuitiva e segura.
-      </p>
-    </div>
-  </section>
-
-  <section class="pesquisa">
-    <div class="container">
-      <h2 id="usuario">Usuário</h2>
-      <h3>Pesquisa com usuários</h3>
-      <p>Aspectos problemáticos encontrados com a pesquisa e insights:</p>
-      <ol class="problemas">
-        <li class="problema">
-          <p>
-            Processo de reserva lento e burocrático, com múltiplas etapas e
-            excesso de solicitações de dados.
-          </p>
-          <ArrowRight />
-          <p>
-            Simplificar o processo de reserva, tornando-o mais rápido e sem
-            etapas desnecessárias, para garantir uma experiência sem
-            frustrações.
-          </p>
-        </li>
-        <li class="problema">
-          <p>Ausência de funcionalidade de reserva direta no aplicativo.</p>
-          <ArrowRight />
-          <p>
-            Integrar uma solução de reserva diretamente no app, sem
-            redirecionamentos para outras plataformas, garantindo mais
-            comodidade e simplicidade.
-          </p>
-        </li>
-        <li class="problema">
-          <p>A complexidade no processo de reserva.</p>
-          <ArrowRight />
-          <p>
-            Desenvolver um design centrado na usabilidade, priorizando clareza,
-            eficiência e uma experiência ágil, com o mínimo de informações
-            necessárias.
-          </p>
-        </li>
-      </ol>
-
-      <h3>Personas</h3>
-
-      <div class="persona">
-        <div class="perfil">
-          <Image
-            alt="Mulher de cabelo ondulado na altura do ombro, usando camisa laranja e sorrindo."
-            src={marilia}
-          />
-          <h4>Marília</h4>
-          <hr />
-          <ul class="detalhes">
-            <li>
-              <span>Idade:</span>
-              46 anos
-            </li>
-            <li>
-              <span>Cidade:</span>
-              Belo Horizonte, MG
-            </li>
-            <li>
-              <span>Estado Civil:</span>
-              Divorciada
-            </li>
-            <li>
-              <span>Família:</span>
-              02 filhos
-            </li>
-            <li>
-              <span>Escolaridade:</span>
-              Superior Completo
-            </li>
-            <li>
-              <span>Profissão:</span>
-              Massagista
-            </li>
-          </ul>
-        </div>
-        <p class="descricao">
-          Marília é uma mulher cisgênero, heterossexual, conhecida por sua
-          personalidade divertida, espontanea e alegre. Após um divórcio
-          recente, está em busca de redescobrir os prazeres da vida de solteira.
-          Ela gosta de sair com as amigas para jantar, conhecer pessoas novas e
-          se divertir.
-        </p>
-        <aside class="frase">
-          “Não quero mais perder tempo, tenho sede de viver”
-        </aside>
-
-        <div class="interesses">
-          <h5>Interesses e Desejos</h5>
-          <ul>
-            <li>Se reunir com as amigas.</li>
-            <li>Conhecer novos restaurantes.</li>
-            <li>Experimentar novas culinárias.</li>
-          </ul>
-        </div>
-
-        <div class="frustracoes">
-          <h5>Frustrações</h5>
-          <ul>
-            <li>Falta de tempo.</li>
-            <li>Problemas com reserva.</li>
-            <li>Chegar no restaurante e ter de aguardar liberação da mesa.</li>
-          </ul>
-        </div>
-      </div>
-      <hr />
-
-      <div class="persona">
-        <div class="perfil">
-          <Image
-            alt="Homem jovem, de cabelo loiro e curto, usando uma camisa amarela."
-            src={henrique}
-          />
-          <h4>Henrique</h4>
-          <hr />
-          <ul class="detalhes">
-            <li><span>Idade:</span> 30 anos</li>
-            <li><span>Cidade:</span> Sete Lagoas, MG</li>
-            <li><span>Estado Civil:</span> Solteiro</li>
-            <li><span>Família:</span> Sem filhos</li>
-            <li><span>Escolaridade:</span> Superior Completo</li>
-            <li><span>Profissão:</span> Analista de Suporte</li>
-          </ul>
-        </div>
-        <p class="descricao">
-          Henrique é um homem cisgênero e gay que vive sozinho no interior. Sua
-          personalidade é marcada pela praticidade, agilidade e decisão. Nos
-          momentos de lazer adora sair com os amigos, desfrutar de boas
-          refeições, ouvir música, e explorar cachoeiras. Valoriza a comodidade
-          e busca uma vida confortável, longe de complicações
-        </p>
-        <aside class="frase">
-          “Gosto do prático e ágil, detesto burocracia”
-        </aside>
-        <div class="interesses">
-          <h5>Interesses e Desejos</h5>
-          <ul>
-            <li>Gosta de bom atendimento.</li>
-            <li>Tecnologia e soluções que otimizam o tempo.</li>
-            <li>Preferência por ambientes modernos.</li>
-          </ul>
-        </div>
-        <div class="frustracoes">
-          <h5>Frustrações</h5>
-          <ul>
-            <li>Reserva não garantida.</li>
-            <li>Atendimento demorado.</li>
-            <li>Lugares sem diversidade.</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr />
-
-      <h3>Jornada do Usuário</h3>
-
-      <p class="caption">
-        <Target />
-        <span class="objetivo">Objetivo:</span> Marília reservar uma mesa em um restaurante.
-      </p>
-      <div class="table-wrapper">
-        <table class="jornada">
-          <thead>
-            <tr>
-              <th scope="col">Fases</th>
-              <th scope="col">Identificação da necessidade</th>
-              <th scope="col">Busca por um restaurante</th>
-              <th scope="col">Escolha do restaurante</th>
-              <th scope="col">Reserva</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Ação</th>
-              <td>
-                <ol>
-                  <li>Entra em contato com as amigas</li>
-                  <li>Verifica a agenda de todas</li>
-                  <li>Definem um tipo de restaurante</li>
-                </ol>
-              </td>
-              <td>
-                <ul>
-                  <li>Busca Online</li>
-                  <li>Acesso às redes sociais</li>
-                  <li>Pedir opinião/recomendação das amigas</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Ver as avaliações</li>
-                  <li>Consultar o cardápio</li>
-                  <li>Compartilhar com as amigas</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Abrir app</li>
-                  <li>Selecionar o dia, horário e mesa</li>
-                  <li>Reservar</li>
-                  <li>Confirmação de reserva</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">Sentimentos</th>
-              <td><span class="emoji">😊</span></td>
-              <td><span class="emoji">🤔</span></td>
-              <td><span class="emoji">🤩</span></td>
-              <td><span class="emoji">😌</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Oportunidade</th>
-              <td>
-                <ul>
-                  <li>Calendário compartilhado</li>
-                  <li>Enquete para votação sobre o tipo de restaurante</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>
-                    Coletar as preferências da usuária e indicar restaurantes
-                  </li>
-                  <li>Criar uma lista com os melhores restaurantes</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Restaurantes bem avaliados aparecem primeiro</li>
-                  <li>QR Code ou link para a usuária baixar o app</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Compartilhar a reserva</li>
-                  <li>Avaliação e feedback do app</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <section class="fluxo">
-      <div class="container">
-        <h3>Fluxo do usuário</h3>
-        <embed
-          src="/user_flow.pdf"
-          width="1024"
-          height="480"
-          type="application/pdf"
-        />
-      </div>
-    </section>
-  </section>
-
-  <section class="desenvolvimento">
-    <div class="container">
-      <h2 class="fluid">Desenvolvimento</h2>
-      <h3>Wireframes</h3>
-      <ul class="wireframes">
-        <li class="item">
-          <Image
-            src={wireframe1}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe2}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe3}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
-        <li class="item">
-          <Image
-            src={wireframe4}
-            alt="Wireframe do projeto Vivant Restaurante"
-          />
-        </li>
+      <ul class="tags">
+        <li>UX/UI Design</li>
+        <li>UX Research</li>
       </ul>
 
-      <h3>Resultados dos estudos de usabilidade</h3>
-
-      <div class="estudos">
-        <div class="estudo">
-          <h4 class="titulo"><span class="numero">1º</span> Estudo</h4>
-          <ul>
-            <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
-            <li>Incluir a opção de editar a reserva.</li>
-            <li>
-              Adicionar um campo para atendimento personalizado em situações
-              especiais, como aniversários e comemorações.
-            </li>
-          </ul>
-        </div>
-        <div class="estudo">
-          <h4 class="titulo"><span class="numero">2º</span> Estudo</h4>
-          <ul>
-            <li>
-              Melhorias no design dos botões da tela inicial (cores, proporção).
-            </li>
-            <li>
-              Aprimorar os textos dos botões de ação para evitar confusão.
-            </li>
-            <li>
-              Adicionar uma tela de confirmação após a avaliação do app,
-              garantindo que o feedback foi registrado com sucesso.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <h3>Mockup</h3>
-      <ul class="mockups">
-        <li class="item"><Image src={mockup1} alt="" /></li>
-        <li style="width: 48%" class="item">
-          <Image
-            src={mockup2}
-            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
-          />
-        </li>
-        <li style="width: 80%" class="item">
-          <Image
-            src={mockup3}
-            alt="Mockup de Alta Fidelidade do Vivant Restaurante"
-          />
-        </li>
-      </ul>
-
-      <h3>Elementos visuais</h3>
-
-      <div class="elementos-visuais">
-        <div class="logo">
-          <h4>Logomarca</h4>
-          <Image
-            src={VivantLogo}
-            alt="Mesa com duas cadeiras ao centro, no topo está escrito Vivant, abaixo, Restaurante."
-          />
-        </div>
-        <div class="icones">
-          <h4>Ícones</h4>
-          <Image src={Icones} alt="Conjunto de icones utilizados no projeto" />
-        </div>
-        <div class="cores">
-          <h4>Cores</h4>
-          <ul>
-            <li>
-              <span style="background: #FFF8E6" class="cor"></span>#FFF8E6
-            </li>
-            <li>
-              <span style="background: #8D0B41" class="cor"></span>#8D0B41
-            </li>
-            <li>
-              <span style="background: #FBBC05" class="cor"></span>#FBBC05
-            </li>
-            <li>
-              <span style="background: #302E2E" class="cor"></span>#302E2E
-            </li>
-            <li>
-              <span style="background: #4F4D48" class="cor"></span>#4F4D48
-            </li>
-          </ul>
-        </div>
-        <div class="tipografia">
-          <h4>Tipografia</h4>
-          <ul>
-            <li>
-              <span>Anek Odia / MEDIUM / 27px</span><span
-                style="font-size: 27px">Exemplo</span
-              >
-            </li>
-            <li>
-              <span>Anek Odia / MEDIUM / 20px</span><span
-                style="font-size: 20px">Exemplo</span
-              >
-            </li>
-            <li>
-              <span>Anek Odia / MEDIUM / 13px</span><span
-                style="font-size: 13px">Exemplo</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="botoes">
-          <h4>Botões</h4>
-          <ul>
-            <li><button>Rótulo</button></li>
-            <li><button class="light">Rótulo</button></li>
-            <li><button class="round">1</button></li>
-            <li><button class="round light">1</button></li>
-            <li><button class="select"><MapPin /> Rótulo</button></li>
-          </ul>
-        </div>
-      </div>
+      <p class="author">Danilo Reis</p>
     </div>
-  </section>
-
-  <section class="conclusao">
-    <div class="container">
-      <div class="aprendizado">
-        <h2>Conclusão</h2>
-        <h3>Aprendizado</h3>
-        <p>
-          Este projeto reforçou a <strong
-            >importância de entender a fundo as dores e necessidades dos
-            usuários</strong
-          > antes de propor soluções. Aprendi que
-          <strong>simplicidade e clareza</strong> são essenciais para uma experiência
-          fluida, especialmente em processos sensíveis como reservas. Além disso,
-          participar de <strong>todas as etapas do desenvolvimento</strong> ampliou
-          minha visão sobre a integração entre pesquisa, design e usabilidade, destacando
-          a importância da <strong
-            >iteração contínua com base no feedback dos usuários.</strong
-          >
-        </p>
-      </div>
-
-      <div class="etapas">
-        <h3>Próximas etapas</h3>
-        <ol>
-          <li>
-            Coletar dados de uso do aplicativo após o lançamento para entender
-            melhor como os usuários interagem com as demais funcionalidades.
-          </li>
-          <li>
-            Analisar os feedbacks recebidos nas avaliações para identificar
-            oportunidades de aprimoramento e focar nas áreas que precisam de
-            melhorias.
-          </li>
-        </ol>
-      </div>
+    <div class="image">
       <Image
-        src={conclusaoMockup}
-        alt="Uma mão segura um aparelho celular com o mockup de alta fidelidade do Vivant Restaurante aberto."
+        src={headerMockup}
+        alt="Uma mão segurando um smartphone com a tela inicial do app vivant restaurante aberta."
+      />
+    </div>
+  </div>
+</header>
+
+<section class="projeto">
+  <div class="container">
+    <h2 id="projeto">Projeto</h2>
+    <div class="grade">
+      <div class="item">
+        <h3>Produto</h3>
+        <p>
+          O aplicativo foi desenvolvido para proporcionar uma experiência
+          prática na reserva de horários e mesas, permitindo escolhas rápidas e
+          sem complicações.
+        </p>
+      </div>
+      <div class="item">
+        <h3>Ferramentas</h3>
+        <ul class="ferramentas">
+          <li>
+            <Image style={{ width: '2rem' }} src={FigmaLogo} alt="Figma" />
+          </li>
+          <li><Image src={MiroLogo} alt="Miro" /></li>
+          <li><Image src={MeetLogo} alt="Google Meet" /></li>
+          <li><Image src={NotionLogo} alt="Notion" /></li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Duração do Projeto</h3>
+        <p><time>Novembro a Dezembro de 2024</time></p>
+      </div>
+      <div class="item">
+        <h3>Meu papel</h3>
+        <p>Designer de UX liderando o app desde a concepção até a entrega.</p>
+      </div>
+    </div>
+
+    <h3>Responsabilidades</h3>
+    <p>
+      Pesquisa e análise, prototipagem e design, ux writing, ux research e
+      gestão de projeto.
+    </p>
+
+    <h3>Desafios</h3>
+    <div class="desafios grade">
+      <div class="item">
+        <p class="desafio">
+          Dificuldade em encontrar mesas disponíveis, muitas vezes exigindo
+          reservas via WhatsApp, o que pode ser demorado e pouco prático.
+        </p>
+      </div>
+      <div class="item">
+        <p class="desafio">
+          Experiência de reserva pouco intuitiva, comprometida por uma navegação
+          confusa e interações pouco fluídas.
+        </p>
+      </div>
+    </div>
+
+    <h3>Meta</h3>
+    <p>
+      Identificar os desafios enfrentados pelos usuários durante o processo de
+      reserva e aprimorar a experiência, tornando-a mais confortável, intuitiva
+      e segura.
+    </p>
+  </div>
+</section>
+
+<section class="pesquisa">
+  <div class="container">
+    <h2 id="usuario">Usuário</h2>
+    <h3>Pesquisa com usuários</h3>
+    <p>Aspectos problemáticos encontrados com a pesquisa e insights:</p>
+    <ol class="problemas">
+      <li class="problema">
+        <p>
+          Processo de reserva lento e burocrático, com múltiplas etapas e
+          excesso de solicitações de dados.
+        </p>
+        <ArrowRight />
+        <p>
+          Simplificar o processo de reserva, tornando-o mais rápido e sem etapas
+          desnecessárias, para garantir uma experiência sem frustrações.
+        </p>
+      </li>
+      <li class="problema">
+        <p>Ausência de funcionalidade de reserva direta no aplicativo.</p>
+        <ArrowRight />
+        <p>
+          Integrar uma solução de reserva diretamente no app, sem
+          redirecionamentos para outras plataformas, garantindo mais comodidade
+          e simplicidade.
+        </p>
+      </li>
+      <li class="problema">
+        <p>A complexidade no processo de reserva.</p>
+        <ArrowRight />
+        <p>
+          Desenvolver um design centrado na usabilidade, priorizando clareza,
+          eficiência e uma experiência ágil, com o mínimo de informações
+          necessárias.
+        </p>
+      </li>
+    </ol>
+
+    <h3>Personas</h3>
+
+    <div class="persona">
+      <div class="perfil">
+        <Image
+          alt="Mulher de cabelo ondulado na altura do ombro, usando camisa laranja e sorrindo."
+          src={marilia}
+        />
+        <h4>Marília</h4>
+        <hr />
+        <ul class="detalhes">
+          <li>
+            <span>Idade:</span>
+            46 anos
+          </li>
+          <li>
+            <span>Cidade:</span>
+            Belo Horizonte, MG
+          </li>
+          <li>
+            <span>Estado Civil:</span>
+            Divorciada
+          </li>
+          <li>
+            <span>Família:</span>
+            02 filhos
+          </li>
+          <li>
+            <span>Escolaridade:</span>
+            Superior Completo
+          </li>
+          <li>
+            <span>Profissão:</span>
+            Massagista
+          </li>
+        </ul>
+      </div>
+      <p class="descricao">
+        Marília é uma mulher cisgênero, heterossexual, conhecida por sua
+        personalidade divertida, espontanea e alegre. Após um divórcio recente,
+        está em busca de redescobrir os prazeres da vida de solteira. Ela gosta
+        de sair com as amigas para jantar, conhecer pessoas novas e se divertir.
+      </p>
+      <aside class="frase">
+        “Não quero mais perder tempo, tenho sede de viver”
+      </aside>
+
+      <div class="interesses">
+        <h5>Interesses e Desejos</h5>
+        <ul>
+          <li>Se reunir com as amigas.</li>
+          <li>Conhecer novos restaurantes.</li>
+          <li>Experimentar novas culinárias.</li>
+        </ul>
+      </div>
+
+      <div class="frustracoes">
+        <h5>Frustrações</h5>
+        <ul>
+          <li>Falta de tempo.</li>
+          <li>Problemas com reserva.</li>
+          <li>Chegar no restaurante e ter de aguardar liberação da mesa.</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+
+    <div class="persona">
+      <div class="perfil">
+        <Image
+          alt="Homem jovem, de cabelo loiro e curto, usando uma camisa amarela."
+          src={henrique}
+        />
+        <h4>Henrique</h4>
+        <hr />
+        <ul class="detalhes">
+          <li><span>Idade:</span> 30 anos</li>
+          <li><span>Cidade:</span> Sete Lagoas, MG</li>
+          <li><span>Estado Civil:</span> Solteiro</li>
+          <li><span>Família:</span> Sem filhos</li>
+          <li><span>Escolaridade:</span> Superior Completo</li>
+          <li><span>Profissão:</span> Analista de Suporte</li>
+        </ul>
+      </div>
+      <p class="descricao">
+        Henrique é um homem cisgênero e gay que vive sozinho no interior. Sua
+        personalidade é marcada pela praticidade, agilidade e decisão. Nos
+        momentos de lazer adora sair com os amigos, desfrutar de boas refeições,
+        ouvir música, e explorar cachoeiras. Valoriza a comodidade e busca uma
+        vida confortável, longe de complicações
+      </p>
+      <aside class="frase">“Gosto do prático e ágil, detesto burocracia”</aside>
+      <div class="interesses">
+        <h5>Interesses e Desejos</h5>
+        <ul>
+          <li>Gosta de bom atendimento.</li>
+          <li>Tecnologia e soluções que otimizam o tempo.</li>
+          <li>Preferência por ambientes modernos.</li>
+        </ul>
+      </div>
+      <div class="frustracoes">
+        <h5>Frustrações</h5>
+        <ul>
+          <li>Reserva não garantida.</li>
+          <li>Atendimento demorado.</li>
+          <li>Lugares sem diversidade.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <h3>Jornada do Usuário</h3>
+
+    <p class="caption">
+      <Target />
+      <span class="objetivo">Objetivo:</span> Marília reservar uma mesa em um restaurante.
+    </p>
+    <div class="table-wrapper">
+      <table class="jornada">
+        <thead>
+          <tr>
+            <th scope="col">Fases</th>
+            <th scope="col">Identificação da necessidade</th>
+            <th scope="col">Busca por um restaurante</th>
+            <th scope="col">Escolha do restaurante</th>
+            <th scope="col">Reserva</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Ação</th>
+            <td>
+              <ol>
+                <li>Entra em contato com as amigas</li>
+                <li>Verifica a agenda de todas</li>
+                <li>Definem um tipo de restaurante</li>
+              </ol>
+            </td>
+            <td>
+              <ul>
+                <li>Busca Online</li>
+                <li>Acesso às redes sociais</li>
+                <li>Pedir opinião/recomendação das amigas</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Ver as avaliações</li>
+                <li>Consultar o cardápio</li>
+                <li>Compartilhar com as amigas</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Abrir app</li>
+                <li>Selecionar o dia, horário e mesa</li>
+                <li>Reservar</li>
+                <li>Confirmação de reserva</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Sentimentos</th>
+            <td><span class="emoji">😊</span></td>
+            <td><span class="emoji">🤔</span></td>
+            <td><span class="emoji">🤩</span></td>
+            <td><span class="emoji">😌</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Oportunidade</th>
+            <td>
+              <ul>
+                <li>Calendário compartilhado</li>
+                <li>Enquete para votação sobre o tipo de restaurante</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Coletar as preferências da usuária e indicar restaurantes
+                </li>
+                <li>Criar uma lista com os melhores restaurantes</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Restaurantes bem avaliados aparecem primeiro</li>
+                <li>QR Code ou link para a usuária baixar o app</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Compartilhar a reserva</li>
+                <li>Avaliação e feedback do app</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section class="fluxo">
+    <div class="container">
+      <h3>Fluxo do usuário</h3>
+      <embed
+        src="/user_flow.pdf"
+        width="1024"
+        height="480"
+        type="application/pdf"
       />
     </div>
   </section>
+</section>
 
-  <footer class="obrigado">
-    <div class="container">
-      <h2>Muito obrigado!</h2>
-      <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
-      <ul class="social-media">
-        <li>
-          <a href="https://linkedin.com/in/daniloasreis"
-            ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
-          >
-        </li>
-        <li>
-          <a href="https://www.behance.net/daniloasreis"
-            ><Image alt="Behance" src={Behance} /> daniloasreis</a
-          >
-        </li>
-      </ul>
+<section class="desenvolvimento">
+  <div class="container">
+    <h2 class="fluid">Desenvolvimento</h2>
+    <h3>Wireframes</h3>
+    <ul class="wireframes">
+      <li class="item">
+        <Image src={wireframe1} alt="Wireframe do projeto Vivant Restaurante" />
+      </li>
+      <li class="item">
+        <Image src={wireframe2} alt="Wireframe do projeto Vivant Restaurante" />
+      </li>
+      <li class="item">
+        <Image src={wireframe3} alt="Wireframe do projeto Vivant Restaurante" />
+      </li>
+      <li class="item">
+        <Image src={wireframe4} alt="Wireframe do projeto Vivant Restaurante" />
+      </li>
+    </ul>
+
+    <h3>Resultados dos estudos de usabilidade</h3>
+
+    <div class="estudos">
+      <div class="estudo">
+        <h4 class="titulo"><span class="numero">1º</span> Estudo</h4>
+        <ul>
+          <li>Necessidade de melhorar o fluxo de escolha de mesa.</li>
+          <li>Incluir a opção de editar a reserva.</li>
+          <li>
+            Adicionar um campo para atendimento personalizado em situações
+            especiais, como aniversários e comemorações.
+          </li>
+        </ul>
+      </div>
+      <div class="estudo">
+        <h4 class="titulo"><span class="numero">2º</span> Estudo</h4>
+        <ul>
+          <li>
+            Melhorias no design dos botões da tela inicial (cores, proporção).
+          </li>
+          <li>Aprimorar os textos dos botões de ação para evitar confusão.</li>
+          <li>
+            Adicionar uma tela de confirmação após a avaliação do app,
+            garantindo que o feedback foi registrado com sucesso.
+          </li>
+        </ul>
+      </div>
     </div>
-  </footer>
-</main>
+
+    <h3>Mockup</h3>
+    <ul class="mockups">
+      <li class="item"><Image src={mockup1} alt="" /></li>
+      <li style="width: 48%" class="item">
+        <Image
+          src={mockup2}
+          alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+        />
+      </li>
+      <li style="width: 80%" class="item">
+        <Image
+          src={mockup3}
+          alt="Mockup de Alta Fidelidade do Vivant Restaurante"
+        />
+      </li>
+    </ul>
+
+    <h3>Elementos visuais</h3>
+
+    <div class="elementos-visuais">
+      <div class="logo">
+        <h4>Logomarca</h4>
+        <Image
+          src={VivantLogo}
+          alt="Mesa com duas cadeiras ao centro, no topo está escrito Vivant, abaixo, Restaurante."
+        />
+      </div>
+      <div class="icones">
+        <h4>Ícones</h4>
+        <Image src={Icones} alt="Conjunto de icones utilizados no projeto" />
+      </div>
+      <div class="cores">
+        <h4>Cores</h4>
+        <ul>
+          <li>
+            <span style="background: #FFF8E6" class="cor"></span>#FFF8E6
+          </li>
+          <li>
+            <span style="background: #8D0B41" class="cor"></span>#8D0B41
+          </li>
+          <li>
+            <span style="background: #FBBC05" class="cor"></span>#FBBC05
+          </li>
+          <li>
+            <span style="background: #302E2E" class="cor"></span>#302E2E
+          </li>
+          <li>
+            <span style="background: #4F4D48" class="cor"></span>#4F4D48
+          </li>
+        </ul>
+      </div>
+      <div class="tipografia">
+        <h4>Tipografia</h4>
+        <ul>
+          <li>
+            <span>Anek Odia / MEDIUM / 27px</span><span style="font-size: 27px"
+              >Exemplo</span
+            >
+          </li>
+          <li>
+            <span>Anek Odia / MEDIUM / 20px</span><span style="font-size: 20px"
+              >Exemplo</span
+            >
+          </li>
+          <li>
+            <span>Anek Odia / MEDIUM / 13px</span><span style="font-size: 13px"
+              >Exemplo</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="botoes">
+        <h4>Botões</h4>
+        <ul>
+          <li><button>Rótulo</button></li>
+          <li><button class="light">Rótulo</button></li>
+          <li><button class="round">1</button></li>
+          <li><button class="round light">1</button></li>
+          <li><button class="select"><MapPin /> Rótulo</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="conclusao">
+  <div class="container">
+    <div class="aprendizado">
+      <h2>Conclusão</h2>
+      <h3>Aprendizado</h3>
+      <p>
+        Este projeto reforçou a <strong
+          >importância de entender a fundo as dores e necessidades dos usuários</strong
+        > antes de propor soluções. Aprendi que
+        <strong>simplicidade e clareza</strong> são essenciais para uma experiência
+        fluida, especialmente em processos sensíveis como reservas. Além disso, participar
+        de <strong>todas as etapas do desenvolvimento</strong> ampliou minha visão
+        sobre a integração entre pesquisa, design e usabilidade, destacando a importância
+        da <strong>iteração contínua com base no feedback dos usuários.</strong>
+      </p>
+    </div>
+
+    <div class="etapas">
+      <h3>Próximas etapas</h3>
+      <ol>
+        <li>
+          Coletar dados de uso do aplicativo após o lançamento para entender
+          melhor como os usuários interagem com as demais funcionalidades.
+        </li>
+        <li>
+          Analisar os feedbacks recebidos nas avaliações para identificar
+          oportunidades de aprimoramento e focar nas áreas que precisam de
+          melhorias.
+        </li>
+      </ol>
+    </div>
+    <Image
+      src={conclusaoMockup}
+      alt="Uma mão segura um aparelho celular com o mockup de alta fidelidade do Vivant Restaurante aberto."
+    />
+  </div>
+</section>
+
+<footer class="obrigado">
+  <div class="container">
+    <h2>Muito obrigado!</h2>
+    <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
+    <ul class="social-media">
+      <li>
+        <a href="https://linkedin.com/in/daniloasreis"
+          ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
+        >
+      </li>
+      <li>
+        <a href="https://www.behance.net/daniloasreis"
+          ><Image alt="Behance" src={Behance} /> daniloasreis</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

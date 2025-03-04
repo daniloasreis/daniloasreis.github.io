@@ -6,17 +6,10 @@ body {
   font-size: 1.125rem;
 }
 
-main {
-  height: 100lvh;
-  scroll-snap-type: y proximity;
-  overflow-y: auto;
-}
-
 footer,
 header,
 section {
   background-color: var(--background-color);
-  scroll-snap-align: start;
 }
 
 .subsection {
