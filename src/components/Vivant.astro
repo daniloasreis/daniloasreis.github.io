@@ -11,8 +11,11 @@ import MeetLogo from '../assets/meet_logo.svg';
 import NotionLogo from '../assets/notion_logo.svg';
 import VivantLogo from '../assets/vivant_logo.svg';
 import Icones from '../assets/icones.svg';
+import Linkedin from '../assets/linkedin-icon.svg';
+import Behance from '../assets/behance-icon.svg';
 
 import headerMockup from '../assets/header_mockup.png';
+import conclusaoMockup from '../assets/conclusao_mockup.png';
 import marilia from '../assets/marilia.jpg';
 import henrique from '../assets/henrique.jpg';
 
@@ -365,14 +368,19 @@ import MapPin from '~icons/ph/map-pin-fill';
           </tbody>
         </table>
       </div>
-      <h3>Fluxo do usuário</h3>
-      <iframe
-        width="768"
-        height="432"
-        src="https://miro.com/app/embed/uXjVIehzvLc=/?pres=1&frameId=3458764617179332515&embedId=735062471171"
-        allow="fullscreen; clipboard-read; clipboard-write"
-        allowfullscreen></iframe>
     </div>
+
+    <section class="fluxo">
+      <div class="container">
+        <h3>Fluxo do usuário</h3>
+        <embed
+          src="/user_flow.pdf"
+          width="1024"
+          height="480"
+          type="application/pdf"
+        />
+      </div>
+    </section>
   </section>
 
   <section class="desenvolvimento">
@@ -524,41 +532,60 @@ import MapPin from '~icons/ph/map-pin-fill';
 
   <section class="conclusao">
     <div class="container">
-      <h2>Conclusão</h2>
-      <h3>Aprendizado</h3>
-      <p>
-        Este projeto reforçou a <strong
-          >importância de entender a fundo as dores e necessidades dos usuários</strong
-        > antes de propor soluções. Aprendi que
-        <strong>simplicidade e clareza</strong> são essenciais para uma experiência
-        fluida, especialmente em processos sensíveis como reservas. Além disso, participar
-        de <strong>todas as etapas do desenvolvimento</strong> ampliou minha visão
-        sobre a integração entre pesquisa, design e usabilidade, destacando a importância
-        da <strong>iteração contínua com base no feedback dos usuários.</strong>
-      </p>
+      <div class="aprendizado">
+        <h2>Conclusão</h2>
+        <h3>Aprendizado</h3>
+        <p>
+          Este projeto reforçou a <strong
+            >importância de entender a fundo as dores e necessidades dos
+            usuários</strong
+          > antes de propor soluções. Aprendi que
+          <strong>simplicidade e clareza</strong> são essenciais para uma experiência
+          fluida, especialmente em processos sensíveis como reservas. Além disso,
+          participar de <strong>todas as etapas do desenvolvimento</strong> ampliou
+          minha visão sobre a integração entre pesquisa, design e usabilidade, destacando
+          a importância da <strong
+            >iteração contínua com base no feedback dos usuários.</strong
+          >
+        </p>
+      </div>
 
-      <h3>Próximas etapas</h3>
-      <ol>
-        <li>
-          Coletar dados de uso do aplicativo após o lançamento para entender
-          melhor como os usuários interagem com as demais funcionalidades.
-        </li>
-        <li>
-          Analisar os feedbacks recebidos nas avaliações para identificar
-          oportunidades de aprimoramento e focar nas áreas que precisam de
-          melhorias.
-        </li>
-      </ol>
+      <div class="etapas">
+        <h3>Próximas etapas</h3>
+        <ol>
+          <li>
+            Coletar dados de uso do aplicativo após o lançamento para entender
+            melhor como os usuários interagem com as demais funcionalidades.
+          </li>
+          <li>
+            Analisar os feedbacks recebidos nas avaliações para identificar
+            oportunidades de aprimoramento e focar nas áreas que precisam de
+            melhorias.
+          </li>
+        </ol>
+      </div>
+      <Image
+        src={conclusaoMockup}
+        alt="Uma mão segura um aparelho celular com o mockup de alta fidelidade do Vivant Restaurante aberto."
+      />
     </div>
   </section>
 
-  <footer>
+  <footer class="obrigado">
     <div class="container">
       <h2>Muito obrigado!</h2>
-      <h3>Danilo Reis - UX/UI Design</h3>
-      <ul>
-        <li>Linkedin</li>
-        <li>Behance</li>
+      <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
+      <ul class="social-media">
+        <li>
+          <a href="https://linkedin.com/in/daniloasreis"
+            ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
+          >
+        </li>
+        <li>
+          <a href="https://www.behance.net/daniloasreis"
+            ><Image alt="Behance" src={Behance} /> daniloasreis</a
+          >
+        </li>
       </ul>
     </div>
   </footer>
