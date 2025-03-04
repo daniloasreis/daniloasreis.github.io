@@ -100,6 +100,7 @@ a {
     grid-area: image;
     margin-bottom: calc(-1 * tokens.$space-12);
     position: relative;
+    container: Image / size;
     img {
       position: absolute;
       height: calc(100vh - tokens.$space-12);
@@ -108,6 +109,9 @@ a {
       left: 0;
       top: 0;
       max-width: unset;
+      @container Image (max-height: 15rem) {
+        display: none;
+      }
     }
   }
 
