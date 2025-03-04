@@ -332,6 +332,10 @@ import Target from '~icons/streamline/target';
     hr {
       border-bottom: 1px solid colors.$neutral-light;
       width: calc(100% + tokens.$space-5);
+      @media (max-width: $responsive-bp) {
+        width: 100%;
+        opacity: 0.3;
+      }
     }
     .perfil {
       grid-area: perfil;
@@ -342,6 +346,7 @@ import Target from '~icons/streamline/target';
       border-right: 1px solid colors.$neutral-light;
       @media (max-width: $responsive-bp) {
         border-right: none;
+        padding-right: 0;
       }
       h4 {
         text-align: center;
@@ -700,6 +705,8 @@ import Target from '~icons/streamline/target';
           </ul>
         </div>
       </div>
+
+      <hr />
 
       <h3>Jornada do Usuário</h3>
 
