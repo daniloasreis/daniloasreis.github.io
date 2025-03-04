@@ -13,6 +13,7 @@ import marilia from '../assets/marilia.jpg';
 import henrique from '../assets/henrique.jpg';
 
 import ArrowRight from '~icons/lucide/arrow-right';
+import Target from '~icons/streamline/target';
 ---
 
 <style lang="scss">
@@ -59,6 +60,7 @@ import ArrowRight from '~icons/lucide/arrow-right';
   p {
     line-height: 1.6;
     margin-bottom: 0.75em;
+    hyphens: auto;
   }
 
   .container {
@@ -300,10 +302,11 @@ import ArrowRight from '~icons/lucide/arrow-right';
   }
 
   .persona {
-    $responsive-bp: 40rem;
+    $responsive-bp: 48rem;
     margin-block: tokens.$space-8;
     line-height: 1.6;
     display: grid;
+    gap: tokens.$space-5;
     grid:
       'perfil frase frase' min-content
       'perfil interesses frustracoes' min-content
@@ -316,7 +319,6 @@ import ArrowRight from '~icons/lucide/arrow-right';
         'interesses'
         'frustracoes' / 1fr;
     }
-    gap: tokens.$space-5;
     h4,
     h5 {
       font-size: 24px;
@@ -388,6 +390,69 @@ import ArrowRight from '~icons/lucide/arrow-right';
       border: 1px solid colors.$accent;
       border-radius: tokens.$space-5;
       padding: tokens.$space-5;
+    }
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-y: auto;
+    border: 1px solid colors.$accent;
+    border-radius: tokens.$space-4;
+    scrollbar-color: colors.$main colors.$accent;
+    background:
+      linear-gradient(to right, colors.$main, transparent) left,
+      linear-gradient(to left, colors.$main, transparent) right,
+      linear-gradient(to right, hsl(0deg 0% 0% / 15%), transparent) left,
+      linear-gradient(to left, hsl(0deg 0% 0% / 15%), transparent) right;
+    background-repeat: no-repeat;
+    background-size:
+      4rem 100%,
+      4rem 100%,
+      2rem 100%,
+      2rem 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
+
+  .caption {
+    text-align: left;
+    .objetivo {
+      color: colors.$accent;
+    }
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .jornada {
+    min-width: 76rem;
+    border-collapse: collapse;
+    th {
+      color: colors.$accent;
+    }
+    th,
+    td {
+      text-align: left;
+      vertical-align: top;
+      border: 1px solid colors.$accent;
+      padding-inline: tokens.$space-4;
+      padding-block: tokens.$space-3;
+    }
+    th:first-child {
+      border-left: 0;
+    }
+    :is(td, th):last-child {
+      border-right: 0;
+    }
+    tr:first-child th {
+      border-top: 0;
+    }
+    tbody tr:last-child :is(td, th) {
+      border-bottom: 0;
+    }
+    ul,
+    ol {
+      padding-left: 2ch;
     }
   }
 </style>
@@ -598,6 +663,7 @@ import ArrowRight from '~icons/lucide/arrow-right';
             src={henrique}
           />
           <h4>Henrique</h4>
+          <hr />
           <ul class="detalhes">
             <li><span>Idade:</span> 30 anos</li>
             <li><span>Cidade:</span> Sete Lagoas, MG</li>
@@ -637,89 +703,93 @@ import ArrowRight from '~icons/lucide/arrow-right';
 
       <h3>Jornada do Usuário</h3>
 
-      <table>
-        <caption>Objetivo: Marília reservar uma mesa em um restaurante.</caption
-        >
-        <thead>
-          <tr>
-            <th scope="col">Fases</th>
-            <th scope="col">Identificação da necessidade</th>
-            <th scope="col">Busca por um restaurante</th>
-            <th scope="col">Escolha do restaurante</th>
-            <th scope="col">Reserva</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Ação</th>
-            <td>
-              <ol>
-                <li>Entra em contato com as amigas</li>
-                <li>Verifica a agenda de todas</li>
-                <li>Definem um tipo de restaurante</li>
-              </ol>
-            </td>
-            <td>
-              <ul>
-                <li>Busca Online</li>
-                <li>Acesso às redes sociais</li>
-                <li>Pedir opinião/recomendação das amigas</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Ver as avaliações</li>
-                <li>Consultar o cardápio</li>
-                <li>Compartilhar com as amigas</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Abrir app</li>
-                <li>Selecionar o dia, horário e mesa</li>
-                <li>Reservar</li>
-                <li>Confirmação de reserva</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">Sentimentos</th>
-            <td>😊</td>
-            <td>🤔</td>
-            <td>🤩</td>
-            <td>😌</td>
-          </tr>
-          <tr>
-            <th scope="row">Oportunidade</th>
-            <td>
-              <ul>
-                <li>Calendário compartilhado</li>
-                <li>Enquete para votação sobre o tipo de restaurante</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>
-                  Coletar as preferências da usuária e indicar restaurantes
-                </li>
-                <li>Criar uma lista com os melhores restaurantes</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Restaurantes bem avaliados aparecem primeiro</li>
-                <li>QR Code ou link para a usuária baixar o app</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Compartilhar a reserva</li>
-                <li>Avaliação e feedback do app</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <p class="caption">
+        <Target />
+        <span class="objetivo">Objetivo:</span> Marília reservar uma mesa em um restaurante.
+      </p>
+      <div class="table-wrapper">
+        <table class="jornada">
+          <thead>
+            <tr>
+              <th scope="col">Fases</th>
+              <th scope="col">Identificação da necessidade</th>
+              <th scope="col">Busca por um restaurante</th>
+              <th scope="col">Escolha do restaurante</th>
+              <th scope="col">Reserva</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ação</th>
+              <td>
+                <ol>
+                  <li>Entra em contato com as amigas</li>
+                  <li>Verifica a agenda de todas</li>
+                  <li>Definem um tipo de restaurante</li>
+                </ol>
+              </td>
+              <td>
+                <ul>
+                  <li>Busca Online</li>
+                  <li>Acesso às redes sociais</li>
+                  <li>Pedir opinião/recomendação das amigas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Ver as avaliações</li>
+                  <li>Consultar o cardápio</li>
+                  <li>Compartilhar com as amigas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Abrir app</li>
+                  <li>Selecionar o dia, horário e mesa</li>
+                  <li>Reservar</li>
+                  <li>Confirmação de reserva</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sentimentos</th>
+              <td>😊</td>
+              <td>🤔</td>
+              <td>🤩</td>
+              <td>😌</td>
+            </tr>
+            <tr>
+              <th scope="row">Oportunidade</th>
+              <td>
+                <ul>
+                  <li>Calendário compartilhado</li>
+                  <li>Enquete para votação sobre o tipo de restaurante</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Coletar as preferências da usuária e indicar restaurantes
+                  </li>
+                  <li>Criar uma lista com os melhores restaurantes</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Restaurantes bem avaliados aparecem primeiro</li>
+                  <li>QR Code ou link para a usuária baixar o app</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Compartilhar a reserva</li>
+                  <li>Avaliação e feedback do app</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <h3>Fluxo do usuário</h3>
       FLUXO DO USUARIO GOES HERE
     </div>
