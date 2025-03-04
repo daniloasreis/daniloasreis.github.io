@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.1"
+    "@fontsource-variable/anek-odia": "^5.2.5",
+    "astro": "^5.4.1",
+    "sass": "^1.85.1"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.28",
+    "unplugin-icons": "^22.1.0"
   }
 }
