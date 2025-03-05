@@ -15,7 +15,7 @@
 .bg-accent {
   background-color: colors.$accent;
   h2 {
-    color: color.adjust(colors.$accent, $lightness: -15%, $saturation: -35%);
+    color: color.adjust(colors.$accent, $lightness: -10%);
   }
   h3 {
     color: colors.$main;
@@ -51,4 +51,12 @@
 .outline {
   border: var(--outline-width, 4px) solid var(--outline-color, #{colors.$main});
   border-radius: tokens.$space-5;
+}
+
+.flex-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  gap: tokens.$space-4;
+  flex-wrap: wrap;
 }
