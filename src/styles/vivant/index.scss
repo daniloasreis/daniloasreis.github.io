@@ -11,28 +11,29 @@ strong {
   font-weight: 600;
 }
 
-section {
-  h2 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: -1.3em;
-    color: colors.$accent-light;
-    margin-inline: -0.1ch;
-    &.fluid {
-      font-size: clamp(2rem, 8vw, 4rem);
-    }
-  }
+big {
+  font-size: 2rem;
+  font-weight: 200;
+}
 
-  h3 {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: colors.$main;
-    font-size: 2rem;
-    margin-top: 1em;
-    margin-bottom: 0.25em;
-    margin-inline: -0.05ch;
+h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: -1.3em;
+  margin-inline: -0.1ch;
+  &.fluid {
+    font-size: clamp(2rem, 8vw, 4rem);
   }
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+  margin-inline: -0.05ch;
 }
 
 p {

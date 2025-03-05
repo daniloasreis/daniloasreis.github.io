@@ -1,16 +1,39 @@
+@use 'sass:color';
 @use './colors.scss';
 @use './tokens.scss';
 
 .bg-main {
   background-color: colors.$main;
+  h2 {
+    color: color.adjust(colors.$main, $lightness: -15%, $saturation: -35%);
+  }
+  h3 {
+    color: colors.$accent;
+  }
 }
 
 .bg-accent {
   background-color: colors.$accent;
+  h2 {
+    color: color.adjust(colors.$accent, $lightness: -15%, $saturation: -35%);
+  }
+  h3 {
+    color: colors.$main;
+  }
 }
 
 .bg-neutral {
   background-color: colors.$neutral-light;
+  h2 {
+    color: color.adjust(
+      colors.$neutral-light,
+      $lightness: -15%,
+      $saturation: -35%
+    );
+  }
+  h3 {
+    color: colors.$main;
+  }
 }
 
 .color-neutral {
