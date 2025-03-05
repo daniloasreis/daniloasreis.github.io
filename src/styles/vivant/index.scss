@@ -62,21 +62,25 @@ a {
 
   .container {
     display: grid;
-    grid: 'text image' / 1.2fr 0.7fr;
-    align-items: center;
-    gap: tokens.$space-4;
+    grid:
+      '. .' 1fr
+      'text image' min-content
+      '. image' 1fr / 1.2fr 0.7fr;
+    align-items: flex-start;
+    column-gap: tokens.$space-4;
     overflow: visible;
+    padding-block: 0;
   }
 
   .image {
     grid-area: image;
-    margin-bottom: calc(-1 * tokens.$space-8);
     position: relative;
     container: Image / size;
     align-self: stretch;
+    margin-top: tokens.$space-4;
     img {
       position: absolute;
-      height: calc(100vh - tokens.$space-8);
+      height: 100%;
       width: auto;
       aspect-ratio: 706 / 1003;
       left: 0;
@@ -92,6 +96,7 @@ a {
     grid-area: text;
     display: flex;
     flex-direction: column;
+    padding-block: tokens.$space-4;
   }
 
   @media (max-aspect-ratio: 8 / 10) {
