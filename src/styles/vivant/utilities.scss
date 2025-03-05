@@ -1,0 +1,31 @@
+@use './colors.scss';
+@use './tokens.scss';
+
+.bg-main {
+  background-color: colors.$main;
+}
+
+.bg-accent {
+  background-color: colors.$accent;
+}
+
+.bg-neutral {
+  background-color: colors.$neutral-light;
+}
+
+.color-neutral {
+  color: colors.$neutral-light;
+}
+
+.color-main {
+  color: colors.$main;
+}
+
+.color-accent {
+  color: colors.$accent;
+}
+
+.outline {
+  border: var(--outline-width, 4px) solid var(--outline-color, #{colors.$main});
+  border-radius: tokens.$space-5;
+}

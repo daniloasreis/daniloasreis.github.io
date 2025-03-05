@@ -1,0 +1,77 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+type Props = {
+  nome: string;
+  foto: {
+    src: ImageMetadata;
+    alt: string;
+  };
+  idade: number;
+  cidade: string;
+  estadoCivil: string;
+  familia: string;
+  escolaridade: string;
+  profissao: string;
+
+  frase: string;
+
+  interesses: string[];
+  frustracoes: string[];
+};
+
+const {
+  nome,
+  foto,
+  idade,
+  cidade,
+  estadoCivil,
+  familia,
+  escolaridade,
+  profissao,
+  frase,
+  interesses,
+  frustracoes,
+} = Astro.props;
+---
+
+<div class="persona">
+  <div class="perfil">
+    <Image alt={foto.alt} src={foto.src} />
+    <h4>{nome}</h4>
+    <hr />
+    <ul class="detalhes">
+      <li><span class="color-accent">Idade:</span> {idade} anos</li>
+      <li><span class="color-accent">Cidade:</span> {cidade}</li>
+      <li><span class="color-accent">Estado Civil:</span> {estadoCivil}</li>
+      <li><span class="color-accent">Família:</span> {familia}</li>
+      <li>
+        <span class="color-accent">Escolaridade:</span>
+        {escolaridade}
+      </li>
+      <li>
+        <span class="color-accent">Profissão:</span>
+        {profissao}
+      </li>
+    </ul>
+  </div>
+  <p class="descricao outline">
+    <slot />
+  </p>
+  <blockquote class="frase outline color-accent">
+    “{frase}”
+  </blockquote>
+  <div class="interesses">
+    <h5>Interesses e Desejos</h5>
+    <ul>
+      {interesses.map((interesse) => <li>{interesse}</li>)}
+    </ul>
+  </div>
+  <div class="frustracoes">
+    <h5>Frustrações</h5>
+    <ul>
+      {frustracoes.map((interesse) => <li>{interesse}</li>)}
+    </ul>
+  </div>
+</div>

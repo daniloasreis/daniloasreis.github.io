@@ -1,0 +1,10 @@
+@use './colors.scss';
+@use './tokens.scss';
+
+.container {
+  margin-inline: auto;
+  padding-inline: tokens.$space-6;
+  padding-block: tokens.$space-8;
+  max-width: 64rem;
+  min-height: 100dvh;
+}
