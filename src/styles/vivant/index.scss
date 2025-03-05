@@ -137,10 +137,6 @@ a {
     font-weight: 300;
   }
   .tags {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    gap: tokens.$space-6;
     margin-bottom: tokens.$space-8;
     li {
       padding-inline: tokens.$space-4;
@@ -160,10 +156,6 @@ a {
 .projeto {
   counter-reset: desafio;
   .ferramentas {
-    display: flex;
-    padding: 0;
-    list-style-type: none;
-    gap: tokens.$space-6;
     img {
       width: 3rem;
       height: 3rem;
@@ -218,11 +210,7 @@ a {
   }
   .problemas {
     counter-reset: problemas;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
     flex-direction: column;
-    gap: tokens.$space-6;
     margin-top: tokens.$space-6;
   }
   .problema {
@@ -393,11 +381,7 @@ a {
     }
   }
   .mockups {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
     flex-direction: column;
-    gap: tokens.$space-6;
     align-items: center;
     margin-block: tokens.$space-4;
     img {
@@ -411,12 +395,6 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   display: grid;
   gap: tokens.$space-8;
-  h4 {
-    font-size: 1.5rem;
-    color: colors.$main;
-    font-weight: 500;
-    margin-bottom: tokens.$space-4;
-  }
   img {
     max-width: 100%;
     height: auto;
@@ -424,18 +402,8 @@ a {
   .cores {
     grid-row: span 2;
   }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
   .logo img {
     max-width: 20rem;
-  }
-  .cores ul,
-  .botoes ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: tokens.$space-4;
   }
   .cor {
     height: 2rem;
@@ -448,14 +416,10 @@ a {
     row-gap: tokens.$space-4;
     border-radius: tokens.$space-2;
   }
-  .tipografia ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: tokens.$space-4;
+  :is(.tipografias, .botoes, .cores) {
+    --list-gap: #{tokens.$space-4};
   }
-  .tipografia li {
+  .tipografia {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -579,10 +543,6 @@ a {
     margin-bottom: tokens.$space-6;
   }
   .social-media {
-    display: flex;
-    gap: tokens.$space-4;
-    list-style-type: none;
-    padding: 0;
     img {
       width: 2rem;
       height: 2rem;

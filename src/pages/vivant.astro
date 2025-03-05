@@ -84,7 +84,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
           <p><big>Simplificando a reserva de mesas e horários</big></p>
         </hgroup>
 
-        <ul class="tags">
+        <ul class="tags flex-list">
           <li>UX/UI Design</li>
           <li>UX Research</li>
         </ul>
@@ -114,7 +114,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         </div>
         <div class="item">
           <h3>Ferramentas</h3>
-          <ul class="ferramentas">
+          <ul class="ferramentas flex-list">
             <li>
               <Image style={{ width: '2rem' }} src={FigmaLogo} alt="Figma" />
             </li>
@@ -169,7 +169,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
       <h2 id="usuario">Usuário</h2>
       <h3>Pesquisa com usuários</h3>
       <p>Aspectos problemáticos encontrados com a pesquisa e insights:</p>
-      <ol class="problemas">
+      <ol class="problemas flex-list">
         <li class="problema">
           <p class="outline">
             Processo de reserva lento e burocrático, com múltiplas etapas e
@@ -433,7 +433,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
       </div>
 
       <h3>Mockup</h3>
-      <ul class="mockups">
+      <ul class="mockups flex-list">
         <li class="item"><Image src={mockup1} alt="" /></li>
         <li style="width: 48%" class="item">
           <Image
@@ -465,7 +465,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         </div>
         <div class="cores">
           <h4>Cores</h4>
-          <ul>
+          <ul class="flex-list">
             <li>
               <span style="background: #FFF8E6" class="cor"></span>#FFF8E6
             </li>
@@ -483,20 +483,20 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
             </li>
           </ul>
         </div>
-        <div class="tipografia">
+        <div class="tipografias">
           <h4>Tipografia</h4>
-          <ul>
-            <li>
+          <ul class="flex-list flex-column">
+            <li class="tipografia">
               <span>Anek Odia / MEDIUM / 27px</span><span
                 style="font-size: 27px">Exemplo</span
               >
             </li>
-            <li>
+            <li class="tipografia">
               <span>Anek Odia / MEDIUM / 20px</span><span
                 style="font-size: 20px">Exemplo</span
               >
             </li>
-            <li>
+            <li class="tipografia">
               <span>Anek Odia / MEDIUM / 13px</span><span
                 style="font-size: 13px">Exemplo</span
               >
@@ -505,7 +505,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         </div>
         <div class="botoes">
           <h4>Botões</h4>
-          <ul>
+          <ul class="flex-list">
             <li><button>Rótulo</button></li>
             <li><button class="light">Rótulo</button></li>
             <li><button class="round">1</button></li>
@@ -562,7 +562,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
     <div class="container">
       <h2>Muito obrigado!</h2>
       <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
-      <ul class="social-media">
+      <ul class="social-media flex-list">
         <li>
           <a href="https://linkedin.com/in/daniloasreis"
             ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
