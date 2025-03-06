@@ -363,7 +363,13 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
   <section class="fluxo bg-main color-neutral">
     <div class="container">
       <h3>Fluxo do usuário</h3>
-      <Image src={UserFlow} alt="Fluxograma de uso da aplicação." />
+      <iframe
+        class="userflow"
+        width="768"
+        height="768"
+        src="https://miro.com/app/embed/uXjVIehzvLc=/?pres=1&frameId=3458764617179332515&embedId=309238824385"
+        allow="fullscreen; clipboard-read; clipboard-write"
+        allowfullscreen></iframe>
     </div>
   </section>
 
