@@ -1,6 +1,6 @@
 @use 'sass:color';
 @use './colors.scss';
-@use './tokens.scss';
+@use '@styles/tokens.scss';
 
 .bg-main {
   background-color: colors.$main;
