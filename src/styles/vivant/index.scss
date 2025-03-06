@@ -104,7 +104,7 @@
 .projeto {
   counter-reset: desafio;
   .ferramentas {
-    img {
+    svg {
       width: 3rem;
       height: 3rem;
     }
@@ -343,14 +343,14 @@
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   display: grid;
   gap: tokens.$space-8;
-  img {
+  svg {
     max-width: 100%;
     height: auto;
   }
   .cores {
     grid-row: span 2;
   }
-  .logo img {
+  .logo svg {
     max-width: 20rem;
   }
   .cor {
@@ -491,7 +491,7 @@
     margin-bottom: tokens.$space-6;
   }
   .social-media {
-    img {
+    svg {
       width: 2rem;
       height: 2rem;
     }

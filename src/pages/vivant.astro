@@ -114,12 +114,10 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         <div class="item">
           <h3>Ferramentas</h3>
           <ul class="ferramentas flex-list">
-            <li>
-              <Image style={{ width: '2rem' }} src={FigmaLogo} alt="Figma" />
-            </li>
-            <li><Image src={MiroLogo} alt="Miro" /></li>
-            <li><Image src={MeetLogo} alt="Google Meet" /></li>
-            <li><Image src={NotionLogo} alt="Notion" /></li>
+            <li><FigmaLogo /></li>
+            <li><MiroLogo /></li>
+            <li><MeetLogo /></li>
+            <li><NotionLogo /></li>
           </ul>
         </div>
         <div class="item">
@@ -453,14 +451,11 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
       <div class="elementos-visuais">
         <div class="logo">
           <h4>Logomarca</h4>
-          <Image
-            src={VivantLogo}
-            alt="Mesa com duas cadeiras ao centro, no topo está escrito Vivant, abaixo, Restaurante."
-          />
+          <VivantLogo />
         </div>
         <div class="icones">
           <h4>Ícones</h4>
-          <Image src={Icones} alt="Conjunto de icones utilizados no projeto" />
+          <Icones />
         </div>
         <div class="cores">
           <h4>Cores</h4>
@@ -563,14 +558,14 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
       <h3><strong>Danilo Reis</strong> - UX/UI Design</h3>
       <ul class="social-media flex-list">
         <li>
-          <a href="https://linkedin.com/in/daniloasreis"
-            ><Image alt="Linkedin" src={Linkedin} /> daniloasreis</a
-          >
+          <a href="https://linkedin.com/in/daniloasreis">
+            <Linkedin /> daniloasreis
+          </a>
         </li>
         <li>
-          <a href="https://www.behance.net/daniloasreis"
-            ><Image alt="Behance" src={Behance} /> daniloasreis</a
-          >
+          <a href="https://www.behance.net/daniloasreis">
+            <Behance /> daniloasreis
+          </a>
         </li>
       </ul>
     </div>
