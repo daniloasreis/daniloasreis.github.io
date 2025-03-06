@@ -1,13 +1,27 @@
 ---
 import '@fontsource/poppins/500';
 import Layout from '@layouts/Layout.astro';
+import '@styles/psiconect/index.scss';
 
-import '@styles/reset.scss';
-import '@styles/psiconect/typography.scss';
-import '@styles/psiconect/utilities.scss';
+import PsiconectLogo from '@assets/psiconect/logo.svg';
 ---
 
-<Layout title="Vivant Restaurante">
-  <h1>Psiconect</h1>
-  <p><big>Tornando o Atendimento Psicológico Online Mais Acessível.</big></p>
+<Layout title="Psiconect">
+  <header class="header page bg-neutral">
+    <div class="hero-container">
+      <div class="box">
+        <PsiconectLogo class="logo" />
+        <p class="subtitle">
+          <big class="fluid color-main">
+            Tornando o atendimento psicológico online mais acessível.
+          </big>
+        </p>
+        <ul class="flex-list">
+          <li class="fluid tag color-main">UX/UI Design</li>
+          <li class="fluid tag color-main">Danilo Reis</li>
+        </ul>
+      </div>
+      <div class="hero bg-dots"></div>
+    </div>
+  </header>
 </Layout>

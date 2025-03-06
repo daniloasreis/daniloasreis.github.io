@@ -1,4 +1,5 @@
 @use './colors.scss';
+@use '@styles/tokens.scss';
 
 .bg-main {
   background-color: colors.$main;
@@ -9,7 +10,7 @@
 }
 
 .bg-neutral {
-  background-color: colors.$neutral-light;
+  background-color: colors.$neutral-dark;
 }
 
 .color-text {
@@ -26,4 +27,49 @@
 
 .color-accent {
   color: colors.$accent;
+}
+
+.bg-dots {
+  background: var(--background, linear-gradient(colors.$main, colors.$accent));
+  background: var(
+    --background,
+    linear-gradient(in oklch, colors.$main, colors.$accent)
+  );
+  mask: url('/dots.svg');
+  mask-size: var(--density, 1rem);
+  mask-repeat: round;
+}
+
+.box {
+  padding-inline: tokens.$space-6;
+  padding-block: tokens.$space-8;
+}
+
+.page {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  max-width: 64rem;
+  margin-inline: auto;
+  min-height: 100dvh;
+}
+
+.flex-list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  gap: var(--list-gap, tokens.$space-6);
+  flex-wrap: wrap;
+}
+
+.fluid {
+  font-size: clamp(
+    var(--fluid-typography-min),
+    4vmin,
+    var(--fluid-typography-max)
+  );
 }

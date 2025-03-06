@@ -5,4 +5,12 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
   line-height: 1.6;
+  color: colors.$text;
+}
+
+big {
+  --fluid-typography-min: 1.25rem;
+  --fluid-typography-max: 2rem;
+  font-size: 2rem;
+  hyphens: none;
 }

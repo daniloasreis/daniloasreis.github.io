@@ -1,0 +1,12 @@
+@use './colors.scss';
+@use '@styles/tokens.scss';
+
+.tag {
+  --fluid-typography-min: 0.75rem;
+  --fluid-typography-max: 1rem;
+  border: 2px solid colors.$accent;
+  padding-inline: tokens.$space-4;
+  padding-block: 0.5em;
+  border-radius: 2em;
+  text-transform: uppercase;
+}
