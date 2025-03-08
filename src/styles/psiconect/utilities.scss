@@ -62,10 +62,11 @@
 
 .hero-container {
   display: grid;
-  grid-template-columns: var(--left-width, 1fr) var(--right-width, 50%);
+  grid-template-columns: var(--columns, 1fr 50%);
   max-width: 64rem;
   margin-inline: auto;
   min-height: 100dvh;
+  overflow: clip;
 }
 
 .flex-list {
