@@ -1,5 +1,9 @@
 ---
+import '@fontsource/poppins/400';
 import '@fontsource/poppins/500';
+import '@fontsource/poppins/600';
+import '@fontsource/poppins/700';
+
 import Layout from '@layouts/Layout.astro';
 import '@styles/psiconect/index.scss';
 
@@ -7,6 +11,7 @@ import PsiconectLogo from '@assets/psiconect/logo.svg';
 import { Picture } from 'astro:assets';
 
 import header from '@assets/psiconect/header.png';
+import projeto from '@assets/psiconect/projeto.png';
 ---
 
 <Layout title="Psiconect">
@@ -33,9 +38,21 @@ import header from '@assets/psiconect/header.png';
       </div>
     </div>
   </header>
-  <section class="page bg-neutral">
+  <section class="projeto page page-padding bg-neutral">
     <div class="hero-container">
-      <div class="hero"></div>
+      <div class="hero">
+        <div class="float-area">
+          <div aria-hidden class="bg-dots"></div>
+        </div>
+        <div class="float-area">
+          <div aria-hidden class="bg-dots"></div>
+        </div>
+        <Picture
+          class="hero__image"
+          alt="Ilustração de uma pessoa sentada utilizando um celular. Ao seu lado, um cachorro dorme."
+          src={projeto}
+        />
+      </div>
       <div class="box">
         <h2>O Projeto</h2>
         <p>

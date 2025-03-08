@@ -4,7 +4,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125rem;
-  line-height: 1.6;
+  font-weight: 500;
+  line-height: 1.8;
   color: colors.$text;
 }
 
@@ -16,9 +17,33 @@ big {
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: 400;
   font-size: 3rem;
   color: colors.$main;
   line-height: 1;
   margin-bottom: tokens.$space-6;
+}
+
+h2 {
+  color: colors.$main;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: tokens.$space-6;
+  font-weight: 600;
+}
+
+p {
+  hyphens: auto;
+  margin-bottom: tokens.$space-4;
+}
+
+strong {
+  color: colors.$main;
+  font-weight: 600;
+}
+
+mark {
+  background: none;
+  font-weight: 800;
+  color: colors.$main;
 }

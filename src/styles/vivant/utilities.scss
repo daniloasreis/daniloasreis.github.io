@@ -64,3 +64,9 @@
 .flex-column {
   flex-direction: column;
 }
+
+.page-padding {
+  min-height: calc(100dvh - 2 * tokens.$space-2);
+  padding-inline: tokens.$space-4;
+  padding-block: tokens.$space-8;
+}
