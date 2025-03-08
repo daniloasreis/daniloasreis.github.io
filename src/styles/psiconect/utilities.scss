@@ -58,6 +58,7 @@
 .page {
   width: 100%;
   min-height: 100dvh;
+  overflow-x: clip;
 }
 
 .hero-container {
@@ -66,7 +67,6 @@
   max-width: 64rem;
   margin-inline: auto;
   min-height: 100dvh;
-  overflow: clip;
 }
 
 .flex-list {
