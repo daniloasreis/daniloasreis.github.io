@@ -11,6 +11,10 @@
   text-transform: uppercase;
 }
 
+.hero {
+  padding-left: tokens.$space-8;
+}
+
 .hero__image {
   width: 50vw;
   min-height: 100vh;
@@ -18,4 +22,6 @@
   object-position: left;
   height: auto;
   isolation: isolate;
+  filter: drop-shadow(5px 5px 12px rgba(0, 0, 0, 0.2))
+    drop-shadow(10px 10px 24px rgba(0, 0, 0, 0.1));
 }
