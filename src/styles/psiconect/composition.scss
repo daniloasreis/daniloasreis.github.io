@@ -9,10 +9,15 @@
     flex-direction: column;
     justify-content: center;
   }
+  h1 {
+    position: relative;
+  }
   .logo {
-    width: clamp(10rem, 35vmin, 20rem);
-    height: auto;
-    margin-bottom: 2em;
+    height: 6rem;
+    position: absolute;
+    left: 1.7ch;
+    top: 0.2rem;
+    transform: translateY(-100%);
   }
   .hero {
     width: 100vw;

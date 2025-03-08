@@ -14,3 +14,11 @@ big {
   font-size: 2rem;
   hyphens: none;
 }
+
+h1 {
+  font-weight: 100;
+  font-size: 3rem;
+  color: colors.$main;
+  line-height: 1;
+  margin-bottom: tokens.$space-6;
+}
