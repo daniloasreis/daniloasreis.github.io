@@ -1,5 +1,5 @@
 @use './colors.scss';
-@use '@styles/tokens.scss';
+@use '../tokens.scss';
 
 .tag {
   --fluid-typography-min: 0.75rem;
@@ -9,4 +9,13 @@
   padding-block: 0.5em;
   border-radius: 2em;
   text-transform: uppercase;
+}
+
+.hero__image {
+  width: 50vw;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: left;
+  height: auto;
+  isolation: isolate;
 }

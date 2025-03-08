@@ -4,6 +4,9 @@ import Layout from '@layouts/Layout.astro';
 import '@styles/psiconect/index.scss';
 
 import PsiconectLogo from '@assets/psiconect/logo.svg';
+import { Picture } from 'astro:assets';
+
+import header from '@assets/psiconect/header.png';
 ---
 
 <Layout title="Psiconect">
@@ -21,7 +24,13 @@ import PsiconectLogo from '@assets/psiconect/logo.svg';
           <li class="fluid tag color-main">Danilo Reis</li>
         </ul>
       </div>
-      <div class="hero bg-dots"></div>
+      <div class="hero bg-dots">
+        <Picture
+          class="hero__image"
+          alt="Coleção de telas do psiconect."
+          src={header}
+        />
+      </div>
     </div>
   </header>
 </Layout>

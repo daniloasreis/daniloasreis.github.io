@@ -1,22 +1,23 @@
+@use 'sass:meta';
 @layer reset, composition, blocks, utilities, exceptions;
 
 @layer reset {
-  @import './typography.scss';
-  @import '../reset.scss';
+  @include meta.load-css('typography.scss');
+  @include meta.load-css('../reset.scss');
 }
 
 @layer composition {
-  @import './composition.scss';
+  @include meta.load-css('composition.scss');
 }
 
 @layer blocks {
-  @import './blocks.scss';
+  @include meta.load-css('blocks.scss');
 }
 
 @layer utilities {
-  @import './utilities.scss';
+  @include meta.load-css('utilities.scss');
 }
 
 @layer exceptions {
-  @import './exceptions.scss';
+  @include meta.load-css('exceptions.scss');
 }

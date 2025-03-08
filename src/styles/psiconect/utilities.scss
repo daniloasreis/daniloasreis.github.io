@@ -1,5 +1,5 @@
 @use './colors.scss';
-@use '@styles/tokens.scss';
+@use '../tokens.scss';
 
 .bg-main {
   background-color: colors.$main;
@@ -30,14 +30,24 @@
 }
 
 .bg-dots {
-  background: var(--background, linear-gradient(colors.$main, colors.$accent));
-  background: var(
-    --background,
-    linear-gradient(in oklch, colors.$main, colors.$accent)
-  );
-  mask: url('/dots.svg');
-  mask-size: var(--density, 1rem);
-  mask-repeat: round;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    background: var(
+      --background,
+      linear-gradient(colors.$main, colors.$accent)
+    );
+    background: var(
+      --background,
+      linear-gradient(in oklch, colors.$main, colors.$accent)
+    );
+    mask: url('/dots.svg');
+    mask-size: var(--density, 1rem);
+    mask-repeat: round;
+  }
 }
 
 .box {
