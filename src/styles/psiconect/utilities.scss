@@ -1,5 +1,5 @@
-@use './colors.scss';
-@use '../tokens.scss';
+@use "./colors.scss";
+@use "../tokens.scss";
 
 .bg-main {
   background-color: colors.$main;
@@ -32,7 +32,7 @@
 .bg-dots {
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     inset: 0;
@@ -44,7 +44,7 @@
       --background,
       linear-gradient(in oklch, colors.$main, colors.$accent)
     );
-    mask: url('/dots.svg');
+    mask: url("/dots.svg");
     mask-size: var(--density, 1rem);
     mask-repeat: round;
   }
@@ -61,6 +61,13 @@
   overflow-x: clip;
 }
 
+.container {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: tokens.$space-6;
+  padding-block: tokens.$space-8;
+}
+
 .hero-container {
   display: grid;
   grid-template-columns: var(--columns, 1fr 50%);
@@ -75,6 +82,12 @@
   list-style-type: none;
   gap: var(--list-gap, tokens.$space-6);
   flex-wrap: wrap;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, tokens.$space-5);
 }
 
 .fluid {

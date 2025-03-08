@@ -8,10 +8,18 @@ import Layout from '@layouts/Layout.astro';
 import '@styles/psiconect/index.scss';
 
 import PsiconectLogo from '@assets/psiconect/logo.svg';
-import { Picture } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 
 import header from '@assets/psiconect/header.png';
 import projeto from '@assets/psiconect/projeto.png';
+import atuacao from '@assets/psiconect/atuacao.png';
+import duracao from '@assets/psiconect/duracao.png';
+import problema from '@assets/psiconect/problema.png';
+
+import FigmaLogo from '@assets/logos/figma.svg';
+import MiroLogo from '@assets/logos/miro.svg';
+import MeetLogo from '@assets/logos/google_meet.svg';
+import NotionLogo from '@assets/logos/notion.svg';
 ---
 
 <Layout title="Psiconect">
@@ -38,7 +46,7 @@ import projeto from '@assets/psiconect/projeto.png';
       </div>
     </div>
   </header>
-  <section class="projeto page page-padding bg-neutral">
+  <section class="projeto page bg-neutral">
     <div class="hero-container">
       <div class="hero">
         <div class="float-area">
@@ -66,6 +74,72 @@ import projeto from '@assets/psiconect/projeto.png';
           no processo de busca por atendimento psicológico, tornando-o mais prático
           e inclusivo.
         </p>
+      </div>
+    </div>
+  </section>
+  <section class="atuacao page bg-neutral">
+    <div class="container flex-container">
+      <div class="image-block">
+        <div class="text">
+          <h3>Minha Atuação</h3>
+          <p>
+            No desenvolvimento do projeto, atuei como
+            <strong>designer de UX</strong>, conduzindo pesquisas e entrevistas,
+            criando wireframes, prototipando em diferentes fidelidades e
+            realizando testes de usabilidade para garantir uma experiência
+            intuitiva e eficiente.
+          </p>
+        </div>
+        <div class="image">
+          <Image
+            src={atuacao}
+            alt="Ilustração de um jovem adulto trabalhando num quadro branco."
+          />
+        </div>
+      </div>
+      <div style="--image-size: 12rem" class="image-block" data-left>
+        <div class="text">
+          <h3>Duração</h3>
+          <p>Janeiro a fevereiro de 2025.</p>
+        </div>
+        <div class="image">
+          <Image
+            src={duracao}
+            alt="Ilustração de um jovem adulto trabalhando num quadro branco."
+          />
+        </div>
+      </div>
+      <div class="image-block">
+        <div class="text">
+          <h3>O Problema</h3>
+          <p>
+            Muitas pessoas que precisam de atendimento psicológico encontram
+            <strong>dificuldades</strong> para acessar profissionais qualificados,
+            seja por processos burocráticos de agendamento, falta de transparência
+            sobre os profissionais ou limitações financeiras. Nosso
+            <strong>objetivo</strong> era criar uma solução acessível e eficiente
+            para conectar pacientes e psicólogos de maneira prática.
+          </p>
+        </div>
+        <div class="image">
+          <Image
+            src={problema}
+            alt="Ilustração de um jovem adulto trabalhando num quadro branco."
+          />
+        </div>
+      </div>
+      <div style="--image-size: max-content" class="image-block">
+        <div class="text">
+          <h3>Ferramentas</h3>
+        </div>
+        <div class="image">
+          <ul class="flex-list">
+            <li><FigmaLogo class="brand-logo" /></li>
+            <li><MiroLogo class="brand-logo" /></li>
+            <li><MeetLogo class="brand-logo" /></li>
+            <li><NotionLogo class="brand-logo" /></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

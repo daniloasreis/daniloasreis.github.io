@@ -1,5 +1,5 @@
-@use './colors.scss';
-@use '../tokens.scss';
+@use "./colors.scss";
+@use "../tokens.scss";
 
 .tag {
   --fluid-typography-min: 0.75rem;
@@ -9,4 +9,38 @@
   padding-block: 0.5em;
   border-radius: 2em;
   text-transform: uppercase;
+}
+
+.image-block {
+  display: grid;
+  grid: "text image" / 1fr var(--image-size, 20rem);
+  gap: tokens.$space-4;
+  &[data-left] {
+    grid: "image text" / var(--image-size, 20rem) 1fr;
+  }
+  @include tokens.on-sm-screen {
+    grid:
+      "text" min-content
+      "image" 12rem / 1fr;
+    gap: 0;
+    &[data-left] {
+      grid:
+        "text" min-content
+        "image" 12rem / 1fr;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    @include tokens.on-sm-screen {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .text {
+    grid-area: text;
+  }
+  .image {
+    grid-area: image;
+  }
 }
