@@ -113,6 +113,7 @@
 
 .gradient-border {
   position: relative;
+  margin: var(--border-width, 4px);
   &::before {
     content: "";
     display: block;
