@@ -84,14 +84,6 @@
   overflow-y: auto;
   border: 2px solid colors.$main;
   border-radius: tokens.$space-4;
-  background: linear-gradient(to right, colors.$neutral-green 1rem, transparent)
-      left,
-    linear-gradient(to left, colors.$neutral-green 1rem, transparent) right,
-    linear-gradient(to right, hsl(0deg 0% 0% / 10%), transparent) left,
-    linear-gradient(to left, hsl(0deg 0% 0% / 10%), transparent) right;
-  background-repeat: no-repeat;
-  background-size: 8rem 100%, 8rem 100%, 1rem 100%, 1rem 100%;
-  background-attachment: local, local, scroll, scroll;
 }
 
 .benchmarking {
