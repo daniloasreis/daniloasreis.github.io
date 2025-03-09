@@ -21,25 +21,32 @@ h1 {
   font-size: 3rem;
   color: colors.$main;
   line-height: 1;
-  margin-bottom: tokens.$space-6;
+  margin-bottom: tokens.$space-7;
 }
 
 h2 {
   color: colors.$main;
   text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: tokens.$space-6;
+  line-height: 1.2;
+  margin-bottom: tokens.$space-7;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
   color: colors.$main;
   text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: tokens.$space-5;
+  line-height: 1.2;
+  margin-bottom: tokens.$space-6;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  margin-bottom: tokens.$space-5;
+  font-weight: 500;
 }
 
 p {
@@ -56,4 +63,12 @@ mark {
   background: none;
   font-weight: 800;
   color: colors.$main;
+}
+
+a {
+  color: colors.$main;
+}
+
+blockquote {
+  margin-bottom: tokens.$space-8;
 }

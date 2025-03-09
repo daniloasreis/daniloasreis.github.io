@@ -16,3 +16,9 @@ $space-12: 8rem;
     @content;
   }
 }
+
+@mixin on-md-screen {
+  @media (max-width: 60rem) {
+    @content;
+  }
+}

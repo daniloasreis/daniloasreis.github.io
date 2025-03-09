@@ -1,6 +1,10 @@
 @use "./colors.scss";
 @use "../tokens.scss";
 
+.container > div {
+  margin-bottom: tokens.$space-8;
+}
+
 .header {
   --list-gap: #{tokens.$space-4};
   overflow: clip;
@@ -105,5 +109,43 @@
   .brand-logo {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+.pesquisa {
+  .csd {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(18rem, 1fr));
+    gap: tokens.$space-6;
+    overflow-x: auto;
+    height: auto;
+    h4 {
+      font-weight: 600;
+      text-align: center;
+    }
+    ul {
+      flex-direction: column;
+      height: 100%;
+    }
+    li {
+      height: 14rem;
+    }
+  }
+  .user-research {
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: tokens.$space-8;
+    p {
+      margin: 0;
+    }
+    h4 {
+      margin-bottom: 0;
+    }
+    .subgrid {
+      display: grid;
+      grid-template-rows: min-content 1fr 1fr;
+      row-gap: tokens.$space-6;
+    }
   }
 }

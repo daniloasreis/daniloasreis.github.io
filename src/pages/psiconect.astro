@@ -1,29 +1,29 @@
 ---
-import '@fontsource/poppins/400';
-import '@fontsource/poppins/500';
-import '@fontsource/poppins/600';
-import '@fontsource/poppins/700';
+import "@fontsource/poppins/400";
+import "@fontsource/poppins/500";
+import "@fontsource/poppins/600";
+import "@fontsource/poppins/700";
 
-import Layout from '@layouts/Layout.astro';
-import '@styles/psiconect/index.scss';
+import Layout from "@layouts/Layout.astro";
+import "@styles/psiconect/index.scss";
 
-import PsiconectLogo from '@assets/psiconect/logo.svg';
-import { Image, Picture } from 'astro:assets';
+import PsiconectLogo from "@assets/psiconect/logo.svg";
+import { Image, Picture } from "astro:assets";
 
-import header from '@assets/psiconect/header.png';
-import projeto from '@assets/psiconect/projeto.png';
-import atuacao from '@assets/psiconect/atuacao.png';
-import duracao from '@assets/psiconect/duracao.png';
-import problema from '@assets/psiconect/problema.png';
+import header from "@assets/psiconect/header.png";
+import projeto from "@assets/psiconect/projeto.png";
+import atuacao from "@assets/psiconect/atuacao.png";
+import duracao from "@assets/psiconect/duracao.png";
+import problema from "@assets/psiconect/problema.png";
 
-import FigmaLogo from '@assets/logos/figma.svg';
-import MiroLogo from '@assets/logos/miro.svg';
-import MeetLogo from '@assets/logos/google_meet.svg';
-import NotionLogo from '@assets/logos/notion.svg';
+import FigmaLogo from "@assets/logos/figma.svg";
+import MiroLogo from "@assets/logos/miro.svg";
+import MeetLogo from "@assets/logos/google_meet.svg";
+import NotionLogo from "@assets/logos/notion.svg";
 ---
 
 <Layout title="Psiconect">
-  <header class="header page bg-neutral">
+  <header class="header page bg-neutral-teal">
     <div class="hero-container">
       <div class="box">
         <h1><PsiconectLogo class="logo" /> PsiConect</h1>
@@ -46,7 +46,7 @@ import NotionLogo from '@assets/logos/notion.svg';
       </div>
     </div>
   </header>
-  <section class="projeto page bg-neutral">
+  <section class="projeto page bg-neutral-teal">
     <div class="hero-container">
       <div class="hero">
         <div class="float-area">
@@ -77,8 +77,8 @@ import NotionLogo from '@assets/logos/notion.svg';
       </div>
     </div>
   </section>
-  <section class="atuacao page bg-neutral">
-    <div class="container flex-container">
+  <section class="atuacao page bg-neutral-teal">
+    <div style="--direction: column" class="container flex-container">
       <div class="image-block">
         <div class="text">
           <h3>Minha Atuação</h3>
@@ -140,6 +140,161 @@ import NotionLogo from '@assets/logos/notion.svg';
             <li><NotionLogo class="brand-logo" /></li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="pesquisa page bg-neutral-green">
+    <div class="container">
+      <h2>Pesquisas e Descobertas</h2>
+      <h3>Desk Research</h3>
+      <p>
+        <strong>Objetivo:</strong> aprofundar o conhecimento sobre o mercado de saúde
+        mental para entender o crescimento e o cenário atual da psicoterapia online.
+      </p>
+      <h4>Crescimento da terapia online no Brasil</h4>
+      <blockquote class="quote padding-box">
+        A pandemia de COVID-19 impulsionou significativamente a procura por
+        serviços de saúde mental online. Fonte:
+        <a href="https://melhorrh.com.br">https://melhorrh.com.br</a>
+      </blockquote>
+      <h4>Número de psicólogos habilitados para atendimento online</h4>
+      <blockquote class="quote padding-box">
+        Desde o início da pandemia, o número de psicólogos cadastrados para
+        oferecer terapia online no Brasil aumentou em 447%. Fonte:
+        <a href="https://www1.folha.uol.com.br">https://www1.folha.uol.com.br</a>
+      </blockquote>
+      <h4>Aceitação e adaptação dos profissionais de saúde</h4>
+      <blockquote class="quote padding-box">
+        A resistência de alguns profissionais de saúde ao uso de tecnologias
+        digitais, devido à falta de familiaridade ou preocupações sobre a
+        eficácia comparada ao atendimento presencial. Fonte: 
+        <a href="https://versatilis.com.br/">https://versatilis.com.br/</a>
+      </blockquote>
+
+      <h3>Matriz CSD</h3>
+      <div class="csd">
+        <div class="matrix padding-box">
+          <h4 class="color-main">Certezas</h4>
+          <ul class="flex-list">
+            <li>A demanda por terapia online aumentou significativamente após a pandemia.</li>
+            <li>O mercado de saúde mental digital está em expansão.</li>
+            <li>A falta de transparência sobre a qualificação e especialização dos psicólogos dificulta a escolha dos pacientes.</li>
+            <li>A dificuldade de agendar consultas e encontrar profissionais qualificados é um desafio para muitas pessoas.</li>
+          </ul>
+        </div>
+        <div class="matrix padding-box">
+          <h4 class="color-main">Suposições</h4>
+          <ul class="flex-list">
+            <li>Usuários preferem ter informações detalhadas sobre a qualificação, experiência e avaliações dos psicólogos.</li>
+            <li>As sessões de terapia online são eficazes, mas os usuários podem preferir a terapia presencial em casos mais complexos.</li>
+            <li>A fidelização dos pacientes dependerá de um acompanhamento contínuo e personalizado ao longo da jornada terapêutica.</li>
+            <li>A plataforma será mais bem recebida por pessoas que já estão familiarizadas com a utilização de tecnologias.</li>
+          </ul>
+        </div>
+        <div class="matrix padding-box">
+          <h4 class="color-main">Dúvidas</h4>
+          <ul class="flex-list">
+            <li>Quais são as barreiras culturais ou geográficas que podem dificultar a adoção de terapia online em determinadas regiões?</li>
+            <li>Como a Psiconect lidará com situações de crise ou emergências?</li>
+            <li>Como podemos manter os usuários engajados entre as sessões e motivados a continuar o acompanhamento psicológico?</li>
+            <li>Como gerenciar a comunicação e interação entre pacientes e psicólogos de maneira eficiente e atrativa?</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Pesquisa com Usuário</h3>
+      <div class="user-research">
+        <div class="problemas subgrid">
+          <h4 class="color-main">Problema</h4>
+          <p class="box gradient-border bg-neutral-green padding-box">Encontrar profissionais adequados</p>
+          <p class="box gradient-border bg-neutral-green padding-box">Processos de agendamento pouco práticos</p>
+        </div>
+
+        <div class="insights subgrid">
+          <h4 class="color-main col-2">Insights</h4>
+          <p class="box gradient-border bg-neutral-green padding-box">A necessidade de mais transparência sobre os profissionais disponíveis</p>
+          <p class="box gradient-border bg-neutral-green padding-box">Agendamento simplificado</p>
+        </div>
+      </div>
+
+      <h3>Benchmarking</h3>
+
+      <div class="table-wrapper">
+        <table class="benchmarking">
+          <thead>
+            <tr>
+              <th scope="col">Aspecto</th>
+              <th scope="col">Psicologia Viva</th>
+              <th scope="col">Vittude</th>
+              <th scope="col">Zenklub</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Processo de agendamento</th>
+              <td>
+                Pode ser demorado, dependendo da demanda
+                <span class="emoji">❌</span>
+              </td>
+              <td>
+                Filtro inteligente
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                Não otimizado para acesso rápido
+                <span class="emoji">❌</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Transparência sobre os profissionais</th>
+              <td>Pouca informação sobre a formação<span class="emoji">❌</span></td>
+              <td>Qualificação pouco clara<span class="emoji">❌</span></td>
+              <td>Falta melhor descrição<span class="emoji">❌</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Opções financeiras</th>
+              <td>
+                Preços podem ser altos para alguns
+                <span class="emoji">❌</span>
+              </td>
+              <td>
+                Preços acessíveis, pacotes e consultas avulsas
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                Preços acessíveis, pacotes e consultas avulsas
+                <span class="emoji">✅</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Acessibilidade e facilidade do uso</th>
+              <td>
+                Interface simples
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                Interface prática
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                Simples, mas com algumas funcionalidades que podem confundir
+                <span class="emoji">❌</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Suporte ao cliente</th>
+              <td>
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                <span class="emoji">✅</span>
+              </td>
+              <td>
+                <span class="emoji">✅</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
