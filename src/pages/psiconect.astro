@@ -42,6 +42,7 @@ import Bar from "@assets/psiconect/bar.svg";
 import Calendar from "@assets/psiconect/calendar.svg";
 import CreditCard from "@assets/psiconect/credit-card.svg";
 import LogoFull from "@assets/psiconect/logo_full.svg";
+import Rede from "@assets/psiconect/rede.svg";
 
 import Persona from "@components/psiconect/Persona.astro";
 ---
@@ -157,7 +158,7 @@ import Persona from "@components/psiconect/Persona.astro";
           <h3>Ferramentas</h3>
         </div>
         <div class="image">
-          <ul class="flex-list">
+          <ul style="--direction: row" class="flex-list">
             <li><FigmaLogo class="brand-logo" /></li>
             <li><MiroLogo class="brand-logo" /></li>
             <li><MeetLogo class="brand-logo" /></li>
@@ -456,6 +457,7 @@ import Persona from "@components/psiconect/Persona.astro";
       <h3>Sitemap</h3>
       <div class="floating-image-wrapper">
         <Image
+          class="image"
           style={{
             width: "12rem",
             height: "auto",
@@ -476,6 +478,7 @@ import Persona from "@components/psiconect/Persona.astro";
       <h4>Principais descobertas</h4>
       <div class="floating-image-wrapper">
         <Image
+          class="image"
           style={{
             width: "12rem",
             height: "auto",
@@ -619,6 +622,32 @@ import Persona from "@components/psiconect/Persona.astro";
           <Image src={prototipo2} alt="" />
         </li>
       </ul>
+    </div>
+  </section>
+  <section class="proximas-etapas page bg-neutral-teal">
+    <div class="container">
+      <Rede class="image" />
+      <div class="padding-box bg-main">
+        <h2>Próximas Etapas</h2>
+        <ol class="etapas">
+          <li class="etapa">
+            Implementar feedback pós-consulta: Criar um sistema de avaliação
+            para que os pacientes compartilhem sua experiência, ajudando a
+            melhorar a correspondência entre usuários e profissionais, além de
+            fornecer informações úteis para novos pacientes.
+          </li>
+          <li class="etapa">
+            Aprimorar as opções de pagamento: Introduzir planos e pacotes
+            fechados, oferecendo condições vantajosas para fidelizar os usuários
+            e proporcionar mais flexibilidade e praticidade no acesso às
+            consultas.
+          </li>
+          <li class="etapa">
+            Análise de dados: Acompanhar o comportamento dos usuários por meio
+            de ferramentas analíticas para identificar pontos de melhoria.
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 </Layout>
