@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./colors.scss";
 @use "../tokens.scss";
 
@@ -5,8 +6,38 @@
   background-color: colors.$main;
 }
 
+button.bg-main:hover {
+  background-color: color.adjust(colors.$main, $lightness: -10%);
+}
+button.bg-main:active {
+  background-color: color.adjust(colors.$main, $lightness: -15%);
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
 .bg-accent {
   background-color: colors.$accent;
+}
+
+button.bg-accent:hover {
+  background-color: color.adjust(
+    colors.$accent,
+    $lightness: -10%,
+    $saturation: -5%
+  );
+}
+button.bg-accent:active {
+  background-color: color.adjust(
+    colors.$accent,
+    $lightness: -15%,
+    $saturation: -15%
+  );
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.bg-text {
+  background-color: colors.$text;
 }
 
 .bg-neutral-teal {
@@ -86,6 +117,7 @@
   list-style-type: none;
   gap: var(--list-gap, tokens.$space-6);
   flex-wrap: wrap;
+  flex-direction: var(--direction, row);
 }
 
 .flex-container {
@@ -163,4 +195,13 @@
       max-width: unset;
     }
   }
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--col-width, 20rem), 1fr)
+  );
+  row-gap: tokens.$space-6;
 }

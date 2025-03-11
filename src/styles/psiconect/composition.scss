@@ -155,4 +155,42 @@
     width: 100%;
     height: auto;
   }
+  .bold {
+    font-weight: 700;
+  }
+  .semibold {
+    font-weight: 600;
+  }
+  .medium {
+    font-weight: 500;
+  }
+  .regular {
+    font-weight: 400;
+  }
+  .logo {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+  }
+  .icons {
+    --col-width: 16rem;
+    max-width: 40rem;
+    column-gap: tokens.$space-6;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+    .buttons {
+      display: flex;
+      gap: tokens.$space-4;
+    }
+    button {
+      flex: 1;
+      border: none;
+      color: colors.$neutral-green;
+      border-radius: tokens.$space-2;
+      padding-inline: tokens.$space-4;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+    }
+  }
 }

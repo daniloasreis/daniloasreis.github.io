@@ -34,6 +34,12 @@ import MiroLogo from "@assets/logos/miro.svg";
 import MeetLogo from "@assets/logos/google_meet.svg";
 import NotionLogo from "@assets/logos/notion.svg";
 
+import Icons from "@assets/psiconect/icons.svg";
+import Bar from "@assets/psiconect/bar.svg";
+import Calendar from "@assets/psiconect/calendar.svg";
+import CreditCard from "@assets/psiconect/credit-card.svg";
+import LogoFull from "@assets/psiconect/logo_full.svg";
+
 import Persona from "@components/psiconect/Persona.astro";
 ---
 
@@ -511,6 +517,92 @@ import Persona from "@components/psiconect/Persona.astro";
         <Image class="wireframe" src={wireframes5} alt="" />
         <Image class="wireframe" src={wireframes6} alt="" />
       </div>
+
+      <h3>Elementos de design</h3>
+
+      <h4>Cores</h4>
+      <ul class="color-list flex-list">
+        <li class="swatch">
+          <div class="square bg-neutral-green"></div><span>#F6FFEB</span>
+        </li>
+        <li class="swatch">
+          <div class="square bg-neutral-teal"></div><span>#DEF7ED</span>
+        </li>
+        <li class="swatch">
+          <div class="square bg-main"></div><span>#395AB1</span>
+        </li>
+        <li class="swatch">
+          <div class="square bg-text"></div><span>#2A2B2C</span>
+        </li>
+        <li class="swatch">
+          <div class="square bg-accent"></div><span>#FA8B8B</span>
+        </li>
+      </ul>
+
+      <hr />
+      <h4>Tipografia</h4>
+
+      <h5 class="poppins">Poppins</h5>
+      <div class="responsive-grid">
+        <ul style="--direction: column; --list-gap: 0.5rem" class="flex-list">
+          <li style="font-size: 20px" class="semibold"
+            >Poppins / Semibold / 20px</li
+          >
+          <li style="font-size: 18px" class="bold">Poppins / Bold / 18px</li>
+        </ul>
+        <ul style="--direction: column; --list-gap: 0.5rem" class="flex-list">
+          <li style="font-size: 20px" class="medium">Poppins / Medium / 20px</li
+          >
+          <li style="font-size: 18px" class="medium">Poppins / Medium / 18px</li
+          >
+          <li style="font-size: 15px" class="medium">Poppins / Medium / 15px</li
+          >
+        </ul>
+        <ul style="--direction: column; --list-gap: 0.5rem" class="flex-list">
+          <li style="font-size: 20px" class="regular"
+            >Poppins / Regular / 20px</li
+          >
+          <li style="font-size: 15px" class="regular"
+            >Poppins / Regular / 15px</li
+          >
+          <li style="font-size: 14px" class="regular"
+            >Poppins / Regular / 14px</li
+          >
+          <li style="font-size: 12px" class="regular"
+            >Poppins / Regular / 12px</li
+          >
+        </ul>
+      </div>
+
+      <hr />
+      <h4>Ícones e Componentes</h4>
+      <div class="icons responsive-grid">
+        <ul style="--direction: column; --list-gap: 1rem" class="flex-list">
+          <li>
+            <Icons />
+          </li>
+          <li>
+            <Bar />
+          </li>
+          <li>
+            <div class="buttons">
+              <button class="bg-main">Rótulo</button>
+              <button class="bg-accent">Rótulo</button>
+            </div>
+          </li>
+          <li>
+            <Calendar />
+          </li>
+        </ul>
+        <ul style="--direction: column; --list-gap: 1rem" class="flex-list">
+          <li>
+            <CreditCard />
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <h4>Logomarca</h4>
+      <LogoFull class="logo" />
     </div>
   </section>
 </Layout>
