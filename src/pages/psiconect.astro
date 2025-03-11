@@ -15,6 +15,16 @@ import projeto from "@assets/psiconect/projeto.png";
 import atuacao from "@assets/psiconect/atuacao.png";
 import duracao from "@assets/psiconect/duracao.png";
 import problema from "@assets/psiconect/problema.png";
+import sitemap from "@assets/psiconect/sitemap.png";
+import usabilidade from "@assets/psiconect/usabilidade.png";
+import lupa from "@assets/psiconect/lupa.png";
+
+import wireframes1 from "@assets/psiconect/wireframes-01.png";
+import wireframes2 from "@assets/psiconect/wireframes-02.png";
+import wireframes3 from "@assets/psiconect/wireframes-03.png";
+import wireframes4 from "@assets/psiconect/wireframes-04.png";
+import wireframes5 from "@assets/psiconect/wireframes-05.png";
+import wireframes6 from "@assets/psiconect/wireframes-06.png";
 
 import laura from "@assets/psiconect/laura.jpeg";
 import alan from "@assets/psiconect/alan.jpeg";
@@ -24,7 +34,7 @@ import MiroLogo from "@assets/logos/miro.svg";
 import MeetLogo from "@assets/logos/google_meet.svg";
 import NotionLogo from "@assets/logos/notion.svg";
 
-import Persona from '@components/psiconect/Persona.astro'
+import Persona from "@components/psiconect/Persona.astro";
 ---
 
 <Layout title="Psiconect">
@@ -170,11 +180,23 @@ import Persona from '@components/psiconect/Persona.astro'
         >
       </blockquote>
       <h4>Aceitação e adaptação dos profissionais de saúde</h4>
-      <blockquote class="quote padding-box">
+      <blockquote style="margin-bottom: 6rem" class="quote padding-box">
         A resistência de alguns profissionais de saúde ao uso de tecnologias
         digitais, devido à falta de familiaridade ou preocupações sobre a
         eficácia comparada ao atendimento presencial. Fonte:
         <a href="https://versatilis.com.br/">https://versatilis.com.br/</a>
+        <Image
+          style={{
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            width: "10rem",
+            height: "auto",
+            transform: "translate(5%, 70%)",
+          }}
+          src={lupa}
+          alt=""
+        />
       </blockquote>
 
       <h3>Matriz CSD</h3>
@@ -352,12 +374,12 @@ import Persona from '@components/psiconect/Persona.astro'
     <div class="container">
       <h2>Entendendo o usuário</h2>
       <h3>Personas</h3>
-      
+
       <Persona
         nome="Laura"
         foto={{
           src: laura,
-          alt: 'Mulher de cabelo loiro, usando uma camiseta rosa.',
+          alt: "Mulher de cabelo loiro, usando uma camiseta rosa.",
         }}
         idade={24}
         cidade="Residente em Belo Horizonte, MG"
@@ -365,21 +387,23 @@ import Persona from '@components/psiconect/Persona.astro'
         escolaridade="Formada em Publicidade e Propaganda"
         profissao="Trabalha como Analista de Mídias Sociais"
         metas={[
-          'Manter um estilo de vida saudável;',
-          'Desenvolver novos hábitos de auto cuidado;',
-          'Iniciar uma psicoterapia. ',
+          "Manter um estilo de vida saudável;",
+          "Desenvolver novos hábitos de auto cuidado;",
+          "Iniciar uma psicoterapia. ",
         ]}
         frustracoes={[
-          'Rotina intensa de trabalho e estudo;',
-          'Gosta de ter tudo sob controle;',
-          'Tem apresentado sintomas de ansiedade.',
+          "Rotina intensa de trabalho e estudo;",
+          "Gosta de ter tudo sob controle;",
+          "Tem apresentado sintomas de ansiedade.",
         ]}>
         <p>
-          Laura lida com uma rotina intensa de trabalho e estudos. 
-          Para equilibrar o dia a dia, pratica exercícios, lê e passeia com sua cachorra. 
+          Laura lida com uma rotina intensa de trabalho e estudos. Para
+          equilibrar o dia a dia, pratica exercícios, lê e passeia com sua
+          cachorra.
         </p>
         <p>
-          Apesar de cuidar do bem-estar, tem buscado aprofundar o autoconhecimento e fortalecer sua saúde emocional.
+          Apesar de cuidar do bem-estar, tem buscado aprofundar o
+          autoconhecimento e fortalecer sua saúde emocional.
         </p>
       </Persona>
 
@@ -387,7 +411,7 @@ import Persona from '@components/psiconect/Persona.astro'
         nome="Alan"
         foto={{
           src: alan,
-          alt: 'Homem de pele negra, cabeça raspada, braços cruzados e sorrindo, usando uma camisa cinza. Ao fundo, uma criança brinca.',
+          alt: "Homem de pele negra, cabeça raspada, braços cruzados e sorrindo, usando uma camisa cinza. Ao fundo, uma criança brinca.",
         }}
         idade={35}
         cidade="Residente em Belo Horizonte, MG"
@@ -395,22 +419,98 @@ import Persona from '@components/psiconect/Persona.astro'
         escolaridade="Formado em Administração"
         profissao="Trabalha como Analista Financeiro"
         metas={[
-          'Superar o divórcio;',
-          'Cuidar da saúde emocional;',
-          'Encontrar novos objetivos pessoais.',
+          "Superar o divórcio;",
+          "Cuidar da saúde emocional;",
+          "Encontrar novos objetivos pessoais.",
         ]}
         frustracoes={[
-          'Sobrecarga emocional;',
-          'Falta de tempo para si;',
-          'Término do casamento.',
+          "Sobrecarga emocional;",
+          "Falta de tempo para si;",
+          "Término do casamento.",
         ]}>
         <p>
-          Alan trabalha em uma empresa de grande porte e tem enfrentado desafios no trabalho e na vida pessoal enquanto passa por um divórcio. 
+          Alan trabalha em uma empresa de grande porte e tem enfrentado desafios
+          no trabalho e na vida pessoal enquanto passa por um divórcio.
         </p>
         <p>
-          Pai dedicado, busca manter o equilíbrio investindo em atividades físicas e aproveitando momentos com seu filho.
+          Pai dedicado, busca manter o equilíbrio investindo em atividades
+          físicas e aproveitando momentos com seu filho.
         </p>
       </Persona>
+      <h3>Jornada do Usuário</h3>
+      <p>MIRO</p>
+    </div>
+  </section>
+  <section class="desenvolvimento page bg-neutral-green">
+    <div class="container">
+      <h2>Desenvolvimento</h2>
+      <h3>Sitemap</h3>
+      <div class="floating-image-wrapper">
+        <Image
+          style={{
+            width: "12rem",
+            height: "auto",
+            transform: "scaleX(-1) translate(0, -88%)",
+          }}
+          src={sitemap}
+          alt=""
+        />
+        <iframe
+          class="userflow"
+          width="768"
+          height="300"
+          src="https://miro.com/app/embed/uXjVIehzvLc=/?pres=1&frameId=3458764617179332515&embedId=309238824385"
+          allow="fullscreen; clipboard-read; clipboard-write"
+          allowfullscreen></iframe>
+      </div>
+      <h3>Estudo de usabilidade</h3>
+      <h4>Principais descobertas</h4>
+      <div class="floating-image-wrapper">
+        <Image
+          style={{
+            width: "12rem",
+            height: "auto",
+            transform: "scaleX(-1) translate(0, -95%)",
+          }}
+          src={usabilidade}
+          alt=""
+        />
+        <div style="margin-bottom: 6rem;" class="triple-column">
+          <div style="--bg-color: #CFA8FF" class="post-it">
+            <h5>Texto</h5>
+            <p>
+              Tornar a experiência mais convidativa utilizando de uma linguagem
+              atrativa e textos mais curtos.
+            </p>
+          </div>
+          <div style="--bg-color: #D8D872" class="post-it">
+            <h5>Calendário</h5>
+            <p>
+              Necessidade de um calendário para facilitar a escolha de uma data
+              para agendamento.
+            </p>
+          </div>
+          <div style="--bg-color: #B8D2EF" class="post-it">
+            <h5>Comprovante</h5>
+            <p>
+              Opção de download do comprovante de pagamento e acesso rápido aos
+              agendamentos para ajustes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Wireframes mobile</h3>
+      <div class="triple-column">
+        <Image class="wireframe" src={wireframes1} alt="" />
+        <Image class="wireframe" src={wireframes2} alt="" />
+        <Image class="wireframe" src={wireframes3} alt="" />
+      </div>
+      <div class="triple-column">
+        <Image class="wireframe" src={wireframes4} alt="" />
+        <Image class="wireframe" src={wireframes5} alt="" />
+        <Image class="wireframe" src={wireframes6} alt="" />
+      </div>
     </div>
   </section>
 </Layout>

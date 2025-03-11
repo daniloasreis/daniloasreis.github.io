@@ -104,7 +104,7 @@
 
 .atuacao {
   .container {
-    --gap: #{tokens.$space-8};
+    --gap: 0;
   }
   .brand-logo {
     width: 4rem;
@@ -147,5 +147,12 @@
       grid-template-rows: min-content 1fr 1fr;
       row-gap: tokens.$space-6;
     }
+  }
+}
+
+.desenvolvimento {
+  .wireframe {
+    width: 100%;
+    height: auto;
   }
 }

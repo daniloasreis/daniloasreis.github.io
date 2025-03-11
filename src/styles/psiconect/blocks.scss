@@ -47,6 +47,7 @@
 }
 
 .quote {
+  position: relative;
   background: color.change(colors.$accent, $alpha: 0.28);
   &::before {
     content: "\201C";
@@ -119,5 +120,19 @@
   .emoji {
     display: block;
     font-size: 1.5rem;
+  }
+}
+
+.post-it {
+  padding: tokens.$space-6;
+  text-align: center;
+  background: var(--bg-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  h5 {
+    color: colors.$main;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: tokens.$space-4;
   }
 }
