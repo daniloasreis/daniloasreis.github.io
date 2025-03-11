@@ -26,6 +26,9 @@ import wireframes4 from "@assets/psiconect/wireframes-04.png";
 import wireframes5 from "@assets/psiconect/wireframes-05.png";
 import wireframes6 from "@assets/psiconect/wireframes-06.png";
 
+import prototipo1 from "@assets/psiconect/prototipo1.png";
+import prototipo2 from "@assets/psiconect/prototipo2.png";
+
 import laura from "@assets/psiconect/laura.jpeg";
 import alan from "@assets/psiconect/alan.jpeg";
 
@@ -603,6 +606,19 @@ import Persona from "@components/psiconect/Persona.astro";
       <hr />
       <h4>Logomarca</h4>
       <LogoFull class="logo" />
+    </div>
+  </section>
+  <section class="prototipo page bg-main">
+    <div class="container">
+      <h2>Protótipo de Alta Fidelidade</h2>
+      <ul style="--direction: column; --list-gap: 8rem" class="flex-list">
+        <li>
+          <Image style="transform: rotate(-8deg)" src={prototipo1} alt="" />
+        </li>
+        <li>
+          <Image src={prototipo2} alt="" />
+        </li>
+      </ul>
     </div>
   </section>
 </Layout>

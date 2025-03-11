@@ -4,6 +4,10 @@
 
 .bg-main {
   background-color: colors.$main;
+  color: colors.$neutral-green;
+  h2 {
+    color: currentColor;
+  }
 }
 
 button.bg-main:hover {

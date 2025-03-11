@@ -194,3 +194,15 @@
     }
   }
 }
+
+.prototipo {
+  .flex-list {
+    align-items: center;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 36rem;
+    transform-origin: bottom center;
+  }
+}
