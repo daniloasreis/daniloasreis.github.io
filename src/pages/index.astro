@@ -1,9 +1,67 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import "@fontsource/poppins/500";
+
+import Layout from "@layouts/Layout.astro";
 ---
 
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    font-size: 4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  main {
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    max-width: 56rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .subtitle {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .projetos {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 1rem;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
 <Layout title="Danilo Reis UX Design">
-  Bem-vindo
-  <a href="/vivant">Vivant</a>
-  <a href="/psiconect">Psiconect</a>
+  <main>
+    <h1>Danilo Reis</h1>
+    <p class="subtitle">UX Design Portfolio</p>
+    <h2>Projetos</h2>
+    <ul class="projetos">
+      <li class="card">
+        <img src="/vivant_og.png" alt="" />
+        <h3><a href="/vivant">Vivant Restaurante</a></h3>
+      </li>
+      <li class="card">
+        <img src="/psiconect_og.png" alt="" />
+        <h3><a href="/psiconect">Psiconect</a></h3>
+      </li>
+    </ul>
+  </main>
 </Layout>

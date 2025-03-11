@@ -197,6 +197,17 @@
 }
 
 .prototipo {
+  position: relative;
+  isolation: isolate;
+  .bg-pic {
+    position: absolute;
+    z-index: -1;
+    max-height: 80vh;
+    width: auto;
+    top: 50%;
+    right: 50%;
+    transform: rotateX(35deg) rotateY(0deg) rotateZ(43deg) translate(-80%, -90%);
+  }
   .flex-list {
     align-items: center;
   }

@@ -19,6 +19,7 @@ import sitemap from "@assets/psiconect/sitemap.png";
 import usabilidade from "@assets/psiconect/usabilidade.png";
 import lupa from "@assets/psiconect/lupa.png";
 import reflexoes from "@assets/psiconect/reflexoes.png";
+import screencap from "@assets/psiconect/screencap.png";
 
 import wireframes1 from "@assets/psiconect/wireframes-01.png";
 import wireframes2 from "@assets/psiconect/wireframes-02.png";
@@ -48,9 +49,28 @@ import LogoFull from "@assets/psiconect/logo_full.svg";
 import Rede from "@assets/psiconect/rede.svg";
 
 import Persona from "@components/psiconect/Persona.astro";
+
+const permalink = new URL(Astro.url.pathname, Astro.site).href;
+
+const title = "Psiconect - Tornando o atendimento psicológico mais acessível";
+const description =
+  "Psiconect é um app de psicologia com foco total em UX e design, tornando a marcação de terapia online mais fácil, intuitiva e acessível para todos.";
 ---
 
 <Layout title="Psiconect">
+  <!-- Open Graph Meta Tags -->
+  <meta slot="opengraph" property="og:title" content={title} />
+  <meta slot="opengraph" property="og:description" content={description} />
+  <meta slot="opengraph" property="og:image" content="/psiconect_og.png" />
+  <meta slot="opengraph" property="og:url" content={permalink} />
+  <meta slot="opengraph" property="og:type" content="website" />
+  <meta slot="opengraph" property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Meta Tags -->
+  <meta slot="twitter" name="twitter:card" content="summary_large_image" />
+  <meta slot="twitter" name="twitter:title" content={title} />
+  <meta slot="twitter" name="twitter:description" content={description} />
+  <meta slot="twitter" name="twitter:image" content="/psiconect_og.png" />
   <header class="header page bg-neutral-teal">
     <div class="hero-container">
       <div class="box">
@@ -451,7 +471,14 @@ import Persona from "@components/psiconect/Persona.astro";
         </p>
       </Persona>
       <h3>Jornada do Usuário</h3>
-      <p>MIRO</p>
+      <iframe
+        width="768"
+        height="432"
+        src="https://miro.com/app/embed/uXjVIS9NDsw=/?pres=1&frameId=3458764620518206882&embedId=513500148321"
+        frameborder="0"
+        scrolling="no"
+        allow="fullscreen; clipboard-read; clipboard-write"
+        allowfullscreen></iframe>
     </div>
   </section>
   <section class="desenvolvimento page bg-neutral-green">
@@ -470,10 +497,11 @@ import Persona from "@components/psiconect/Persona.astro";
           alt=""
         />
         <iframe
-          class="userflow"
           width="768"
-          height="300"
-          src="https://miro.com/app/embed/uXjVIehzvLc=/?pres=1&frameId=3458764617179332515&embedId=309238824385"
+          height="432"
+          src="https://miro.com/app/embed/uXjVIS-d6nA=/?pres=1&frameId=3458764620517941257&embedId=870035256703"
+          frameborder="0"
+          scrolling="no"
           allow="fullscreen; clipboard-read; clipboard-write"
           allowfullscreen></iframe>
       </div>
@@ -615,8 +643,9 @@ import Persona from "@components/psiconect/Persona.astro";
     </div>
   </section>
   <section class="prototipo page bg-main">
+    <Picture class="bg-pic" src={screencap} alt="" />
     <div class="container">
-      <h2>Protótipo de Alta Fidelidade</h2>
+      <h2>Capturas de tela</h2>
       <ul style="--direction: column; --list-gap: 8rem" class="flex-list">
         <li>
           <Image style="transform: rotate(-8deg)" src={prototipo1} alt="" />
@@ -625,6 +654,19 @@ import Persona from "@components/psiconect/Persona.astro";
           <Image src={prototipo2} alt="" />
         </li>
       </ul>
+    </div>
+  </section>
+  <section style="margin-top: -2px" class="figma-prototype page bg-main">
+    <div class="container">
+      <h2>Protótipo de Alta Fidelidade</h2>
+      <div class="prototype">
+        <iframe
+          style="border: none;"
+          width="720"
+          height="680"
+          src="https://embed.figma.com/proto/QIwAN5twuvbhrMBjs2GkwU/Psi-Conect?node-id=161-230&p=f&scaling=scale-down&content-scaling=fixed&page-id=35%3A941&starting-point-node-id=161%3A230&embed-host=share"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </section>
   <section class="proximas-etapas page bg-neutral-teal">

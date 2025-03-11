@@ -181,3 +181,13 @@
   text-shadow: 0 0.08em colors.$accent;
   margin-bottom: tokens.$space-6;
 }
+
+.prototype {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  iframe {
+    width: 100%;
+    max-width: 20rem;
+  }
+}

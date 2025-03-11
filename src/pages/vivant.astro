@@ -1,59 +1,56 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import Layout from "@layouts/Layout.astro";
 
-import '@fontsource-variable/anek-odia';
-import '@styles/reset.scss';
-import '@styles/vivant/typography.scss';
-import '@styles/vivant/composition.scss';
-import '@styles/vivant/utilities.scss';
-import '@styles/vivant/index.scss';
+import "@fontsource-variable/anek-odia";
+import "@styles/reset.scss";
+import "@styles/vivant/typography.scss";
+import "@styles/vivant/composition.scss";
+import "@styles/vivant/utilities.scss";
+import "@styles/vivant/index.scss";
 
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import Behance from '@assets/logos/behance.svg';
-import FigmaLogo from '@assets/logos/figma.svg';
-import Linkedin from '@assets/logos/linkedin.svg';
-import MeetLogo from '@assets/logos/google_meet.svg';
-import MiroLogo from '@assets/logos/miro.svg';
+import Behance from "@assets/logos/behance.svg";
+import FigmaLogo from "@assets/logos/figma.svg";
+import Linkedin from "@assets/logos/linkedin.svg";
+import MeetLogo from "@assets/logos/google_meet.svg";
+import MiroLogo from "@assets/logos/miro.svg";
 
-import Icones from '@assets/vivant/icones.svg';
-import NotionLogo from '@assets/logos/notion.svg';
-import VivantLogo from '@assets/vivant/vivant_logo.svg';
+import Icones from "@assets/vivant/icones.svg";
+import NotionLogo from "@assets/logos/notion.svg";
+import VivantLogo from "@assets/vivant/vivant_logo.svg";
 
-import conclusaoMockup from '@assets/vivant/conclusao_mockup.png';
-import headerMockup from '@assets/vivant/header_mockup.png';
-import henrique from '@assets/vivant/henrique.jpg';
-import marilia from '@assets/vivant/marilia.jpg';
+import conclusaoMockup from "@assets/vivant/conclusao_mockup.png";
+import headerMockup from "@assets/vivant/header_mockup.png";
+import henrique from "@assets/vivant/henrique.jpg";
+import marilia from "@assets/vivant/marilia.jpg";
 
-import wireframe1 from '@assets/vivant/wireframe-1.jpeg';
-import wireframe2 from '@assets/vivant/wireframe-2.jpeg';
-import wireframe3 from '@assets/vivant/wireframe-3.png';
-import wireframe4 from '@assets/vivant/wireframe-4.png';
+import wireframe1 from "@assets/vivant/wireframe-1.jpeg";
+import wireframe2 from "@assets/vivant/wireframe-2.jpeg";
+import wireframe3 from "@assets/vivant/wireframe-3.png";
+import wireframe4 from "@assets/vivant/wireframe-4.png";
 
-import mockup1 from '@assets/vivant/mockup-1.png';
-import mockup2 from '@assets/vivant/mockup-2.png';
-import mockup3 from '@assets/vivant/mockup-3.png';
+import mockup1 from "@assets/vivant/mockup-1.png";
+import mockup2 from "@assets/vivant/mockup-2.png";
+import mockup3 from "@assets/vivant/mockup-3.png";
 
-import ArrowRight from '~icons/lucide/arrow-right';
-import MapPin from '~icons/ph/map-pin-fill';
-import Target from '~icons/streamline/target';
-import Persona from '@components/vivant/Persona.astro';
+import ArrowRight from "~icons/lucide/arrow-right";
+import MapPin from "~icons/ph/map-pin-fill";
+import Target from "~icons/streamline/target";
+import Persona from "@components/vivant/Persona.astro";
 
 const permalink = new URL(Astro.url.pathname, Astro.site).href;
+
+const title =
+  "Vivant Restaurante - Simplificando a reserva de mesas e horários";
+const description =
+  "Vivant Restaurante é um aplicativo inovador que redefine a experiência de reserva e pedidos em restaurantes. Design intuitivo e centrado no usuário, criado por Danilo Reis.";
 ---
 
 <Layout title="Vivant Restaurante">
   <!-- Open Graph Meta Tags -->
-  <meta
-    slot="opengraph"
-    property="og:title"
-    content="Vivant Restaurante - Simplificando a reserva de mesas e horários"
-  />
-  <meta
-    slot="opengraph"
-    property="og:description"
-    content="Vivant Restaurante é um aplicativo inovador que redefine a experiência de reserva e pedidos em restaurantes. Design intuitivo e centrado no usuário, criado por Danilo Reis."
-  />
+  <meta slot="opengraph" property="og:title" content={title} />
+  <meta slot="opengraph" property="og:description" content={description} />
   <meta slot="opengraph" property="og:image" content="/vivant_og.png" />
   <meta slot="opengraph" property="og:url" content={permalink} />
   <meta slot="opengraph" property="og:type" content="website" />
@@ -61,16 +58,8 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
 
   <!-- Twitter Meta Tags -->
   <meta slot="twitter" name="twitter:card" content="summary_large_image" />
-  <meta
-    slot="twitter"
-    name="twitter:title"
-    content="Vivant Restaurante - Simplificando a reserva de mesas e horários"
-  />
-  <meta
-    slot="twitter"
-    name="twitter:description"
-    content="Aplicativo que redefine reservas e pedidos em restaurantes, projetado por Danilo Reis."
-  />
+  <meta slot="twitter" name="twitter:title" content={title} />
+  <meta slot="twitter" name="twitter:description" content={description} />
   <meta slot="twitter" name="twitter:image" content="/vivant_og.png" />
 
   <header class="header bg-main">
@@ -207,7 +196,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         nome="Marília"
         foto={{
           src: marilia,
-          alt: 'Mulher de cabelo ondulado na altura do ombro, usando camisa laranja e sorrindo.',
+          alt: "Mulher de cabelo ondulado na altura do ombro, usando camisa laranja e sorrindo.",
         }}
         idade={46}
         cidade="Belo Horizonte, MG"
@@ -217,14 +206,14 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         profissao="Massagista"
         frase="Não quero mais perder tempo, tenho sede de viver"
         interesses={[
-          'Se reunir com as amigas.',
-          'Conhecer novos restaurantes.',
-          'Experimentar novas culinárias.',
+          "Se reunir com as amigas.",
+          "Conhecer novos restaurantes.",
+          "Experimentar novas culinárias.",
         ]}
         frustracoes={[
-          'Falta de tempo.',
-          'Problemas com reserva.',
-          'Chegar no restaurante e ter de aguardar liberação da mesa.',
+          "Falta de tempo.",
+          "Problemas com reserva.",
+          "Chegar no restaurante e ter de aguardar liberação da mesa.",
         ]}>
         Marília é uma mulher cisgênero, heterossexual, conhecida por sua
         personalidade divertida, espontanea e alegre. Após um divórcio recente,
@@ -238,7 +227,7 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         nome="Henrique"
         foto={{
           src: henrique,
-          alt: 'Homem jovem, de cabelo loiro e curto, usando uma camisa amarela.',
+          alt: "Homem jovem, de cabelo loiro e curto, usando uma camisa amarela.",
         }}
         idade={30}
         cidade="Sete Lagoas, MG"
@@ -248,14 +237,14 @@ const permalink = new URL(Astro.url.pathname, Astro.site).href;
         profissao="Analista de suporte"
         frase="Gosto do prático e ágil, detesto burocracia"
         interesses={[
-          'Gosta de bom atendimento.',
-          'Tecnologia e soluções que otimizam o tempo.',
-          'Preferência por ambientes modernos.',
+          "Gosta de bom atendimento.",
+          "Tecnologia e soluções que otimizam o tempo.",
+          "Preferência por ambientes modernos.",
         ]}
         frustracoes={[
-          'Reserva não garantida.',
-          'Atendimento demorado.',
-          'Lugares sem diversidade.',
+          "Reserva não garantida.",
+          "Atendimento demorado.",
+          "Lugares sem diversidade.",
         ]}>
         Henrique é um homem cisgênero e gay que vive sozinho no interior. Sua
         personalidade é marcada pela praticidade, agilidade e decisão. Nos
