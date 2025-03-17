@@ -1,0 +1,35 @@
+@use "./colors.scss";
+@use "../tokens.scss";
+
+.header {
+  isolation: isolate;
+  position: relative;
+  background-image: url("/eliestetica/background.jpeg");
+  background-size: cover;
+  &::before {
+    content: "";
+    z-index: -1;
+    background: colors.$green-light;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 40rem;
+    mask-image: url("/eliestetica/background_mask.svg");
+    mask-repeat: no-repeat;
+    mask-position: top;
+    mask-size: 100% 100%;
+  }
+  .container {
+    text-align: center;
+    height: 100vh;
+  }
+  .prototype {
+    margin-inline: auto;
+    margin-top: tokens.$space-6;
+    max-height: 60vh;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+}

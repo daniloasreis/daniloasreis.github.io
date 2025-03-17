@@ -1,0 +1,82 @@
+@use "./colors.scss";
+@use "../tokens.scss";
+
+.bg-green-light {
+  background-color: colors.$green-light;
+}
+
+.bg-green-medium {
+  background-color: colors.$green-medium;
+}
+
+.bg-green-dark {
+  background-color: colors.$green-dark;
+}
+
+.bg-pink-light {
+  background-color: colors.$pink-light;
+}
+
+.bg-pink-medium {
+  background-color: colors.$pink-medium;
+}
+
+.bg-pink-dark {
+  background-color: colors.$pink-dark;
+}
+
+// ----
+
+.color-green-light {
+  color: colors.$green-light;
+}
+
+.color-green-medium {
+  color: colors.$green-medium;
+}
+
+.color-green-dark {
+  color: colors.$green-dark;
+}
+
+.color-pink-light {
+  color: colors.$pink-light;
+}
+
+.color-pink-medium {
+  color: colors.$pink-medium;
+}
+
+.color-pink-dark {
+  color: colors.$pink-dark;
+}
+
+// ---
+
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+.container {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: tokens.$space-6;
+  padding-block: tokens.$space-8;
+}
+
+// ---
+
+.hide-sm-screen {
+  @include tokens.on-sm-screen {
+    display: none;
+  }
+}
+
+.show-sm-screen {
+  display: none;
+  @include tokens.on-sm-screen {
+    display: unset;
+  }
+}

@@ -11,6 +11,9 @@ importers:
       '@fontsource-variable/anek-odia':
         specifier: ^5.2.5
         version: 5.2.5
+      '@fontsource-variable/reem-kufi':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@fontsource/poppins':
         specifier: ^5.2.5
         version: 5.2.5
@@ -234,6 +237,9 @@ packages:
 
   '@fontsource-variable/anek-odia@5.2.5':
     resolution: {integrity: sha512-uzdj/Ao8skCk+y81soZjOhlvPq13PMXhElYdwZe7M7kj2NL6t9TkvnjPyDH0uY06HfWIthl5/KjysZeT7TzFTQ==}
+
+  '@fontsource-variable/reem-kufi@5.2.6':
+    resolution: {integrity: sha512-caHQ25XIuUPQJpkIcmlUaQ3U1ontBqH/nWRr0dJWlRDjM8bJRFV4wxkPVIf/XApxglVluqAnr94hxxVYYtZnuw==}
 
   '@fontsource/poppins@5.2.5':
     resolution: {integrity: sha512-1S3k45pZOz2jqGPPqKw0in3uxFwnB+d5jSU8Tp9YwH/dIJptE3jdkQbYN0QD861GtuOpn6QhPW/yKt1w7hVRBQ==}
@@ -1819,6 +1825,8 @@ snapshots:
     optional: true
 
   '@fontsource-variable/anek-odia@5.2.5': {}
+
+  '@fontsource-variable/reem-kufi@5.2.6': {}
 
   '@fontsource/poppins@5.2.5': {}
 

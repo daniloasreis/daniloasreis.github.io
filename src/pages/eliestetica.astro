@@ -1,0 +1,27 @@
+---
+import "@fontsource-variable/reem-kufi";
+import "@styles/eliestetica/index.scss";
+
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import prototipoLaptop from "@assets/eliestetica/prototipo_laptop.png";
+import prototipoCelular from "@assets/eliestetica/prototipo_celular.png";
+---
+
+<Layout title="Eli Estética">
+  <header class="header page bg-green-light">
+    <div class="container">
+      <h1>
+        <strong>Eli Spa & Estética:</strong> facilitando a compra de cosméticos naturais
+      </h1>
+
+      <p class="info">
+        <span>UX/UI Design</span> - <span>Danilo Reis</span>
+      </p>
+
+      <Image class="prototype hide-sm-screen" src={prototipoLaptop} alt="" />
+      <Image class="prototype show-sm-screen" src={prototipoCelular} alt="" />
+    </div>
+  </header>
+</Layout>
