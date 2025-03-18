@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./colors.scss";
 @use "../tokens.scss";
 
@@ -53,6 +54,12 @@
 
 // ---
 
+.shadow-pink-dark {
+  box-shadow: 0.5rem 0.5rem color.change(colors.$pink-dark, $alpha: 0.4);
+}
+
+// ---
+
 .page {
   width: 100%;
   min-height: 100dvh;
@@ -79,4 +86,22 @@
   @include tokens.on-sm-screen {
     display: unset;
   }
+}
+
+// ---
+
+.padding-block {
+  padding: tokens.$space-6;
+  border-radius: tokens.$space-5;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, #{tokens.$space-5});
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, #{tokens.$space-5});
 }

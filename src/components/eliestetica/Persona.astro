@@ -1,0 +1,177 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+type Props = {
+  nome: string;
+  foto: {
+    src: ImageMetadata;
+    alt: string;
+  };
+  idade: number;
+  cidade: string;
+  estadoCivil: string;
+  familia: string;
+  escolaridade: string;
+  profissao: string;
+
+  frase: string;
+
+  metas: string[];
+  frustracoes: string[];
+};
+
+const {
+  nome,
+  foto,
+  idade,
+  cidade,
+  estadoCivil,
+  familia,
+  escolaridade,
+  profissao,
+  frase,
+  metas,
+  frustracoes,
+} = Astro.props;
+---
+
+<style lang="scss">
+  @use "@styles/tokens.scss";
+  @use "@styles/vivant/colors.scss";
+
+  $responsive-bp: 48rem;
+
+  h4,
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1;
+    color: colors.$accent;
+    font-weight: 600;
+  }
+  ul {
+    padding: tokens.$space-4;
+    padding-bottom: 0;
+  }
+  hr {
+    border-bottom: 1px solid colors.$neutral-light;
+    width: calc(100% + tokens.$space-5);
+    @media (max-width: $responsive-bp) {
+      width: 100%;
+      opacity: 0.3;
+    }
+  }
+
+  .persona {
+    --outline-width: 1px;
+    margin-block: tokens.$space-8;
+    line-height: 1.6;
+    display: grid;
+    gap: tokens.$space-5;
+    grid:
+      "perfil frase frase" min-content
+      "perfil interesses frustracoes" min-content
+      "perfil descricao descricao" 1fr /1fr 1fr 1fr;
+    @media (max-width: $responsive-bp) {
+      grid:
+        "perfil"
+        "frase"
+        "descricao"
+        "interesses"
+        "frustracoes" / 1fr;
+    }
+  }
+  .perfil {
+    grid-area: perfil;
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$space-2;
+    padding-right: tokens.$space-5;
+    border-right: 1px solid colors.$neutral-light;
+    @media (max-width: $responsive-bp) {
+      border-right: none;
+      padding-right: 0;
+    }
+    h4 {
+      text-align: center;
+      margin-top: tokens.$space-4;
+    }
+    img {
+      border-radius: 50%;
+      width: 10rem;
+      height: auto;
+      margin-inline: auto;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .frase {
+    --outline-color: #{colors.$neutral-light};
+    grid-area: frase;
+    font-size: 1.5rem;
+    padding: tokens.$space-4;
+    padding-block: tokens.$space-2;
+    padding-top: calc(tokens.$space-4 + 0.1ex);
+    text-align: center;
+  }
+  .interesses {
+    grid-area: interesses;
+  }
+  .frustracoes {
+    grid-area: frustracoes;
+  }
+  .detalhes {
+    list-style-type: none;
+    padding: 0;
+    padding-block: tokens.$space-2;
+    li {
+      text-wrap: nowrap;
+      display: flex;
+      gap: 1ex;
+    }
+  }
+  .descricao {
+    --outline-color: #{colors.$accent};
+    grid-area: descricao;
+    padding: tokens.$space-5;
+  }
+</style>
+
+<div class="persona">
+  <div class="perfil">
+    <Image alt={foto.alt} src={foto.src} />
+    <h4>{nome}</h4>
+    <hr />
+    <ul class="detalhes">
+      <li><span class="color-accent">Idade:</span> {idade} anos</li>
+      <li><span class="color-accent">Cidade:</span> {cidade}</li>
+      <li><span class="color-accent">Estado Civil:</span> {estadoCivil}</li>
+      <li><span class="color-accent">Família:</span> {familia}</li>
+      <li>
+        <span class="color-accent">Escolaridade:</span>
+        {escolaridade}
+      </li>
+      <li>
+        <span class="color-accent">Profissão:</span>
+        {profissao}
+      </li>
+    </ul>
+  </div>
+  <p class="descricao outline">
+    <slot />
+  </p>
+  <blockquote class="frase outline color-accent">
+    “{frase}”
+  </blockquote>
+  <div class="interesses">
+    <h5>Interesses e Desejos</h5>
+    <ul>
+      {metas.map((meta) => <li>{meta}</li>)}
+    </ul>
+  </div>
+  <div class="frustracoes">
+    <h5>Frustrações</h5>
+    <ul>
+      {frustracoes.map((frustracao) => <li>{frustracao}</li>)}
+    </ul>
+  </div>
+</div>

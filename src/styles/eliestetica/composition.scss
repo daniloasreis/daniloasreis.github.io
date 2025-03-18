@@ -33,3 +33,25 @@
     height: auto;
   }
 }
+
+.sobre {
+  .image {
+    width: 30vw;
+    max-width: 20rem;
+    height: auto;
+    float: right;
+    margin-left: tokens.$space-8;
+    margin-right: 0;
+    transform: rotate(-8deg);
+  }
+}
+
+.processo {
+  h3 {
+    text-decoration: none;
+  }
+  .glyph-wrapper {
+    margin-block: tokens.$space-10;
+    padding-inline: tokens.$space-5;
+  }
+}

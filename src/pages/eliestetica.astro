@@ -7,6 +7,14 @@ import { Image } from "astro:assets";
 
 import prototipoLaptop from "@assets/eliestetica/prototipo_laptop.png";
 import prototipoCelular from "@assets/eliestetica/prototipo_celular.png";
+
+import vivian from "@assets/eliestetica/vivian.jpeg";
+import lucas from "@assets/eliestetica/lucas.jpeg";
+
+import problema from "@assets/eliestetica/problema.png";
+import objetivo from "@assets/eliestetica/objetivo.png";
+import solucao from "@assets/eliestetica/solucao.png";
+import Persona from "@components/eliestetica/Persona.astro";
 ---
 
 <Layout title="Eli Estética">
@@ -24,4 +32,95 @@ import prototipoCelular from "@assets/eliestetica/prototipo_celular.png";
       <Image class="prototype show-sm-screen" src={prototipoCelular} alt="" />
     </div>
   </header>
+  <section class="sobre page bg-green-medium">
+    <div class="container">
+      <h2>Sobre o projeto</h2>
+      <Image class="hide-sm-screen image" src={prototipoCelular} alt="" />
+      <p>
+        Desenvolvi um site responsivo para a marca real “Eli Spa e Estética”,
+        com foco em uma <strong>experiência intuitiva e agradável</strong>.
+      </p>
+      <p>
+        O projeto foi pensado para facilitar a compra de cosméticos naturais,
+        garantindo <strong>
+          transações rápidas e eficientes em qualquer dispositivo
+        </strong>.
+      </p>
+      <h2>Duração</h2>
+      <p>Janeiro de 2025</p>
+      <h2>Meu papel</h2>
+      <p>
+        Atuei de forma completa, conduzindo todas as etapas do desenvolvimento
+        do projeto, desde o planejamento à entrega do produto final.
+      </p>
+    </div>
+  </section>
+  <section class="processo page bg-pink-light">
+    <div class="container">
+      <h2>Processo de Design</h2>
+      <h3><span class="pill red">Descoberta</span></h3>
+      <div style="--gap: 6rem" class="glyph-wrapper flex-column">
+        <div class="glyph-block padding-block bg-pink-medium shadow-pink-dark">
+          <Image src={problema} alt="" />
+          <h4>O Problema</h4>
+          <p>
+            Informações excessivas ou pouco claras sobre produtos e checkout
+            tornam a decisão de compra mais difícil, aumentando o tempo de
+            navegação e o processo de finalização.
+          </p>
+        </div>
+        <div
+          style="align-self: flex-end;"
+          class="glyph-block padding-block bg-pink-medium shadow-pink-dark">
+          <Image src={objetivo} alt="" />
+          <h4>Objetivo</h4>
+          <p>
+            Reduzir o tempo de navegação e aumentar a taxa de conversão,
+            tornando a apresentação das informações mais clara e acessível.
+          </p>
+        </div>
+        <div
+          style="align-self: center;"
+          class="glyph-block padding-block bg-pink-medium shadow-pink-dark">
+          <Image src={solucao} alt="" />
+          <h4>Solução</h4>
+          <p>
+            Fornecer descrições objetivas dos produtos e simplificar o fluxo de
+            compra, garantindo uma experiência intuitiva e eficiente que atenda
+            à necessidade dos usuários.
+          </p>
+        </div>
+      </div>
+      <h2>Definição</h2>
+      <h3><span class="pill red">Personas</span></h3>
+      <Persona
+        foto={{
+          src: vivian,
+          alt: "",
+        }}
+        nome="Vivian"
+        cidade="Fortaleza-CE"
+        idade={43}
+        estadoCivil="Casada"
+        familia="Dois filhos"
+        escolaridade="Superior incompleto"
+        profissao="Secretária"
+        frase="O importante é conseguir cuidar mais de mim agora"
+        frustracoes={[
+          "Dificuldade em encontrar produtos naturais realmente eficazes.",
+          "Falta de tempo para fazer compras",
+          "Navegação complicada e desorganizada",
+        ]}
+        metas={[
+          "Ter uma rotina de autocuidado eficiente",
+          "Cuidar da pele de forma natural e saudável",
+          "Equilibrar vida pessoal e profissional",
+        ]}>
+        Vivian é uma secretária dedicada que equilibra trabalho, família e
+        autocuidado. Prática e exigente, ela busca produtos naturais eficazes,
+        sem complicação ou processos de compra demorados, para manter seu
+        bem-estar de forma rápida e descomplicada.
+      </Persona>
+    </div>
+  </section>
 </Layout>

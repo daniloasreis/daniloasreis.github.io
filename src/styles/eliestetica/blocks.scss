@@ -1,0 +1,43 @@
+@use "./colors.scss";
+@use "../tokens.scss";
+
+.pill {
+  position: relative;
+  isolation: isolate;
+  color: var(--text-color);
+  &.red {
+    --background-color: #{colors.$pink-medium};
+    --text-color: #{colors.$pink-dark};
+  }
+  &::before {
+    content: "";
+    z-index: -1;
+    background-color: var(--background-color);
+    inset-block: calc(-1 * tokens.$space-4);
+    inset-inline: calc(-1 * tokens.$space-10);
+    position: absolute;
+    border-radius: tokens.$space-6;
+  }
+}
+
+.glyph-block {
+  text-align: center;
+  position: relative;
+  max-width: 40rem;
+  img {
+    width: 8rem;
+    height: auto;
+    position: absolute;
+    top: -5rem;
+    right: -3rem;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: colors.$pink-dark;
+    font-weight: t00;
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
