@@ -47,11 +47,27 @@
 }
 
 .processo {
+  display: flow-root;
+  .container {
+    padding-bottom: 0;
+  }
   h3 {
     text-decoration: none;
   }
   .glyph-wrapper {
     margin-block: tokens.$space-10;
     padding-inline: tokens.$space-5;
+  }
+  .post-it-wrapper {
+    padding: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    height: 15rem;
+    --gap: #{tokens.$space-8};
+  }
+  .decoration {
+    width: 100vw;
+    height: auto;
+    float: left;
   }
 }

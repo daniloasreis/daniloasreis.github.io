@@ -105,3 +105,24 @@
   flex-direction: column;
   gap: var(--gap, #{tokens.$space-5});
 }
+
+.triple-column {
+  display: grid;
+  gap: tokens.$space-6;
+  grid-template-columns: repeat(3, minmax(16rem, 1fr));
+  @include tokens.on-md-screen {
+    grid-template-columns: repeat(2, minmax(16rem, 1fr));
+    > *:last-child {
+      grid-column: span 2;
+      max-width: 50%;
+      margin: auto;
+    }
+  }
+  @include tokens.on-sm-screen {
+    grid-template-columns: 1fr;
+    > *:last-child {
+      grid-column: unset;
+      max-width: unset;
+    }
+  }
+}

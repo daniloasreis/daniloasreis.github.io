@@ -14,6 +14,9 @@ import lucas from "@assets/eliestetica/lucas.jpeg";
 import problema from "@assets/eliestetica/problema.png";
 import objetivo from "@assets/eliestetica/objetivo.png";
 import solucao from "@assets/eliestetica/solucao.png";
+
+import ProcessoDecoration from "@assets/eliestetica/processo_decoration.svg";
+
 import Persona from "@components/eliestetica/Persona.astro";
 ---
 
@@ -152,6 +155,135 @@ import Persona from "@components/eliestetica/Persona.astro";
         que se encaixem no seu estilo de vida corrido, garantindo que sua
         aparência e bem-estar estejam sempre em dia.
       </Persona>
+
+      <h2>Jornada do Usuário</h2>
+
+      <p>Objetivo: Lucas realizar a compra de um cosmético natural no site.</p>
+      <div class="table-wrapper">
+        <table class="jornada">
+          <thead>
+            <tr>
+              <th scope="col">Ação</th>
+              <th scope="col">Descoberta e Navegação</th>
+              <th scope="col">Exploração dos Produtos</th>
+              <th scope="col">Seleção do Produto</th>
+              <th scope="col">Checkout</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Lista de tarefas</th>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #aeb2f9" class="post-it">
+                    O usuário acessa o site em busca de cosméticos naturais.
+                  </div>
+                  <div style="--bg-color: #aeb2f9" class="post-it">
+                    Verifica se é um site confiável olhando o feedback dos
+                    clientes.
+                  </div>
+                  <div style="--bg-color: #aeb2f9" class="post-it">
+                    Procura informações se os produtos são naturais.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #ebd55d" class="post-it">
+                    Clica nos produtos masculinos na barra de navegação.
+                  </div>
+                  <div style="--bg-color: #ebd55d" class="post-it">
+                    Busca pela opção desejada.
+                  </div>
+                  <div style="--bg-color: #ebd55d" class="post-it">
+                    Seleciona um produto.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #a5d182" class="post-it">
+                    Lê as descrições e compara os produtos.
+                  </div>
+                  <div style="--bg-color: #a5d182" class="post-it">
+                    Verifica o preço.
+                  </div>
+                  <div style="--bg-color: #a5d182" class="post-it">
+                    Adiciona à cesta.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #eaac6d" class="post-it">
+                    Confere o produto que selecionou.
+                  </div>
+                  <div style="--bg-color: #eaac6d" class="post-it">
+                    Preenche os formulários.
+                  </div>
+                  <div style="--bg-color: #eaac6d" class="post-it">
+                    Recebe a confirmação.
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sentimento</th>
+              <td><span class="emoji">🤔</span></td>
+              <td><span class="emoji">😏</span></td>
+              <td><span class="emoji">😁</span></td>
+              <td><span class="emoji">🥳</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Oportunidade de melhoria</th>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Organizar os produtos em categorias.
+                  </div>
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Colocar uma funcionalidade de busca.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Destacar informações essenciais.
+                  </div>
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Simplificar a descrição dos produtos.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Implementar recomendações personalizadas.
+                  </div>
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Colocar opção de favoritar um produto.
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="flex post-it-wrapper">
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Simplificar fluxo de checkout.
+                  </div>
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Reduzir as etapas.
+                  </div>
+                  <div style="--bg-color: #b4cbf1" class="post-it">
+                    Adicionar uma opção de acompanhar o pedido.
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <ProcessoDecoration class="decoration" />
   </section>
 </Layout>
