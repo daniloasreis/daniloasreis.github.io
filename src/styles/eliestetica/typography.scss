@@ -34,13 +34,9 @@ h1 {
 h2 {
   color: colors.$text;
   text-transform: uppercase;
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
-  text-decoration-thickness: 2px;
-  text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
   line-height: 1.6;
-  margin-top: tokens.$space-8;
-  margin-bottom: tokens.$space-7;
+  margin-top: tokens.$space-7;
+  margin-bottom: tokens.$space-5;
   font-weight: 600;
   font-size: 2rem;
   hyphens: auto;
@@ -54,10 +50,10 @@ h3 {
   text-decoration-thickness: 2px;
   text-decoration-color: color-mix(in srgb, currentColor, transparent 50%);
   line-height: 1.6;
-  margin-top: tokens.$space-7;
-  margin-bottom: tokens.$space-5;
-  font-weight: 600;
+  margin-top: tokens.$space-8;
+  margin-bottom: tokens.$space-7;
   font-size: 1.75rem;
+  font-weight: 600;
   hyphens: auto;
 }
 
