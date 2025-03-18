@@ -37,133 +37,146 @@ const {
 ---
 
 <style lang="scss">
+  @use "sass:color";
+  @use "@styles/eliestetica/colors.scss";
   @use "@styles/tokens.scss";
-  @use "@styles/vivant/colors.scss";
-
-  $responsive-bp: 48rem;
-
-  h4,
-  h5 {
-    font-size: 1.5rem;
-    line-height: 1;
-    color: colors.$accent;
-    font-weight: 600;
-  }
-  ul {
-    padding: tokens.$space-4;
-    padding-bottom: 0;
-  }
-  hr {
-    border-bottom: 1px solid colors.$neutral-light;
-    width: calc(100% + tokens.$space-5);
-    @media (max-width: $responsive-bp) {
-      width: 100%;
-      opacity: 0.3;
-    }
-  }
 
   .persona {
-    --outline-width: 1px;
-    margin-block: tokens.$space-8;
-    line-height: 1.6;
+    --image-size: 20rem;
+    margin-top: calc(0.8 * var(--image-size));
+    position: relative;
     display: grid;
-    gap: tokens.$space-5;
+    column-gap: tokens.$space-12;
+    row-gap: tokens.$space-6;
     grid:
-      "perfil frase frase" min-content
-      "perfil interesses frustracoes" min-content
-      "perfil descricao descricao" 1fr /1fr 1fr 1fr;
-    @media (max-width: $responsive-bp) {
+      "perfil frase"
+      "metas frustracoes"
+      "descricao descricao" / 1fr 1fr;
+    @include tokens.on-md-screen {
+      --image-size: 12rem;
       grid:
         "perfil"
         "frase"
-        "descricao"
-        "interesses"
-        "frustracoes" / 1fr;
+        "metas"
+        "frustracoes"
+        "descricao" / 1fr;
     }
+  }
+  .foto {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--image-size);
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: 50%;
+    @include tokens.on-md-screen {
+      top: -2rem;
+    }
+  }
+  .detalhes {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .descricao {
+    border-top: 2px solid colors.$pink-dark;
+  }
+  h4 {
+    text-transform: uppercase;
+    color: colors.$pink-dark;
+  }
+  h5 {
+    font-size: 1.75rem;
+    color: colors.$pink-dark;
+  }
+  hr {
+    border: none;
+    border-bottom: 2px solid colors.$pink-dark;
+    margin-top: tokens.$space-4;
   }
   .perfil {
     grid-area: perfil;
-    display: flex;
-    flex-direction: column;
-    gap: tokens.$space-2;
-    padding-right: tokens.$space-5;
-    border-right: 1px solid colors.$neutral-light;
-    @media (max-width: $responsive-bp) {
-      border-right: none;
-      padding-right: 0;
-    }
-    h4 {
-      text-align: center;
-      margin-top: tokens.$space-4;
-    }
-    img {
-      border-radius: 50%;
-      width: 10rem;
-      height: auto;
-      margin-inline: auto;
-      aspect-ratio: 1 / 1;
-    }
+  }
+  .descricao {
+    grid-area: descricao;
+    padding-top: tokens.$space-4;
+  }
+  .metas {
+    grid-area: metas;
   }
   .frase {
-    --outline-color: #{colors.$neutral-light};
+    hyphens: auto;
     grid-area: frase;
-    font-size: 1.5rem;
-    padding: tokens.$space-4;
-    padding-block: tokens.$space-2;
-    padding-top: calc(tokens.$space-4 + 0.1ex);
+    background: color.change(colors.$pink-dark, $alpha: 0.28);
+    margin-top: auto;
+    margin-bottom: tokens.$space-3;
+    justify-self: flex-end;
     text-align: center;
-  }
-  .interesses {
-    grid-area: interesses;
+    color: color.adjust(colors.$pink-dark, $lightness: -10%);
+    @include tokens.on-md-screen {
+      justify-self: stretch;
+      margin-bottom: 0;
+    }
+    &::before {
+      content: "\201C";
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: serif;
+      line-height: 1rem;
+      height: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      color: colors.$pink-dark;
+      padding-right: 4px;
+    }
+    &::after {
+      content: "\201D";
+      padding-left: 4px;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: serif;
+      line-height: 1rem;
+      height: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      color: colors.$pink-dark;
+    }
   }
   .frustracoes {
     grid-area: frustracoes;
   }
-  .detalhes {
-    list-style-type: none;
-    padding: 0;
-    padding-block: tokens.$space-2;
-    li {
-      text-wrap: nowrap;
-      display: flex;
-      gap: 1ex;
-    }
-  }
-  .descricao {
-    --outline-color: #{colors.$accent};
-    grid-area: descricao;
-    padding: tokens.$space-5;
+  li::marker {
+    color: colors.$pink-dark;
   }
 </style>
 
-<div class="persona">
+<div class="persona bg-pink-medium shadow-pink-dark padding-block">
   <div class="perfil">
-    <Image alt={foto.alt} src={foto.src} />
+    <Image class="foto shadow-pink-dark" alt={foto.alt} src={foto.src} />
     <h4>{nome}</h4>
-    <hr />
     <ul class="detalhes">
-      <li><span class="color-accent">Idade:</span> {idade} anos</li>
-      <li><span class="color-accent">Cidade:</span> {cidade}</li>
-      <li><span class="color-accent">Estado Civil:</span> {estadoCivil}</li>
-      <li><span class="color-accent">Família:</span> {familia}</li>
+      <li><span class="color-pink-dark">Idade:</span> {idade} anos</li>
+      <li><span class="color-pink-dark">Cidade:</span> {cidade}</li>
+      <li><span class="color-pink-dark">Estado Civil:</span> {estadoCivil}</li>
+      <li><span class="color-pink-dark">Família:</span> {familia}</li>
       <li>
-        <span class="color-accent">Escolaridade:</span>
+        <span class="color-pink-dark">Escolaridade:</span>
         {escolaridade}
       </li>
       <li>
-        <span class="color-accent">Profissão:</span>
+        <span class="color-pink-dark">Profissão:</span>
         {profissao}
       </li>
     </ul>
+    <hr />
   </div>
-  <p class="descricao outline">
+  <p class="descricao">
     <slot />
   </p>
-  <blockquote class="frase outline color-accent">
-    “{frase}”
-  </blockquote>
-  <div class="interesses">
-    <h5>Interesses e Desejos</h5>
+  <blockquote class="frase padding-block">{frase}</blockquote>
+  <div class="metas">
+    <h5>Metas</h5>
     <ul>
       {metas.map((meta) => <li>{meta}</li>)}
     </ul>

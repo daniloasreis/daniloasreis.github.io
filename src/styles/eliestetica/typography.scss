@@ -61,6 +61,10 @@ h3 {
   hyphens: auto;
 }
 
+ul {
+  padding-left: 2ch;
+}
+
 h4 {
   font-size: 1.75rem;
   line-height: 1.4;
@@ -84,10 +88,8 @@ mark {
   font-weight: 800;
 }
 
-a {
-}
-
 blockquote {
+  text-wrap: pretty;
   margin-bottom: tokens.$space-8;
 }
 
