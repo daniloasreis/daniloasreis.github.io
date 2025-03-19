@@ -190,3 +190,27 @@
   background-color: colors.$green-dark;
   color: colors.$green-light;
 }
+
+.etapas {
+  --gap: #{tokens.$space-8};
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: etapa;
+  .etapa {
+    counter-increment: etapa;
+    padding: tokens.$space-6;
+    border-radius: tokens.$space-5;
+    padding-top: 7rem;
+    position: relative;
+    &::before {
+      content: "0" counter(etapa);
+      font-size: 10rem;
+      position: absolute;
+      line-height: 1;
+      transform: translate(-10%, -30%);
+      color: color.change(colors.$pink-dark, $alpha: 0.5);
+      left: 0;
+      top: 0;
+    }
+  }
+}

@@ -112,7 +112,7 @@
 
 .triple-column {
   display: grid;
-  gap: tokens.$space-6;
+  gap: var(--gap, #{tokens.$space-6});
   grid-template-columns: repeat(3, minmax(16rem, 1fr));
   @include tokens.on-md-screen {
     grid-template-columns: repeat(2, minmax(16rem, 1fr));
