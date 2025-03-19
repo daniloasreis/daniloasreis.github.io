@@ -15,6 +15,8 @@ import problema from "@assets/eliestetica/problema.png";
 import objetivo from "@assets/eliestetica/objetivo.png";
 import solucao from "@assets/eliestetica/solucao.png";
 
+import prototipo from "@assets/eliestetica/prototipo_alta_fidelidade.png";
+
 import wireframe1 from "@assets/eliestetica/wireframes-1.png";
 import wireframe2 from "@assets/eliestetica/wireframes-2.png";
 import wireframe3 from "@assets/eliestetica/wireframes-3.png";
@@ -29,6 +31,8 @@ import MeetLogo from "@assets/logos/google_meet.svg";
 import NotionLogo from "@assets/logos/notion.svg";
 
 import ProcessoDecoration from "@assets/eliestetica/processo_decoration.svg";
+import EntregaDecoration from "@assets/eliestetica/entrega_decoration.svg";
+
 import Typography from "@assets/eliestetica/typography.svg";
 import Icons1 from "@assets/eliestetica/icons_1.svg";
 import Icons2 from "@assets/eliestetica/icons_2.svg";
@@ -81,7 +85,7 @@ import Nav from "@components/eliestetica/Nav.svelte";
   </section>
   <section class="processo page bg-pink-light">
     <div class="container">
-      <h2><span class="pill red">Processo de Design</span></h2>
+      <h2><span class="pill pink">Processo de Design</span></h2>
       <h3>Descoberta</h3>
       <div style="--gap: 6rem" class="glyph-wrapper flex-column">
         <div class="glyph-block padding-block bg-pink-medium shadow-pink-dark">
@@ -115,7 +119,7 @@ import Nav from "@components/eliestetica/Nav.svelte";
           </p>
         </div>
       </div>
-      <h2><span class="pill red">Definição</span></h2>
+      <h2><span class="pill pink">Definição</span></h2>
       <h3>Personas</h3>
       <Persona
         foto={{
@@ -474,5 +478,30 @@ import Nav from "@components/eliestetica/Nav.svelte";
         </div>
       </div>
     </div>
+  </section>
+  <section class="entrega page bg-pink-light">
+    <div class="container">
+      <h2><span class="pill pink">Entrega</span></h2>
+      <div class="flex">
+        <h3>Protótipo de Alta Fidelidade</h3>
+        <Image class="prototipo-image" src={prototipo} alt="" />
+      </div>
+      <h3>Aprendizado</h3>
+      <p>
+        Durante este projeto, aprendi a importância de priorizar a clareza e a
+        simplicidade na navegação para garantir uma experiência mais intuitiva e
+        eficiente.
+      </p>
+      <p>
+        Pequenas mudanças, como a reorganização de categorias e a otimização do
+        checkout, demonstraram um impacto significativo na taxa de conversão e
+        na satisfação do usuário.
+      </p>
+      <p>
+        Essas lições reforçaram minha capacidade de desenvolver soluções
+        práticas, funcionais e verdadeiramente centradas no usuário.
+      </p>
+    </div>
+    <EntregaDecoration class="decoration" />
   </section>
 </Layout>

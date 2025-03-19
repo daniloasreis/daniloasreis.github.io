@@ -2,11 +2,17 @@
 @use "./colors.scss";
 @use "../tokens.scss";
 
+.decoration {
+  width: 100vw;
+  height: auto;
+  float: left;
+}
+
 .pill {
   position: relative;
   isolation: isolate;
   color: var(--text-color);
-  &.red {
+  &.pink {
     --background-color: #{colors.$pink-medium};
     --text-color: #{colors.$pink-dark};
   }
