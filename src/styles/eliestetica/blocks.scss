@@ -9,6 +9,10 @@
     --background-color: #{colors.$pink-medium};
     --text-color: #{colors.$pink-dark};
   }
+  &.green {
+    --background-color: #{colors.$green-medium};
+    --text-color: #{colors.$green-dark};
+  }
   &::before {
     content: "";
     z-index: -1;
