@@ -152,3 +152,35 @@
     margin-top: 4rem;
   }
 }
+
+.button {
+  border: none;
+  padding-inline: tokens.$space-8;
+  padding-block: tokens.$space-2;
+  border-radius: tokens.$space-4;
+  white-space: nowrap;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.button.slim {
+  font-size: 1rem;
+  padding-block: tokens.$space-1;
+}
+
+.button.pink {
+  background-color: colors.$pink-dark;
+  color: colors.$pink-light;
+}
+
+.button.black {
+  background-color: colors.$text;
+  color: colors.$green-light;
+}
+
+.button.green {
+  background-color: colors.$green-dark;
+  color: colors.$green-light;
+}

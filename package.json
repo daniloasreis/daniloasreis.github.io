@@ -9,12 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/svelte": "^7.0.6",
     "@fontsource-variable/anek-odia": "^5.2.5",
     "@fontsource-variable/reem-kufi": "^5.2.6",
     "@fontsource/poppins": "^5.2.5",
     "astro": "^5.4.1",
     "sass": "^1.85.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "svelte": "^5.23.2",
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.28",

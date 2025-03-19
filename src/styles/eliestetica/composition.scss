@@ -90,6 +90,7 @@
       flex-direction: column;
     }
   }
+  .counters,
   .icons {
     flex-wrap: wrap;
   }
@@ -106,4 +107,15 @@
     width: 4rem;
     height: 4rem;
   }
+  .buttons {
+    --column-length: 18rem;
+    gap: tokens.$space-5;
+  }
+  .button-group {
+    align-items: center;
+  }
+}
+
+.components > * + * {
+  margin-top: tokens.$space-5;
 }

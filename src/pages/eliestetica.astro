@@ -37,6 +37,8 @@ import LogoAdiquor from "@assets/eliestetica/logo_adiquor.svg";
 import LogoFlorMadame from "@assets/eliestetica/logo_flormadame.svg";
 
 import Persona from "@components/eliestetica/Persona.astro";
+import Counter from "@components/eliestetica/Counter.svelte";
+import Nav from "@components/eliestetica/Nav.svelte";
 ---
 
 <Layout title="Eli Estética">
@@ -426,9 +428,31 @@ import Persona from "@components/eliestetica/Persona.astro";
         </li>
       </ul>
       <h4>Ícones e Componentes</h4>
-      <div class="icons flex">
-        <Icons1 class="full-width" />
-        <Icons2 class="full-width" />
+      <div class="components">
+        <div class="icons flex">
+          <Icons1 class="full-width" />
+          <Icons2 class="full-width" />
+        </div>
+        <div class="counters flex">
+          <Counter color="green" client:load />
+          <Counter color="pink" client:load />
+          <Nav color="green" client:load />
+          <Nav color="pink" client:load />
+        </div>
+        <div class="buttons columns">
+          <div class="button-group flex-column">
+            <button class="button black">Conhecer mais</button>
+            <button class="button black slim">Adicionar à cesta</button>
+          </div>
+          <div class="button-group flex-column">
+            <button class="button green">Adicionar à cesta</button>
+            <button class="button green slim">Finalizar compra</button>
+          </div>
+          <div class="button-group flex-column">
+            <button class="button pink">Adicionar à cesta</button>
+            <button class="button pink slim">Adicionar à cesta</button>
+          </div>
+        </div>
       </div>
       <div class="columns">
         <div class="column">
