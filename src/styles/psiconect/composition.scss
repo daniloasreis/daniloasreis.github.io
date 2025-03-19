@@ -16,6 +16,7 @@
   }
   h1 {
     position: relative;
+    white-space: nowrap;
   }
   .logo {
     height: 6rem;
@@ -67,25 +68,18 @@
   }
   .float-area {
     position: absolute;
-    position-anchor: --image;
     &:first-child {
       top: 0;
       left: 0;
-      transform: translate(-70%, 40%);
-      --ratio: 2/1.5;
+      transform: translate(-75%, -50%);
+      --ratio: 2/0.9;
       position-area: top left;
-      @supports (position-area: top left) {
-        transform: translate(30%, 40%);
-      }
     }
     &:nth-child(2) {
       bottom: 0;
       right: 0;
       transform: translate(0, -60%);
       position-area: bottom center;
-      @supports (position-area: top left) {
-        transform: translate(0, -40%);
-      }
       @include tokens.on-sm-screen {
         --ratio: 4/1;
       }
