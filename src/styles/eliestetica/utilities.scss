@@ -26,6 +26,10 @@
   background-color: colors.$pink-dark;
 }
 
+.bg-text {
+  background-color: colors.$text;
+}
+
 // ----
 
 .color-green-light {
@@ -67,7 +71,7 @@
 }
 
 .container {
-  max-width: 64rem;
+  max-width: 70rem;
   margin-inline: auto;
   padding-inline: tokens.$space-6;
   padding-block: tokens.$space-8;
@@ -125,4 +129,26 @@
       max-width: unset;
     }
   }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  grid-auto-flow: dense;
+  @include tokens.on-sm-screen {
+    grid-template-columns: 1fr;
+  }
+}
+
+.full-width {
+  width: 100%;
+  height: auto;
+}
+
+.flex-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$space-5;
 }

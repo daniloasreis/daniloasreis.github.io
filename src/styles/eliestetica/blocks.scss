@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./colors.scss";
 @use "../tokens.scss";
 
@@ -102,5 +103,52 @@
   .emoji {
     display: block;
     font-size: 3rem;
+  }
+}
+
+.font-name {
+  font-size: 2rem;
+}
+
+.font-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: tokens.$space-5;
+  &,
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    white-space: nowrap;
+  }
+}
+
+.cores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: tokens.$space-5;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cor {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 0 0 1px color.change(colors.$text, $alpha: 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  .hex {
+    font-size: 0.8em;
+  }
+  .label {
+    font-size: 1.25rem;
+    padding: tokens.$space-3;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: column;
+    background: white;
+    margin-top: 4rem;
   }
 }

@@ -52,7 +52,6 @@
     padding-bottom: 0;
   }
   .glyph-wrapper {
-    margin-block: tokens.$space-10;
     padding-inline: tokens.$space-5;
   }
   .post-it-wrapper {
@@ -66,5 +65,45 @@
     width: 100vw;
     height: auto;
     float: left;
+  }
+}
+
+.desenvolvimento {
+  .typography {
+    max-width: 20rem;
+    margin-left: -4rem;
+    margin-bottom: auto;
+    height: auto;
+  }
+  .glyph {
+    display: flex;
+    flex-direction: column;
+  }
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .estilos {
+    display: flex;
+    gap: tokens.$space-5;
+    @include tokens.on-md-screen {
+      flex-direction: column;
+    }
+  }
+  .icons {
+    flex-wrap: wrap;
+  }
+  .icons svg {
+    max-width: 20rem;
+  }
+  .logo {
+    max-width: 20rem;
+    height: auto;
+    width: 100%;
+    margin-block: tokens.$space-6;
+  }
+  .brand-logo {
+    width: 4rem;
+    height: 4rem;
   }
 }

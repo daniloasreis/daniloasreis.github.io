@@ -15,7 +15,26 @@ import problema from "@assets/eliestetica/problema.png";
 import objetivo from "@assets/eliestetica/objetivo.png";
 import solucao from "@assets/eliestetica/solucao.png";
 
+import wireframe1 from "@assets/eliestetica/wireframes-1.png";
+import wireframe2 from "@assets/eliestetica/wireframes-2.png";
+import wireframe3 from "@assets/eliestetica/wireframes-3.png";
+import wireframe4 from "@assets/eliestetica/wireframes-4.png";
+import wireframe5 from "@assets/eliestetica/wireframes-5.png";
+import wireframe6 from "@assets/eliestetica/wireframes-6.png";
+import wireframe7 from "@assets/eliestetica/wireframes-7.png";
+
+import FigmaLogo from "@assets/logos/figma.svg";
+import MiroLogo from "@assets/logos/miro.svg";
+import MeetLogo from "@assets/logos/google_meet.svg";
+import NotionLogo from "@assets/logos/notion.svg";
+
 import ProcessoDecoration from "@assets/eliestetica/processo_decoration.svg";
+import Typography from "@assets/eliestetica/typography.svg";
+import Icons1 from "@assets/eliestetica/icons_1.svg";
+import Icons2 from "@assets/eliestetica/icons_2.svg";
+import LogoEli from "@assets/eliestetica/logo_eli.svg";
+import LogoAdiquor from "@assets/eliestetica/logo_adiquor.svg";
+import LogoFlorMadame from "@assets/eliestetica/logo_flormadame.svg";
 
 import Persona from "@components/eliestetica/Persona.astro";
 ---
@@ -291,12 +310,145 @@ import Persona from "@components/eliestetica/Persona.astro";
       <h2><span class="pill green">Desenvolvimento</span></h2>
       <h3>Sitemap</h3>
       <h3>Wireframes</h3>
+      <div style="gap: 3rem" class="columns">
+        <Image class="full-width" src={wireframe1} alt="" />
+        <Image
+          style="grid-row: span 2;"
+          class="full-width"
+          src={wireframe2}
+          alt=""
+        />
+        <Image class="full-width" src={wireframe3} alt="" />
+        <Image class="full-width" src={wireframe4} alt="" />
+        <Image class="full-width" src={wireframe5} alt="" />
+        <Image class="full-width" src={wireframe6} alt="" />
+        <Image class="full-width" src={wireframe7} alt="" />
+      </div>
       <h3>Guia de Estilos</h3>
-      <h4>Tipografia</h4>
+      <div class="estilos">
+        <div class="glyph">
+          <Typography class="typography" />
+        </div>
+        <div class="text">
+          <h4> Tipografia </h4>
+          <h5 class="color-green-dark">Nome</h5>
+          <p class="font-name">Reem Kufi</p>
+          <h5 class="color-green-dark">Tamanhos</h5>
+          <ul class="font-list">
+            <li>
+              <ul>
+                <li style="font-weight: 700; font-size: 40px;">
+                  Bold / 40px
+                </li>
+                <li style="font-weight: 700; font-size: 26px;">
+                  Bold / 36px
+                </li>
+                <li style="font-weight: 700; font-size: 24px;">
+                  Bold / 24px
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li style="font-weight: 600; font-size: 32px;">
+                  SemiBold / 32px
+                </li>
+                <li style="font-weight: 600; font-size: 30px;">
+                  SemiBold / 30px
+                </li>
+                <li style="font-weight: 600; font-size: 22px;">
+                  SemiBold / 22px
+                </li>
+                <li style="font-weight: 600; font-size: 20px;">
+                  SemiBold / 20px
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li style="font-weight: 500; font-size: 34px">
+                  Regular / 34px
+                </li>
+                <li style="font-weight: 500; font-size: 30px">
+                  Regular / 30px
+                </li>
+                <li style="font-weight: 500; font-size: 28px">
+                  Regular / 28px
+                </li>
+                <li style="font-weight: 500; font-size: 24px">
+                  Regular / 24px
+                </li>
+                <li style="font-weight: 500; font-size: 20px">
+                  Regular / 20px
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
       <h4>Paleta de cores</h4>
+      <ul class="cores">
+        <li class="cor bg-pink-dark">
+          <div class="label">
+            Rosa escuro
+            <span class="hex">#AD426C</span>
+          </div>
+        </li>
+        <li class="cor bg-pink-light">
+          <div class="label">
+            Rosa claro
+            <span class="hex">#E1C1CD</span>
+          </div>
+        </li>
+        <li class="cor bg-green-dark">
+          <div class="label">
+            Verde 1
+            <span class="hex">#3E5F1B</span>
+          </div>
+        </li>
+        <li class="cor bg-green-medium">
+          <div class="label">
+            Verde 2
+            <span class="hex">#C4C781</span>
+          </div>
+        </li>
+        <li class="cor bg-green-light">
+          <div class="label">
+            Verde 3
+            <span class="hex">#E9E49D</span>
+          </div>
+        </li>
+        <li class="cor bg-text">
+          <div class="label">
+            Preto
+            <span class="hex">#040404</span>
+          </div>
+        </li>
+      </ul>
       <h4>Ícones e Componentes</h4>
-      <h4>Logomarcas</h4>
-      <h4>Ferramentas</h4>
+      <div class="icons flex">
+        <Icons1 class="full-width" />
+        <Icons2 class="full-width" />
+      </div>
+      <div class="columns">
+        <div class="column">
+          <h4>Logomarcas</h4>
+          <LogoEli class="logo" />
+          <h5 class="color-green-dark">Linha de produtos masculinos</h5>
+          <LogoAdiquor class="logo" />
+          <h5 class="color-green-dark">Linha de produtos femininos</h5>
+          <LogoFlorMadame class="logo" />
+        </div>
+        <div class="column">
+          <h4>Ferramentas</h4>
+          <ul class="flex-list">
+            <li><FigmaLogo class="brand-logo" /></li>
+            <li><MiroLogo class="brand-logo" /></li>
+            <li><MeetLogo class="brand-logo" /></li>
+            <li><NotionLogo class="brand-logo" /></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
