@@ -131,3 +131,43 @@
     height: auto;
   }
 }
+
+.obrigado {
+  font-size: 2rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  h3 {
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  a {
+    color: colors.$text !important;
+    text-decoration: none;
+  }
+  .social-media {
+    display: flex;
+    row-gap: tokens.$space-6;
+    column-gap: tokens.$space-12;
+    flex-wrap: wrap;
+  }
+  .social {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    gap: tokens.$space-4;
+    justify-content: center;
+  }
+  svg {
+    width: 4rem;
+    height: 4rem;
+  }
+}
