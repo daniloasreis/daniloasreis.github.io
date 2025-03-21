@@ -46,9 +46,29 @@ import LogoFlorMadame from "@assets/eliestetica/logo_flormadame.svg";
 import Persona from "@components/eliestetica/Persona.astro";
 import Counter from "@components/eliestetica/Counter.svelte";
 import Nav from "@components/eliestetica/Nav.svelte";
+
+const permalink = new URL(Astro.url.pathname, Astro.site).href;
+
+const title = "Eli Spa & Estética - Beleza, Saúde e Bem-Estar";
+const description =
+  "Eli Spa & Estética oferece tudo que você precisa para cuidar do corpo e relaxar, massagem, limpeza de pele e cosméticos naturais.";
 ---
 
 <Layout title="Eli Estética">
+  <!-- Open Graph Meta Tags -->
+  <meta slot="opengraph" property="og:title" content={title} />
+  <meta slot="opengraph" property="og:description" content={description} />
+  <meta slot="opengraph" property="og:image" content="/eliestetica_og.png" />
+  <meta slot="opengraph" property="og:url" content={permalink} />
+  <meta slot="opengraph" property="og:type" content="website" />
+  <meta slot="opengraph" property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Meta Tags -->
+  <meta slot="twitter" name="twitter:card" content="summary_large_image" />
+  <meta slot="twitter" name="twitter:title" content={title} />
+  <meta slot="twitter" name="twitter:description" content={description} />
+  <meta slot="twitter" name="twitter:image" content="/eliestetica_og.png" />
+
   <header class="header page bg-green-light">
     <div class="container">
       <h1>
