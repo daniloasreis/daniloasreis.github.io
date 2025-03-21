@@ -1,6 +1,12 @@
 @use "./colors.scss";
 @use "../tokens.scss";
 
+:root {
+  @include tokens.on-sm-screen {
+    font-size: 12px;
+  }
+}
+
 body {
   font-family: "Reem Kufi Variable", sans-serif;
   font-size: 1.5rem;
