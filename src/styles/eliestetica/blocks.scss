@@ -9,6 +9,7 @@
 }
 
 .pill {
+  white-space: nowrap;
   position: relative;
   isolation: isolate;
   color: var(--text-color);

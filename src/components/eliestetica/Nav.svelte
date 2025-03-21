@@ -59,6 +59,7 @@
     height: 2.5rem;
     width: 2.5rem;
     :global(svg) {
+      flex-shrink: 0;
       width: 1.5rem;
       height: 1.5rem;
     }
