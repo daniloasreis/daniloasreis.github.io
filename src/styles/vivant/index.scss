@@ -212,17 +212,25 @@
 }
 
 .table-wrapper {
+  &.bg-main {
+    --border-color: #{colors.$accent};
+    --bg-shade: #{colors.$main};
+  }
+  &.bg-neutral {
+    --border-color: #{colors.$main};
+    --bg-shade: #{colors.$neutral-light};
+  }
   width: 100%;
   overflow-y: auto;
-  border: 1px solid colors.$accent;
+  border: 1px solid var(--border-color);
   border-radius: tokens.$space-4;
-  scrollbar-color: colors.$main colors.$accent;
-  background: linear-gradient(to right, colors.$main, transparent) left,
-    linear-gradient(to left, colors.$main, transparent) right,
+  scrollbar-color: var(--bg-shade) var(--border-color);
+  background: linear-gradient(to right, var(--bg-shade), transparent) left,
+    linear-gradient(to left, var(--bg-shade), transparent) right,
     linear-gradient(to right, hsl(0deg 0% 0% / 15%), transparent) left,
     linear-gradient(to left, hsl(0deg 0% 0% / 15%), transparent) right;
   background-repeat: no-repeat;
-  background-size: 4rem 100%, 4rem 100%, 2rem 100%, 2rem 100%;
+  background-size: 6rem 100%, 6rem 100%, 2rem 100%, 2rem 100%;
   background-attachment: local, local, scroll, scroll;
 }
 
@@ -234,20 +242,20 @@
   }
 }
 
-.jornada {
-  min-width: 76rem;
+.table {
   border-collapse: collapse;
   th {
-    color: colors.$accent;
+    color: var(--border-color);
   }
   th,
   td {
     text-align: left;
     vertical-align: top;
-    border: 1px solid colors.$accent;
+    border: 1px solid var(--border-color);
     padding-inline: tokens.$space-4;
     padding-block: tokens.$space-3;
   }
+  td:first-child,
   th:first-child {
     border-left: 0;
   }
@@ -517,5 +525,25 @@
     width: 100%;
     max-width: 20rem;
     border: 1px solid black;
+  }
+}
+
+.mercado {
+  .table {
+    td,
+    th {
+      font-size: 1.25em;
+      text-align: center;
+    }
+    .small {
+      font-size: 1rem;
+    }
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      path {
+        stroke-width: 2px;
+      }
+    }
   }
 }

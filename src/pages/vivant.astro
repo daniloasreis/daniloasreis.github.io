@@ -34,6 +34,8 @@ import mockup1 from "@assets/vivant/mockup-1.png";
 import mockup2 from "@assets/vivant/mockup-2.png";
 import mockup3 from "@assets/vivant/mockup-3.png";
 
+import Check from "~icons/material-symbols/check-circle-outline-rounded";
+import Cross from "~icons/material-symbols/cancel-outline-rounded";
 import ArrowRight from "~icons/lucide/arrow-right";
 import MapPin from "~icons/ph/map-pin-fill";
 import Target from "~icons/streamline/target";
@@ -264,8 +266,8 @@ const description =
         <span class="color-accent">Objetivo:</span> Marília reservar uma mesa em
         um restaurante.
       </p>
-      <div class="table-wrapper">
-        <table class="jornada">
+      <div class="table-wrapper bg-main">
+        <table style="min-width: 76rem;" class="table">
           <thead>
             <tr>
               <th scope="col">Fases</th>
@@ -360,6 +362,61 @@ const description =
         src="https://miro.com/app/embed/uXjVIehzvLc=/?pres=1&frameId=3458764617179332515&embedId=309238824385"
         allow="fullscreen; clipboard-read; clipboard-write"
         allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="mercado bg-neutral">
+    <div class="container">
+      <h2 id="mercado">Mercado</h2>
+      <h3>Benchmarking</h3>
+      <div class="table-wrapper bg-neutral">
+        <table style="min-width: 50rem;" class="table">
+          <thead>
+            <tr>
+              <th>Critérios</th>
+              <th>Porcão</th>
+              <th>Moema</th>
+              <th>Duo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Usabilidade</td>
+              <td><Check class="icon" /></td>
+              <td><Check class="icon" /></td>
+              <td><Check class="icon" /></td>
+            </tr>
+            <tr>
+              <td>Navegação</td>
+              <td><Cross class="icon color-main" /></td>
+              <td><Check class="icon" /></td>
+              <td><Check class="icon" /></td>
+            </tr>
+            <tr>
+              <td>Reserva</td>
+              <td><Check class="icon" /></td>
+              <td><Cross class="icon color-main" /></td>
+              <td><Check class="icon" /></td>
+            </tr>
+            <tr>
+              <td>Disponibilidade</td>
+              <td><Check class="icon" /></td>
+              <td><Cross class="icon color-main" /></td>
+              <td><Cross class="icon color-main" /></td>
+            </tr>
+            <tr>
+              <td>Diferenciais</td>
+              <td class="small">
+                Visibilidade das promoções, reservas diretas
+              </td>
+              <td class="small">
+                Design atrativo, navegação intuitiva, menus bem organizados
+              </td>
+              <td class="small">Navegação fluida, facilidade de reserva</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
