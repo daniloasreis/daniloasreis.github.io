@@ -471,6 +471,10 @@
 
 .obrigado {
   color: colors.$neutral-light;
+  .email {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
   .container {
     display: flex;
     flex-direction: column;
